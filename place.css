@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 400;
+}
+
+body {
+    background-color: lightgray;
+   
+}
+
+html {
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: #042820;
+    color: #EEF3F0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header h2 {
+    margin-left: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    color: #DCE1E0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navbar a:hover {
+    color: #53B946;
+    text-decoration: underline;
+}
+
+.search {
+    margin-right: 50px;
+    position: relative;
+}
+
+.search input {
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid white;
+
+}
+
+.search img {
+    position: absolute;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.container1 {
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.1)), url(pollachi_images_png/imagecopy6.png);
+    background-size: 100% 300px;
+    width: 100%;
+    height: 220px;
+    color: white;
+    padding: 10px;
+}
+.breadcrumbs{
+    font-size: 10px;
+    margin-left: 60px;
+}
+.text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 60px;
+    width: 100%;
+}
+.text span{
+   font-size: 60px;
+}
+.text nav h1{
+    font-size: 40px;
+    line-height: 40px;
+}
+.text nav{
+    width: 50%;
+}
+
+.searchbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.searchbar {
+    margin-left: 60px;
+    position: relative;
+}
+
+.searchbar img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    left: 5px;
+}
+
+.searchbar input {
+    width: 400px;
+    padding: 9px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 30px;
+}
+
+.searchbar button {
+    width: 80px;
+    padding: 5px;
+    position: absolute;
+    top: 3px;
+    left: 315px;
+    background-color: #1C9565;
+    border: 3px solid #1C9565;
+    border-radius: 10px;
+}
+
+.location-info {
+    margin-right: 50px;
+}
+
+.location-info h2 img {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.location-tags {
+    display: flex;
+    gap: 5px;
+}
+.filter-place{
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.filter-option{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.filter-option span{
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+}
+.filter-option span select{
+    border: none;
+}
+.filter-place h2{
+    border-left: 3px solid #008733;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.filter-place p{
+    font-size: 13px;
+}
+
+.item{
+    width: 360px;
+    background-color: rgb(240, 231, 231);
+    border-radius: 10px;
+}
+.item img{
+    width:100%;
+    height: 180px;
+    border-radius: 10px;
+}
+.item-text{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 0;
+}
+.item-text span{
+    font-size: 13px;
+}
+.category{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.category span{
+    background-color: lightgray;
+    padding: 3px;
+    border-radius: 10px;
+    
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.buttons a{
+     border: 2px solid green;
+     text-decoration: none;
+     color: black;
+     padding: 5px;
+     border-radius: 10px;
+}
+
+.filter-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.itineraries{
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 20px;
+    
+}
+.itineraries h2{
+    border-left: 3px solid #008733;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.itineraries p{
+    font-size: 13px;
+}
+.itineraries-items{
+    
+   
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.itineraries-item{
+    width: 200px;
+    height: 300px;
+    background-color: rgb(240, 231, 231);
+     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.itineraries-item img{
+    width: 100px;
+    height: 40%;
+}
+.itineraries-item nav {
+    padding: 10px;
+    height: 50%;
+}
+.itineraries-item nav span{
+    font-size: 10px;
+}
+.itineraries-item a{
+    padding: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #008733;
+    margin-bottom: 10px;
+}
+
+.nearby-attraction{
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+.nearby-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nearby-header h2{
+    border-left: 3px solid #008733;
+    padding-left: 10px;
+
+}
+.nearby-header p{
+    font-size: 13px;
+}
+.nearby-header a{
+    text-decoration: none;
+    color: #008733;
+}
+.nearby-container{
+    display: flex;
+    justify-content: space-between;
+}
+.nearby-card{
+    width: 200px;
+    height: 150px;
+    background-color: rgb(240, 231, 231);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.nearby-card img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}
+.nearby-card nav{
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+    margin-top: 5px;
+    
+}
+.nearby-card span{
+    padding-left: 10px;
+}
+.nearby-card nav img{
+    width: 20px;
+    height: 20px;
+}
+
+.footer-container{
+    background-color: #03251E;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.explore-pollachi{
+    width: 30%;
+    display: flex;
+}
+.explore-pollachi img{
+    width: 30px;
+    height: 30px;
+}
+.explore-pollachi p{
+    font-size: 12px;
+    width: 70%;
+    color: #B0BBB9;
+}
+.quicklinks{
+    width: 30%;
+    
+}
+.quicklinks h4{
+    font-size: 15px;
+}
+.quicklinks-content{
+    display: flex;
+}
+.firstpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.secondpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.firstpart a, .secondpart a{
+    text-decoration: none;
+    color: #B0BBB9;
+}
+
+.followus{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.followus img{
+    width: 30px;
+    height: 30px;
+}
+.followus h4{
+    font-size: 15px;
+}
+.footer-searchbar {
+    position: relative;
+    margin-top: 5px;
+}
+
+.footer-searchbar img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 8px;
+    left: 5px;
+}
+
+.footer-searchbar input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 20px;
+    font-size: 10px;
+}
+
+.footer-searchbar button {
+    width: 80px;
+    padding: 2px;
+    position: absolute;
+    top: 3px;
+    left: 215px;
+    background-color: #1C9565;
+    border: 3px solid #1C9565;
+    border-radius: 5px;
+}
+.footer-searchbar-header p{
+    font-size: 10px;
+    color: #B0BBB9;
+}
+.footer-searchbar-header h4{
+    font-size: 15px;
+}
+footer{
+    background-color: #03251E;
+    color: #B0BBB9;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer p{
+    margin-left: 20px;
+    margin-right: 20px
+}

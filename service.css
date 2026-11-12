@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+h1{
+    font-weight: 700;
+}
+h2{
+    font-weight: 600;
+}
+p{
+    font-weight: 400;
+}
+body{
+    background-color:lightgray;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html {
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: #042820;
+    color: #EEF3F0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header h2 {
+    margin-left: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    color: #DCE1E0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navbar a:hover {
+    color: #53B946;
+    text-decoration: underline;
+}
+
+.search {
+    margin-right: 50px;
+    position: relative;
+}
+
+.search input {
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid white;
+
+}
+
+.search img {
+    position: absolute;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+}
+.container1 {
+    background-image:linear-gradient(to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.1)),url(serviceimages/PollachiServices.png) ;
+    background-size: 100% 300px;
+    width: 100%;
+    height: 250px;
+    color: white;
+    padding: 10px;
+    
+    
+   
+}
+.breadcrumbs{
+    margin-left: 50px;
+    font-size: 10px;
+}
+
+.text{
+    margin-top: 10px;
+    margin-left: 50px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+
+}
+.text nav h1{
+    font-size: 40px;
+    line-height: 45px;
+}
+.text img{
+    width: 100px;
+    height: 90px;
+    border-radius: 10px;
+    border: 2px solid white;
+    
+}
+
+
+.searchbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.searchbar {
+    margin-left: 50px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.searchbar img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    left: 5px;
+}
+
+.searchbar input {
+    width: 400px;
+    padding: 9px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 30px;
+}
+
+.searchbar button {
+    width: 80px;
+    padding: 5px;
+    position: absolute;
+    top: 3px;
+    left: 315px;
+    background-color: #1C9565;
+    border: 3px solid #1C9565;
+    border-radius: 10px;
+}
+.category{
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.category h2{
+    border-left: 3px solid #1C9565 ;
+    padding-left: 10px;
+}
+.category p{
+    font-size: 13px;
+}
+.category-card{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.service-card{
+    min-width: 100px;
+    height: auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid;
+    
+}
+
+.service-card nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+.service-card nav p{
+    font-size: 10px;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.service-card nav img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.transport {
+    background: linear-gradient(135deg, #fffaf5, #fff0df);
+    border-color: #ffe0c2;
+}
+
+.healthcare {
+    background: linear-gradient(135deg, #f4fbff, #e4f5ff);
+    border-color: #cceaff;
+}
+.banking {
+    background: linear-gradient(135deg, #faf5ff, #f0e5ff);
+    border-color: #e5d2ff;
+}
+
+.essential {
+    background: linear-gradient(135deg, #f7fff7, #e5f5e5);
+    border-color: #d1ebd1;
+}
+
+.emergency {
+    background: linear-gradient(135deg, #fff7f7, #ffe8e8);
+    border-color: #ffd0d0;
+}
+
+.goverment{
+     background: linear-gradient(135deg, #f4fbff, #e4f5ff);
+    border-color: #cceaff;
+}
+.repair{
+    background: linear-gradient(135deg, #fffaf5, #fff0df);
+    border-color: #ffe0c2;
+}
+
+.popular-service{
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.popular-service h2{
+    border-left: 3px solid #1C9565;
+    padding-left: 10px;
+}
+.popular-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-card{
+    width: 280px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.filter-card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-text{
+    padding-left: 10px;
+}
+.card-text p{
+    font-size: 10px;
+}
+
+.card-option{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    height: 30px;
+    align-items: center;
+    
+}
+.card-option span{
+    min-width: 10%;
+    font-size: 9px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
+.card-button{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-button a{
+    border: 2px solid #017926;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+
+
+.Emergency{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 50px;
+    background-color: #951B1E;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+.emergency-title{
+    display: flex;
+    gap: 5px;
+    width: 40%;
+}
+.emergency-title img{
+    width: 50px;
+    height: 50px;
+}
+.emergency-title p{
+    font-size: 13px;
+}
+.ambulance{
+    display: flex;
+    gap: 10px;
+    width: 20%;
+    border-left: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.ambulance img{
+    width: 50px;
+    height: 50px;
+}
+.police{
+   display: flex;
+    gap: 10px;
+    width: 20%;
+    border-left: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.police img{
+    width: 50px;
+    height: 50px;
+}
+.fire{
+    display: flex;
+    gap: 10px;
+    width: 20%;
+    border-left: 1px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.fire img{
+    width: 50px;
+    height: 50px;
+}
+.footer-container{
+    background-color: #03251E;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.explore-pollachi{
+    width: 30%;
+    display: flex;
+}
+.explore-pollachi img{
+    width: 30px;
+    height: 30px;
+}
+.explore-pollachi p{
+    font-size: 12px;
+    width: 70%;
+    color: #B0BBB9;
+}
+.quicklinks{
+    width: 30%;
+    
+}
+.quicklinks h4{
+    font-size: 15px;
+}
+.quicklinks-content{
+    display: flex;
+}
+.firstpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.secondpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.firstpart a, .secondpart a{
+    text-decoration: none;
+    color: #B0BBB9;
+}
+
+.followus{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.followus img{
+    width: 30px;
+    height: 30px;
+}
+.followus h4{
+    font-size: 15px;
+}
+.footer-searchbar {
+    position: relative;
+    margin-top: 5px;
+}
+
+.footer-searchbar img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 8px;
+    left: 5px;
+}
+
+.footer-searchbar input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 20px;
+    font-size: 10px;
+}
+
+.footer-searchbar button {
+    width: 80px;
+    padding: 2px;
+    position: absolute;
+    top: 3px;
+    left: 215px;
+    background-color: #1C9565;
+    border: 3px solid #1C9565;
+    border-radius: 5px;
+}
+.footer-searchbar-header p{
+    font-size: 10px;
+    color: #B0BBB9;
+}
+.footer-searchbar-header h4{
+    font-size: 15px;
+}
+footer{
+    background-color: #03251E;
+    color: #B0BBB9;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer p{
+    margin-left: 20px;
+    margin-right: 20px
+}

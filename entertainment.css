@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+h1{
+    font-weight: 700;
+}
+h2{
+    font-weight: 600;
+}
+p{
+    font-weight: 400;
+}
+body{
+    background-color:lightgray;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+html {
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: #042820;
+    color: #EEF3F0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header h2 {
+    margin-left: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    color: #DCE1E0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navbar a:hover {
+    color: #53B946;
+    text-decoration: underline;
+}
+
+.search {
+    margin-right: 50px;
+    position: relative;
+}
+
+.search input {
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid white;
+
+}
+
+.search img {
+    position: absolute;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.container1 {
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.1)),url(entertainmentimages/image.png) ;
+    background-size: 100% 300px;
+    width: 100%;
+    height: 200px;
+    border: 1px solid black;
+    color: white;
+    padding: 10px;
+}
+.breadcrumbs{
+    margin-left: 50px;
+    font-size: 10px;
+}
+
+.text{
+    margin-top: 10px;
+    margin-left: 50px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+
+}
+.text nav h1{
+    font-size: 50px;
+    line-height: 45px;
+}
+.text img{
+    width: 80px;
+    height: 100px;
+}
+
+
+.searchbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.searchbar {
+    margin-left: 50px;
+    position: relative;
+}
+
+.searchbar img {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    left: 5px;
+}
+
+.searchbar input {
+    width: 400px;
+    padding: 9px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 30px;
+}
+
+.searchbar button {
+    width: 80px;
+    padding: 5px;
+    position: absolute;
+    top: 3px;
+    left: 315px;
+    background-color: #1C9565;
+    border: 3px solid #1C9565;
+    border-radius: 10px;
+}
+
+.filter-container{
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.filter-option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-option span{
+    min-width:60px ;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-option span select{
+    border: none;
+    padding: 3px;
+}
+
+.filter-place{
+    margin-top: 10px;
+    
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-place h2{
+    border-left: 3px solid #23801b;
+    padding-left: 10px;
+}
+.filter-place p{
+    font-size: 13px;
+}
+
+.filter-card{
+    width: 280px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.filter-card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-text{
+    padding-left: 10px;
+}
+.card-text p{
+    font-size: 10px;
+}
+
+.card-option{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    height: 30px;
+    align-items: center;
+    
+}
+.card-option span{
+    min-width: 10%;
+    height: 10px;
+    font-size: 7px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
+.card-button{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    
+    
+}
+
+.card-button a{
+    border: 2px solid #017926;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    
+   
+}
+
+.nearby-container{
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.nearby-container h2{
+    border-left: 3px solid #017926;
+    padding-left: 10px;
+}
+.nearby-container p{
+    font-size: 13px;
+}
+
+.nearby-place{
+    display: flex;
+    justify-content: space-between;
+}
+.nearby-card{
+    width: 200px;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.nearby-card img{
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.nearby-card nav{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nearby-card nav img{
+    width: 20px;
+    height: 20px;
+}
+.nearby-card nav section{
+    display: flex;
+    gap: 5px;
+    
+}
+.nearby-card nav section h4{
+    font-weight: 500;
+}
+.footer-container{
+    background-color: #03251E;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.explore-pollachi{
+    width: 30%;
+    display: flex;
+}
+.explore-pollachi img{
+    width: 30px;
+    height: 30px;
+}
+.explore-pollachi p{
+    font-size: 12px;
+    width: 70%;
+    color: #B0BBB9;
+}
+.quicklinks{
+    width: 30%;
+    
+}
+.quicklinks h4{
+    font-size: 15px;
+}
+.quicklinks-content{
+    display: flex;
+}
+.firstpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.secondpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.firstpart a, .secondpart a{
+    text-decoration: none;
+    color: #B0BBB9;
+}
+
+.followus{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.followus img{
+    width: 30px;
+    height: 30px;
+}
+.followus h4{
+    font-size: 15px;
+}
+.footer-searchbar {
+    position: relative;
+    margin-top: 5px;
+}
+
+.footer-searchbar img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 8px;
+    left: 5px;
+}
+
+.footer-searchbar input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 20px;
+    font-size: 10px;
+}
+
+.footer-searchbar button {
+    width: 80px;
+    padding: 2px;
+    position: absolute;
+    top: 3px;
+    left: 215px;
+    background-color: #1C9565;
+    border: 3px solid #1C9565;
+    border-radius: 5px;
+}
+.footer-searchbar-header p{
+    font-size: 10px;
+    color: #B0BBB9;
+}
+.footer-searchbar-header h4{
+    font-size: 15px;
+}
+footer{
+    background-color: #03251E;
+    color: #B0BBB9;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer p{
+    margin-left: 20px;
+    margin-right: 20px
+}

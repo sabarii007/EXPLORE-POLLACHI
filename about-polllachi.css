@@ -1,0 +1,455 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url("Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 400;
+}
+
+body {
+    background-color: lightgray;
+   
+}
+
+html {
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-color: #042820;
+    color: #EEF3F0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header h2 {
+    margin-left: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    color: #DCE1E0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.navbar a:hover {
+    color: #53B946;
+    text-decoration: underline;
+}
+
+.search {
+    margin-right: 50px;
+    position: relative;
+}
+
+.search input {
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid white;
+
+}
+
+.search img {
+    position: absolute;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+}
+
+.container1 {
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.1)), url(pollachi_image.png);
+    background-size: 100% 300px;
+    width: 100%;
+    height: 220px;
+    color: white;
+    padding: 10px;
+}
+
+.container1 span {
+    background-color: white;
+    font-size: 10px;
+    border: none;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.text-content {
+    margin-left: 70px;
+    margin-top: 10px;
+}
+
+.text-content h1 {
+    width: 35%;
+    line-height: 40px;
+}
+
+
+.container1 nav {
+    margin-top: 10px;
+    color: #C7C9C8;
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.introduction {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+
+.introduction h2 {
+    font-weight: 600;
+    border-left: 4px solid green;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    font-size: 13px;
+}
+
+.introduction img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.about {
+    margin-left: 50px;
+}
+
+.about h2 {
+    font-weight: 600;
+    border-left: 4px solid green;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 13px;
+}
+
+.top-attraction {
+    margin-left: 50px;
+    margin-top: 20px;
+    
+}
+
+.top-attraction h2 {
+    font-weight: 600;
+    border-left: 4px solid green;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    
+
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    width: 260px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.box img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+    
+
+}
+
+.box h3{
+    padding-left: 10px;
+    display: flex;
+}
+.box p{
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+.culture{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.culture-text h2{
+    font-weight: 600;
+    border-left: 4px solid green;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.culture-text p{
+    font-size: 13px;
+}
+.culture img{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.food{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.food-text h2{
+    font-weight: 600;
+    border-left: 4px solid green;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.food-text p{
+    font-size: 13px;
+}
+.food img{
+    width: 250px;
+    border-radius: 10px;
+}
+
+.conclusion{
+    background-color: #E4F3E0;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+.conclusion h2{
+    font-weight: 600;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+.conclusion p{
+    padding-left: 10px;
+    font-size: 13px;
+    width: 80%;
+    padding-bottom: 10px;
+}
+.right-side{
+    margin-top: 15px;
+    margin-right: 50px;
+}
+
+.about-the-author{
+    background-color: rgb(240, 236, 236);
+    padding: 5px;
+    border-radius: 10px;
+}
+.about-the-author p{
+    font-size: 13px;
+}
+.visit-time{
+    background-color: rgb(240, 236, 236);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.highlights{
+    background-color: rgb(240, 236, 236);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.highlights div{
+    display: flex;
+}
+.highlights div p{
+    font-size: 10px;
+}
+.tags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(240, 236, 236);
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.tags span{
+    background-color: #dbf3d7;
+    width: 100px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.footer-container{
+    background-color: #03251E;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.explore-pollachi{
+    width: 30%;
+    display: flex;
+}
+.explore-pollachi img{
+    width: 30px;
+    height: 30px;
+}
+.explore-pollachi p{
+    font-size: 12px;
+    width: 70%;
+    color: #B0BBB9;
+}
+.quicklinks{
+    width: 30%;
+    
+}
+.quicklinks h4{
+    font-size: 15px;
+}
+.quicklinks-content{
+    display: flex;
+}
+.firstpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.secondpart{
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    width: 50%;
+}
+.firstpart a, .secondpart a{
+    text-decoration: none;
+    color: #B0BBB9;
+}
+
+.followus{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.followus img{
+    width: 30px;
+    height: 30px;
+}
+.followus h4{
+    font-size: 15px;
+}
+.footer-searchbar {
+    position: relative;
+    margin-top: 5px;
+}
+
+.footer-searchbar img {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 8px;
+    left: 5px;
+}
+
+.footer-searchbar input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding-left: 20px;
+    font-size: 10px;
+}
+
+.footer-searchbar button {
+    width: 80px;
+    padding: 2px;
+    position: absolute;
+    top: 3px;
+    left: 215px;
+    background-color: #1C9565;
+    border: 3px solid #1C9565;
+    border-radius: 5px;
+}
+.footer-searchbar-header p{
+    font-size: 10px;
+    color: #B0BBB9;
+}
+.footer-searchbar-header h4{
+    font-size: 15px;
+}
+footer{
+    background-color: #03251E;
+    color: #B0BBB9;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer p{
+    margin-left: 20px;
+    margin-right: 20px
+}
