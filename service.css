@@ -266,16 +266,21 @@ html {
     padding-left: 10px;
 }
 .popular-card{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .filter-card{
-    width: 280px;
-    height: auto;
     background-color: white;
     border-radius: 10px;
     margin-top: 10px;
+    transition: 0.3s;
+}
+
+.filter-card:hover{
+    transform: translateY(-5px);
+
 }
 
 .filter-card img{
@@ -289,27 +294,10 @@ html {
     padding-left: 10px;
 }
 .card-text p{
-    font-size: 10px;
+    font-size: 15px;
 }
 
-.card-option{
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    margin-top: 5px;
-    height: 30px;
-    align-items: center;
-    
-}
-.card-option span{
-    min-width: 10%;
-    font-size: 9px;
-    background-color: lightgrey;
-    border-radius: 10px;
-    padding-left: 2px;
-    padding-right: 2px;
 
-}
 
 .card-button{
     display: flex;
@@ -317,13 +305,17 @@ html {
     padding-right: 10px;
     margin-top: 10px;
     padding-bottom: 10px;
+    gap: 10px;
 }
 
 .card-button a{
-    border: 2px solid #017926;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 10px;
+     flex: 1;
+    text-align: center;
+    padding: 9px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 

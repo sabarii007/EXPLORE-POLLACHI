@@ -186,24 +186,31 @@ html {
     display: flex;
     gap: 5px;
 }
-.filter-place{
-    margin-left: 60px;
-    margin-right: 50px;
-    margin-top: 20px;
-}
+
 
 .filter-option{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-top: 10px;
+    padding-left: 60px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    background-color: #D3D3D3;
 
 }
 
 .filter-option span{
+    min-width: 60px;
     background-color: white;
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 9px 17px;
     font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
 }
 .filter-option span select{
     border: none;
@@ -212,15 +219,26 @@ html {
     border-left: 3px solid #008733;
     padding-left: 10px;
     margin-top: 10px;
+    margin-left: 60px;
+    margin-right: 50px;
 }
 .filter-place p{
     font-size: 13px;
+    margin-left: 60px;
+    margin-right: 50px;
 }
 
+
 .item{
-    width: 360px;
-    background-color: rgb(240, 231, 231);
+    background-color: white;
     border-radius: 10px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.item:hover{
+    transform: translateY(-5px);
+
 }
 .item img{
     width:100%;
@@ -234,7 +252,7 @@ html {
     padding-top: 0;
 }
 .item-text span{
-    font-size: 13px;
+    font-size: 15px;
 }
 .category{
     margin-top: 10px;
@@ -242,13 +260,15 @@ html {
 }
 .category span{
     background-color: lightgray;
-    padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 10px;
     
 }
 .buttons{
     display: flex;
-    justify-content: space-between;
+    
+    gap: 10px;
     
 }
 .buttons a{
@@ -257,11 +277,18 @@ html {
      color: black;
      padding: 5px;
      border-radius: 10px;
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .filter-items{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-left: 60px;
+    margin-right: 50px;
 }
 
 .itineraries{
