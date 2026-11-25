@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospitals in Pollachi</title>
     <link rel="stylesheet" href="hospital.css">
+    <script src="hospital.js" defer></script>
 </head>
 
 <body>
@@ -201,50 +202,56 @@
     </div>
 
     <div class="near-healthcare">
-        <h2>Other Healthcare Services in <span style="color: #22a34b;">Pollachi</span></h2>
-        <p>More healthcare options and medical facilities near you.</p>
+    <h2>Other Healthcare Services in <span style="color: #22a34b;">Pollachi</span></h2>
+    <p>More healthcare options and medical facilities near you.</p>
 
-        <section class="near-cards">
+    <button id="healthBtn" type="button">📍 Use my current location</button>
+    <p id="healthMsg"></p>
 
-            <div class="healthcare">
-                <nav>
-                    <img src="hospitalsimages/icons8-microscope-64.png" alt="">
-                    <h4>Diagnostic Centers</h4>
-                </nav>
-                <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
-            </div>
-            <div class="healthcare">
-                <nav>
-                    <img src="hospitalsimages/pill.png" alt="">
-                    <h4>Pharmacies</h4>
-                </nav>
-                <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
-            </div>
-            <div class="healthcare">
-                <nav>
-                    <img src="hospitalsimages/ambulance.png" alt="">
-                    <h4>Ambulance Services</h4>
-                </nav>
-                <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
-            </div>
-            <div class="healthcare">
-                <nav>
-                    <img src="hospitalsimages/blood.png" alt="">
-                    <h4>Blood Banks</h4>
-                </nav>
-                <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
-            </div>
-            <div class="healthcare">
-                <nav>
-                    <img src="hospitalsimages/Hand Holding Plant.png" alt="">
-                    <h4>Physiotherapy</h4>
-                </nav>
-                <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
-            </div>
+    <section class="near-cards">
 
-        </section>
+        <a class="healthcare" data-search="diagnostic centers" href="#" target="_blank" rel="noopener">
+            <nav>
+                <img src="hospitalsimages/icons8-microscope-64.png" alt="">
+                <h4>Diagnostic Centers</h4>
+            </nav>
+            <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
+        </a>
 
-    </div>
+        <a class="healthcare" data-search="pharmacies" href="#" target="_blank" rel="noopener">
+            <nav>
+                <img src="hospitalsimages/pill.png" alt="">
+                <h4>Pharmacies</h4>
+            </nav>
+            <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
+        </a>
+
+        <a class="healthcare" data-search="ambulance services" href="#" target="_blank" rel="noopener">
+            <nav>
+                <img src="hospitalsimages/ambulance.png" alt="">
+                <h4>Ambulance Services</h4>
+            </nav>
+            <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
+        </a>
+
+        <a class="healthcare" data-search="blood banks" href="#" target="_blank" rel="noopener">
+            <nav>
+                <img src="hospitalsimages/blood.png" alt="">
+                <h4>Blood Banks</h4>
+            </nav>
+            <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
+        </a>
+
+        <a class="healthcare" data-search="physiotherapy clinics" href="#" target="_blank" rel="noopener">
+            <nav>
+                <img src="hospitalsimages/Hand Holding Plant.png" alt="">
+                <h4>Physiotherapy</h4>
+            </nav>
+            <img src="murugalayaimages/rightarrow.png" alt="" class="rightarrow">
+        </a>
+
+    </section>
+</div>
 
      <div class="footer-container">
         <section class="explore-pollachi">

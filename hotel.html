@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels & Restaurants</title>
     <link rel="stylesheet" href="hotel.css">
+    <script src="hotel.js" defer></script>
 </head>
 
 <body>
@@ -295,73 +296,70 @@
     </div>
 
     <div class="nearby-container">
-        <h2>Explore Nearby Places</h2>
-        <p>Popular places near in Pollachi</p>
-        <section class="nearby-place">
-            <div class="nearby-card">
-                <img src="entertainmentimages/image.png" alt="">
-                <nav>
-                    <section>
-                        <img src="hotels&restaurantsimages/image.png" alt="">
-                        <h4>Theatres</h4>
-                    </section>
-                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+    <h2>Explore Nearby Places</h2>
+    <p>Find places near your current location</p>
+    <button id="locBtn" type="button">📍 Use my current location</button>
+    <p id="locMsg"></p>
 
-                </nav>
+    <section class="nearby-place">
 
-            </div>
-            <div class="nearby-card">
-                <img src="entertainmentimages/cafes.png" alt="">
-                <nav>
-                    <section>
-                        <img src="entertainmentimages/cafe1.png" alt="">
-                        <h4>Cafes</h4>
-                    </section>
-                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+        <a class="nearby-card" data-search="theatres" href="#" target="_blank" rel="noopener">
+            <img src="entertainmentimages/image.png" alt="">
+            <nav>
+                <section>
+                    <img src="hotels&restaurantsimages/image.png" alt="">
+                    <h4>Theatres</h4>
+                </section>
+                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+            </nav>
+        </a>
 
-                </nav>
+        <a class="nearby-card" data-search="cafes" href="#" target="_blank" rel="noopener">
+            <img src="entertainmentimages/cafes.png" alt="">
+            <nav>
+                <section>
+                    <img src="entertainmentimages/cafe1.png" alt="">
+                    <h4>Cafes</h4>
+                </section>
+                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+            </nav>
+        </a>
 
-            </div>
-            <div class="nearby-card">
-                <img src="hotels&restaurantsimages/image copy.png" alt="">
-                <nav>
-                    <section>
-                        <img src="hotels&restaurantsimages/education.png" alt="">
-                        <h4>Education</h4>
-                    </section>
-                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+        <a class="nearby-card" data-search="colleges and schools" href="#" target="_blank" rel="noopener">
+            <img src="hotels&restaurantsimages/image copy.png" alt="">
+            <nav>
+                <section>
+                    <img src="hotels&restaurantsimages/education.png" alt="">
+                    <h4>Education</h4>
+                </section>
+                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+            </nav>
+        </a>
 
-                </nav>
+        <a class="nearby-card" data-search="shopping" href="#" target="_blank" rel="noopener">
+            <img src="entertainmentimages/shopping.png" alt="">
+            <nav>
+                <section>
+                    <img src="entertainmentimages/shopping1.png" alt="">
+                    <h4>Shopping</h4>
+                </section>
+                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+            </nav>
+        </a>
 
-            </div>
-            <div class="nearby-card">
-                <img src="entertainmentimages/shopping.png" alt="">
-                <nav>
-                    <section>
-                        <img src="entertainmentimages/shopping1.png" alt="">
-                        <h4>Shopping</h4>
-                    </section>
-                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+        <a class="nearby-card" data-search="tourist places" href="#" target="_blank" rel="noopener">
+            <img src="pollachi_images_png/monkeyfalls.png" alt="">
+            <nav>
+                <section>
+                    <img src="entertainmentimages/mountain.png" alt="">
+                    <h4>Tourist Places</h4>
+                </section>
+                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+            </nav>
+        </a>
 
-                </nav>
-
-            </div>
-            <div class="nearby-card">
-                <img src="pollachi_images_png/monkeyfalls.png" alt="">
-                <nav>
-                    <section>
-                        <img src="entertainmentimages/mountain.png" alt="">
-                        <h4>Tourist Places</h4>
-                    </section>
-                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
-                </nav>
-
-            </div>
-        </section>
-
-    </div>
-
+    </section>
+</div>
     <div class="footer-container">
         <section class="explore-pollachi">
             <img src="coconut_tree_icon.png" alt="">
@@ -403,7 +401,7 @@
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
             <div class="footer-searchbar">
-                <input type="search" placeholder="Search theatres, hotels, restaurants...">
+                <input type="search" placeholder="Search Places in Pollachi...">
                 <img src="search.png" alt="">
                 <button>search</button>
             </div>

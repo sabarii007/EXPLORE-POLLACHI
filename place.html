@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourist Places</title>
     <link rel="stylesheet" href="place.css">
+    <script src="place.js" defer></script>
 </head>
 
 <body>
@@ -149,117 +150,128 @@
     </div>
 
     <div class="itineraries">
-        <h2>Explore Travel Itineraries</h2>
-        <p>Handpicked trip plans to experience the best of Pollachi.</p>
-        <section class="itineraries-items">
-            <div class="itineraries-item">
-                <img src="placeimages/image.png" alt="">
-                <nav>
-                    <h3>One Day Trip</h3>
-                    <p>A quick and refreshing trip to Pollachi’s top spots.</p>
-                    <span>📍 Aliyar Dam → Monkey Falls → Topslip</span>
-                </nav>
-                <a href="">View Itinerary →</a>
-            </div>
-            <div class="itineraries-item">
-                <img src="placeimages/image copy.png" alt="">
-                <nav>
-                    <h3>Nature Adventure</h3>
-                    <p>Into the wild - forests, wildlife and scenic landscapes.</p>
-                    <span>📍 Topslip → Anamalai Reserve → Valparai</span>
-                </nav>
-                <a href="">View Itinerary →</a>
-            </div>
-            <div class="itineraries-item">
-                <img src="placeimages/image copy 2.png" alt="">
-                <nav>
-                    <h3>Spiritual Journey</h3>
-                    <p>A peaceful trip to Pollachi’s famous temples.</p>
-                    <span>📍 Masani Amman Temple → Local Temples</span>
-                </nav>
-                <a href="">View Itinerary →</a>
-            </div>
-            <div class="itineraries-item">
-                <img src="placeimages/image copy 3.png" alt="">
-                <nav>
-                    <h3>Weekend Getaway</h3>
-                    <p>A perfect short escape to unwind and relax.</p>
-                    <span>📍 Valparai → Sholayar Dam → Nirar Dam</span>
-                </nav>
-                <a href="">View Itinerary →</a>
-            </div>
-            <div class="itineraries-item">
-                <img src="placeimages/image copy 4.png" alt="">
-                <nav>
-                    <h3>Family Trip</h3>
-                    <p>A fun-filled trip with nature, relaxation and scenic views.</p>
-                    <span>📍 Aliyar Dam → Monkey Falls → Amaravathi Dam</span>
-                </nav>
-                <a href="">View Itinerary →</a>
-            </div>
-            
-        </section>
-        
-    </div>
+    <h2>Explore Travel Itineraries</h2>
+    <p>Handpicked trip plans to experience the best of Pollachi.</p>
 
-    <div class="nearby-attraction">
-        <section class="nearby-header">
+    <button id="tripBtn" type="button">📍 Start from my location</button>
+    <p id="tripMsg"></p>
+
+    <section class="itineraries-items">
+
+        <div class="itineraries-item">
+            <img src="placeimages/image.png" alt="">
             <nav>
-                <h2>Nearby Attractions</h2>
-            <p>More interesting places to visit near Pollachi.</p>
+                <h3>One Day Trip</h3>
+                <p>A quick and refreshing trip to Pollachi’s top spots.</p>
+                <span>📍 Aliyar Dam → Monkey Falls → Topslip</span>
             </nav>
-            <a href="">View All </a>
-        </section>
-        <section class="nearby-container">
-            <div class="nearby-card">
-                <img src="placeimages/image copy 5.png" alt="">
-                <nav>
-                    <img src="placeimages/image copy 6.png" alt="">
-                    <h4>Valparai</h4>
-                </nav>
-                <span>~ 40 km</span>
+            <a class="trip-link" data-stops="Aliyar Dam|Monkey Falls|Topslip" href="#" target="_blank" rel="noopener">View Itinerary →</a>
+        </div>
 
-            </div>
-            <div class="nearby-card">
-                <img src="placeimages/image copy 7.png" alt="">
-                <nav>
-                    <img src="placeimages/image copy 11.png" alt="">
-                    <h4>Anamalai Tiger Reserve</h4>
-                </nav>
-                <span>~ 28 km</span>
+        <div class="itineraries-item">
+            <img src="placeimages/image copy.png" alt="">
+            <nav>
+                <h3>Nature Adventure</h3>
+                <p>Into the wild - forests, wildlife and scenic landscapes.</p>
+                <span>📍 Topslip → Anamalai Reserve → Valparai</span>
+            </nav>
+            <a class="trip-link" data-stops="Topslip|Anamalai Tiger Reserve|Valparai" href="#" target="_blank" rel="noopener">View Itinerary →</a>
+        </div>
 
-            </div>
-            <div class="nearby-card">
-                <img src="placeimages/image copy 8.png" alt="">
-                <nav>
-                    <img src="placeimages/image copy 12.png" alt="">
-                    <h4>Parambikulam Dam</h4>
-                </nav>
-                <span>~ 48 km</span>
+        <div class="itineraries-item">
+            <img src="placeimages/image copy 2.png" alt="">
+            <nav>
+                <h3>Spiritual Journey</h3>
+                <p>A peaceful trip to Pollachi’s famous temples.</p>
+                <span>📍 Masani Amman Temple → Local Temples</span>
+            </nav>
+            <a class="trip-link" data-stops="Masani Amman Temple" href="#" target="_blank" rel="noopener">View Itinerary →</a>
+        </div>
 
-            </div>
-            <div class="nearby-card">
-                <img src="placeimages/image copy 9.png" alt="">
-                <nav>
-                    <img src="placeimages/image copy 13.png" alt="">
-                    <h4>Udumalpett View Point</h4>
-                </nav>
-                <span>~ 35 km</span>
+        <div class="itineraries-item">
+            <img src="placeimages/image copy 3.png" alt="">
+            <nav>
+                <h3>Weekend Getaway</h3>
+                <p>A perfect short escape to unwind and relax.</p>
+                <span>📍 Valparai → Sholayar Dam → Nirar Dam</span>
+            </nav>
+            <a class="trip-link" data-stops="Valparai|Sholayar Dam|Nirar Dam" href="#" target="_blank" rel="noopener">View Itinerary →</a>
+        </div>
 
-            </div>
-            <div class="nearby-card">
-                <img src="placeimages/image copy 10.png" alt="">
-                <nav>
-                    <img src="placeimages/image copy 14.png" alt="">
-                    <h4>Sethumadai</h4>
-                </nav>
-                <span>~ 24 km</span>
+        <div class="itineraries-item">
+            <img src="placeimages/image copy 4.png" alt="">
+            <nav>
+                <h3>Family Trip</h3>
+                <p>A fun-filled trip with nature, relaxation and scenic views.</p>
+                <span>📍 Aliyar Dam → Monkey Falls → Amaravathi Dam</span>
+            </nav>
+            <a class="trip-link" data-stops="Aliyar Dam|Monkey Falls|Amaravathi Dam" href="#" target="_blank" rel="noopener">View Itinerary →</a>
+        </div>
 
-            </div>
+    </section>
+</div>
 
-        </section>
+  <div class="nearby-attraction">
+    <section class="nearby-header">
+        <nav>
+            <h2>Nearby Attractions</h2>
+            <p>More interesting places to visit near Pollachi.</p>
+        </nav>
+        <a href="">View All </a>
+    </section>
 
-    </div>
+    <button id="routeBtn" type="button">📍 Route from my location</button>
+    <p id="routeMsg"></p>
+
+    <section class="nearby-container">
+
+        <a class="nearby-card" data-destination="Valparai" href="#" target="_blank" rel="noopener">
+            <img src="placeimages/image copy 5.png" alt="">
+            <nav>
+                <img src="placeimages/image copy 6.png" alt="">
+                <h4>Valparai</h4>
+            </nav>
+            <span>~ 40 km</span>
+        </a>
+
+        <a class="nearby-card" data-destination="Anamalai Tiger Reserve" href="#" target="_blank" rel="noopener">
+            <img src="placeimages/image copy 7.png" alt="">
+            <nav>
+                <img src="placeimages/image copy 11.png" alt="">
+                <h4>Anamalai Tiger Reserve</h4>
+            </nav>
+            <span>~ 28 km</span>
+        </a>
+
+        <a class="nearby-card" data-destination="Parambikulam Dam" href="#" target="_blank" rel="noopener">
+            <img src="placeimages/image copy 8.png" alt="">
+            <nav>
+                <img src="placeimages/image copy 12.png" alt="">
+                <h4>Parambikulam Dam</h4>
+            </nav>
+            <span>~ 48 km</span>
+        </a>
+
+        <a class="nearby-card" data-destination="Udumalpet View Point" href="#" target="_blank" rel="noopener">
+            <img src="placeimages/image copy 9.png" alt="">
+            <nav>
+                <img src="placeimages/image copy 13.png" alt="">
+                <h4>Udumalpett View Point</h4>
+            </nav>
+            <span>~ 35 km</span>
+        </a>
+
+        <a class="nearby-card" data-destination="Sethumadai" href="#" target="_blank" rel="noopener">
+            <img src="placeimages/image copy 10.png" alt="">
+            <nav>
+                <img src="placeimages/image copy 14.png" alt="">
+                <h4>Sethumadai</h4>
+            </nav>
+            <span>~ 24 km</span>
+        </a>
+
+    </section>
+</div>
 
     <div class="footer-container">
         <section class="explore-pollachi">

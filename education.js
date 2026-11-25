@@ -33,10 +33,10 @@ cards.forEach(function (card) {
 
 btn.addEventListener("click", function () {
   if (!navigator.geolocation) {
-    msg.textContent = "Indha browser la location support illa.";
+    msg.textContent = "Oops! Your browser doesn't support location access. Please try opening this website in another browser to explore nearby places.";
     return;
   }
-  msg.textContent = "Location edukkuren...";
+  msg.textContent = "Finding your location...";
 
   navigator.geolocation.getCurrentPosition(
     function (pos) {
@@ -44,23 +44,22 @@ btn.addEventListener("click", function () {
       const lng = pos.coords.longitude;
       const km = distanceKm(lat, lng, POLLACHI.lat, POLLACHI.lng);
 
-        console.log("Lat:", lat, "Lng:", lng, "Distance:", km.toFixed(1), "km", "Accuracy:", Math.round(pos.coords.accuracy), "m");
-
+       
 
       if (km <= MAX_KM) {
         cards.forEach(function (card) {
           card.href = aroundMeLink(card.dataset.search, lat, lng);
         });
-        msg.textContent = "✅ Ungal location suththi irukkura places kaattum.";
+        msg.textContent = "✅ Discover interesting places around your current location!";
       } else {
-        msg.textContent = "Neenga Pollachi la illa, so Pollachi suththi irukkura places kaattum.";
+        msg.textContent = "You're currently away from Pollachi, but don't worry! We'll show you interesting places around Pollachi.";
       }
     },
     function (err) {
       if (err.code === 1) {
-        msg.textContent = "Location block aayirukku. Address bar la 🔒 click panni Location ah Allow pannunga.";
+        msg.textContent = "Oops! Location access is blocked. Please click the 🔒 icon in your browser's address bar and set Location to Allow to discover nearby places.";
       } else {
-        msg.textContent = "Location edukka mudiyala. Device location on-a irukkaa paarunga.";
+        msg.textContent = "Oops! We couldn't find your location. Please turn on your device's location services and try again! ";
       }
     },
     { timeout: 10000 }

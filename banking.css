@@ -487,6 +487,20 @@ html {
     border-radius: 10px;
 }
 
+#locBtn{
+    margin: 10px 0;
+    padding: 8px 14px;
+    background-color: #017926;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#locMsg{
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
 .nearby-card nav{
     display: flex;
     justify-content: space-between;

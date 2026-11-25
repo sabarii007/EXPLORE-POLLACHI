@@ -354,9 +354,33 @@ html {
     padding: 5px;
     position: relative;
 
+    display: block;          
+    text-decoration: none;   
+    color: inherit;  
+    transition: 0.3s;
+}
+
+.healthcare:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+#healthBtn{
+    margin: 10px 0;
+    padding: 8px 14px;
+    background-color: #017926;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#healthMsg{
+    font-size: 13px;
+    margin-bottom: 6px;
+}
     
 
-}
+
 .healthcare .rightarrow{
     width: 20px;
     height: 20px;
