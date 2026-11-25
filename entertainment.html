@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Entertainment</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌴</text></svg>">
+    <link rel="stylesheet" href="entertainment.css">
 
-    <head>
-        <title>Explore Pollachi</title>
-        <link rel="icon"
-            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌴</text></svg>">
-        <link rel="stylesheet" href="entertainment.css">
-    </head>
+    <script src="entertainment.js" defer></script>
+
+
 
 <body>
     <div class="header" id="header">
@@ -24,8 +24,8 @@
             <a href="hotel.html">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact</a>
 
         </nav>
 
@@ -97,7 +97,8 @@
                                 <span>🍔 Snacks</span>
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Murugalaya+Vishal+Cinemas+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=Murugalaya+Vishal+Cinemas+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                                 <a href="" style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
@@ -119,7 +120,8 @@
                                 <span>🍔 Snacks</span>
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Thangam+Cinemas+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=Thangam+Cinemas+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                                 <a href="" style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
@@ -141,7 +143,8 @@
                                 <span>🍔 Snacks</span>
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Dorais+Movie+Land+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=Dorais+Movie+Land+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                                 <a href="" style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
@@ -164,7 +167,8 @@
                                 <span>🍔 Food & Snacks</span>
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Sri+Sakthi+Cinemas+24+Municipal+Office+Road+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=Sri+Sakthi+Cinemas+24+Municipal+Office+Road+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                                 <a href="" style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
@@ -173,11 +177,12 @@
         </section>
     </div>
 
-    <div class="nearby-container">
+    <div class="nearby-container" data-place="Murukalaya Theatre, Pollachi">
         <h2>Explore Nearby Places</h2>
         <p>Popular places near theaters in Pollachi</p>
         <section class="nearby-place">
-            <div class="nearby-card">
+
+            <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
                     <section>
@@ -185,11 +190,10 @@
                         <h4>Restaurants</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="cafes" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/cafes.png" alt="">
                 <nav>
                     <section>
@@ -197,11 +201,10 @@
                         <h4>Cafes</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="hotels" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/hotel.png" alt="">
                 <nav>
                     <section>
@@ -209,11 +212,10 @@
                         <h4>Hotels</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="shopping" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/shopping.png" alt="">
                 <nav>
                     <section>
@@ -221,11 +223,10 @@
                         <h4>Shopping</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="tourist places" href="#" target="_blank" rel="noopener">
                 <img src="pollachi_images_png/monkeyfalls.png" alt="">
                 <nav>
                     <section>
@@ -233,12 +234,10 @@
                         <h4>Tourist Places</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
         </section>
-
     </div>
 
     <div class="footer-container">
@@ -262,7 +261,7 @@
                     <a href="entertainment.html">Theatres</a>
                     <a href="education.html">Education</a>
                     <a href="service.html">Services</a>
-                    <a href="">Contact</a>
+                    <a href="contact.html">Contact</a>
 
                 </div>
             </section>

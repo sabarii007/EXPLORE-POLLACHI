@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education in Pollachi</title>
     <link rel="stylesheet" href="education.css">
+
+    <script src="education.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +22,7 @@
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
             <a href="service.html">Services</a>
-            <a href="">Contact</a>
+            <a href="contact.html">Contact</a>
 
         </nav>
 
@@ -169,9 +171,12 @@
 
     <div class="nearby-container">
         <h2>Explore Nearby Places</h2>
-        <p>Popular places near in Pollachi</p>
+        <p>Popular places near theaters in Pollachi</p>
+        <button id="locBtn" type="button">📍 Use my current location</button>
+            <p id="locMsg"></p>
         <section class="nearby-place">
-            <div class="nearby-card">
+            
+            <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
                     <section>
@@ -179,11 +184,10 @@
                         <h4>Restaurants</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="cafes" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/cafes.png" alt="">
                 <nav>
                     <section>
@@ -191,11 +195,10 @@
                         <h4>Cafes</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="hotels" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/hotel.png" alt="">
                 <nav>
                     <section>
@@ -203,11 +206,10 @@
                         <h4>Hotels</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="shopping" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/shopping.png" alt="">
                 <nav>
                     <section>
@@ -215,11 +217,10 @@
                         <h4>Shopping</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
-            <div class="nearby-card">
+            <a class="nearby-card" data-search="tourist places" href="#" target="_blank" rel="noopener">
                 <img src="pollachi_images_png/monkeyfalls.png" alt="">
                 <nav>
                     <section>
@@ -227,12 +228,10 @@
                         <h4>Tourist Places</h4>
                     </section>
                     <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-
                 </nav>
+            </a>
 
-            </div>
         </section>
-
     </div>
 
     <div class="footer-container">
@@ -256,7 +255,7 @@
                     <a href="entertainment.html">Theatres</a>
                     <a href="education.html">Education</a>
                     <a href="service.html">Services</a>
-                    <a href="">Contact</a>
+                    <a href="contact.html">Contact</a>
 
                 </div>
             </section>
