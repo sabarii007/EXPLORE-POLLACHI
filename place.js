@@ -144,7 +144,3 @@ tripBtn.addEventListener("click", function () {
   );
 });
 
-console.log(
-  document.querySelectorAll(".nearby-attraction a.nearby-card").length,
-  document.querySelectorAll(".itineraries a.trip-link").length
-);

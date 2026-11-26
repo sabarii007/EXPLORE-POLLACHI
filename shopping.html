@@ -7,6 +7,7 @@
     <title>Shopping in Pollachi</title>
     <link rel="stylesheet" href="shopping.css">
     <script src="shopping.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about-pollachi.html">About</a>
-            <a href="place.html">Places</a>
+            <a href="place.html" class="active">Places</a>
             <a href="hotel.html">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
@@ -48,33 +49,35 @@
         </section>
         <section class="searchbar-header">
             <div class="searchbar">
+                <span>🔍</span>
                 <input type="search" placeholder="Search Shopping Places in Pollachi...">
-                <img src="search.png" alt="">
-                <button>search</button>
+                <button type="button">Search</button>
             </div>
         </section>
     </div>
 
-
     <div class="filter-place">
         <nav class="filter-option">
-            <span>☰ Filter Place</span>
-            <span>All Shopping </span>
-            <span>🛒 Supermarket</span>
-            <span>🏬 Malls</span>
-            <span>👕 Textiles</span>
-            <span>🖥️ Electronics</span>
-            <span>🏷️ Fashion</span>
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
-        </nav>
 
+            <span class="filter-label">☰ Filter Place</span>
+
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All Shopping</button>
+                <button type="button" class="pill">🛒 Supermarket</button>
+                <button type="button" class="pill">🏬 Malls</button>
+                <button type="button" class="pill">👕 Textiles</button>
+                <button type="button" class="pill">🖥️ Electronics</button>
+                <button type="button" class="pill">🏷️ Fashion</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort shopping places">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
+
+        </nav>
         <h2>Popular Shopping Places in <span style="color: #3CAF77;"> Pollachi</span></h2>
         <p>Top shopping destinations with a great variety, brands and local speciality.</p>
 
@@ -94,10 +97,12 @@
                         <span>🛍️ Shopping</span>
                     </nav>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=EasyBuy+Pollachi" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=EasyBuy+Pollachi" target="_blank"
+                            style="background: #e4f6e8;
     color: #087d43;">View
                             on Map</a>
-                        <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                        <a href="#" class="details-btn" data-place="easybuy"
+                            style="background-color: #017926; color: white;">View Details →</a>
                     </nav>
 
                 </section>
@@ -107,7 +112,7 @@
             <div class="filter-card">
                 <img src="shoppingimages/Max Fashion.png" alt="">
                 <section class="card-text">
-                    <h3>EasyBuy </h3>
+                    <h3>Max </h3>
                     <p>⭐ 4.0(80+ reviews)</p>
                     <p>📍 New Scheme Road, Pollachi</p>
                     <nav class="card-option">
@@ -116,10 +121,12 @@
                         <span>🛍️ Shopping</span>
                     </nav>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Max+Fashion+New+Scheme+Road+Pollachi" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=Max+Fashion+New+Scheme+Road+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
     color: #087d43;">View
                             on Map</a>
-                        <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                        <a href="#" class="details-btn" data-place="max"
+                            style="background-color: #017926; color: white;">View Details →</a>
                     </nav>
 
                 </section>
@@ -139,10 +146,12 @@
                         <span>♿ Accessibility</span>
                     </nav>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Sri+Kumaran+Super+Store+Pollachi" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sri+Kumaran+Super+Store+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
     color: #087d43;">View
                             on Map</a>
-                        <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                        <a href="#" class="details-btn" data-place="srikumaran"
+                            style="background-color: #017926; color: white;">View Details →</a>
                     </nav>
 
                 </section>
@@ -162,10 +171,12 @@
                         <span>🛍️ Shopping & Bulk Orders</span>
                     </nav>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=T+Ramasamy+Textiles+Pollachi" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=T+Ramasamy+Textiles+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
     color: #087d43;">View
                             on Map</a>
-                        <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                        <a href="#" class="details-btn" data-place="tramasamytextiles"
+                            style="background-color: #017926; color: white;">View Details →</a>
                     </nav>
 
                 </section>
@@ -178,9 +189,9 @@
         <h2>Explore Nearby Places</h2>
         <p>Popular places near theaters in Pollachi</p>
         <button id="locBtn" type="button">📍 Use my current location</button>
-            <p id="locMsg"></p>
+        <p id="locMsg"></p>
         <section class="nearby-place">
-            
+
             <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
@@ -292,6 +303,82 @@
         <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
         <p>Made with ♡ for Pollachi</p>
     </footer>
+
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel">Opening Hours</p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel">Entry Fee</p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel">Best Time to Visit</p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
+
 
 </body>
 

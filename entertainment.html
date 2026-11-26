@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="entertainment.css">
 
     <script src="entertainment.js" defer></script>
+    <script src="index.js" defer></script>
 
 
 
@@ -22,7 +23,7 @@
             <a href="about-pollachi.html">About</a>
             <a href="place.html">Places</a>
             <a href="hotel.html">Hotels & Restaurants</a>
-            <a href="entertainment.html">Theatres</a>
+            <a href="entertainment.html" class="active">Theatres</a>
             <a href="education.html">Education</a>
             <a href="service.html">Services</a>
             <a href="contact.html">Contact</a>
@@ -50,140 +51,144 @@
             </nav>
 
         </section>
+
         <section class="searchbar-header">
             <div class="searchbar">
-                <input type="search" placeholder="Search theatres, hotels, restaurants...">
-                <img src="search.png" alt="">
-                <button>search</button>
+                <span>🔍</span>
+                <input type="search" placeholder="Search theatres in Pollachi...">
+                <button>Search</button>
             </div>
         </section>
     </div>
 
     <div class="filter-container">
         <nav class="filter-option">
-            <span>☰ Filter By</span>
-            <span>All Theaters</span>
-            <span>📺 4K</span>
-            <span> 🔊Dolby Atmos</span>
-            <span>❄️AC</span>
-            <span>🅿️ Parking</span>
-            <span>🍔 Food & Snacks</span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+            <span class="filter-label">☰ Filter By</span>
+
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All Theatres</button>
+                <button type="button" class="pill">📺 4K</button>
+                <button type="button" class="pill">🔊 Dolby Atmos</button>
+                <button type="button" class="pill">❄️ AC</button>
+                <button type="button" class="pill">🅿️ Parking</button>
+                <button type="button" class="pill">🍔 Food & Snacks</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort theatres">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
+
         </nav>
-        <section class="filter-place">
-            <h2>Popular Theatres in <span style="color: #78F16D;"">Pollachi</span></h2>
+    </div>
+
+    <section class="filter-place">
+        <h2>Popular Theatres in <span style="color: #78F16D;"">Pollachi</span></h2>
             <p>Explore top movie theatres with rating, facilities and location</p>
 
            <section class=" cards">
-                    <div class="filter-card">
-                        <img src="muruglaya_theatre.png" alt="">
-                        <section class="card-text">
-                            <h3>Muruglaya Theatre</h3>
-                            <p>⭐ 3.9 (2300+ reviews)</p>
-                            <p>📍 Market Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>📺 4K</span>
-                                <span> 🔊Dolby Atmos</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🍔 Snacks</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Murugalaya+Vishal+Cinemas+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                <div class="filter-card">
+                    <img src="muruglaya_theatre.png" alt="">
+                    <section class="card-text">
+                        <h3>Muruglaya Theatre</h3>
+                        <p>⭐ 3.9 (2300+ reviews)</p>
+                        <p>📍 Market Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>📺 4K</span>
+                            <span> 🔊Dolby Atmos</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🍔 Snacks</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Murugalaya+Vishal+Cinemas+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="" style="background-color: #017926; color: white;" class="details-btn" data-place="murugalaya">View Details →</a>
+                        </nav>
 
-                        </section>
+                    </section>
 
-                    </div>
-                    <div class="filter-card">
-                        <img src="entertainmentimages/ThangamCinemas.png" alt="">
-                        <section class="card-text">
-                            <h3>ThangamCinemas</h3>
-                            <p>⭐ 4.4 (6300+ reviews)</p>
-                            <p>📍 Kottur Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>📺 4K</span>
-                                <span> 🔊Dolby Atmos</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🍔 Snacks</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Thangam+Cinemas+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                </div>
+                <div class="filter-card">
+                    <img src="entertainmentimages/ThangamCinemas.png" alt="">
+                    <section class="card-text">
+                        <h3>ThangamCinemas</h3>
+                        <p>⭐ 4.4 (6300+ reviews)</p>
+                        <p>📍 Kottur Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>📺 4K</span>
+                            <span> 🔊Dolby Atmos</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🍔 Snacks</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Thangam+Cinemas+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                           <a href="#" class="details-btn" data-place="thangamcinemas" style="background-color: #017926; color: white;">View Details →</a>   </nav>
 
-                        </section>
+                    </section>
 
-                    </div>
-                    <div class="filter-card">
-                        <img src="entertainmentimages/DoraisTheatre.png" alt="">
-                        <section class="card-text">
-                            <h3>DoraisTheatre</h3>
-                            <p>⭐ 4.0 (2600+ reviews)</p>
-                            <p>📍 Coimbatore Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>📺 4K</span>
-                                <span> 🔊Dolby Atmos</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🍔 Snacks</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Dorais+Movie+Land+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                </div>
+                <div class="filter-card">
+                    <img src="entertainmentimages/DoraisTheatre.png" alt="">
+                    <section class="card-text">
+                        <h3>DoraisTheatre</h3>
+                        <p>⭐ 4.0 (2600+ reviews)</p>
+                        <p>📍 Coimbatore Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>📺 4K</span>
+                            <span> 🔊Dolby Atmos</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🍔 Snacks</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Dorais+Movie+Land+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="dorais" style="background-color: #017926; color: white;">View Details →</a>   </nav>
 
-                        </section>
+                    </section>
 
-                    </div>
-                    <div class="filter-card">
-                        <img src="entertainmentimages/srishakthicinemas.png" alt="">
-                        <section class="card-text">
-                            <h3>Sri Sakthi Cinemas</h3>
-                            <p>⭐ 4.1 (660+ reviews)</p>
-                            <p>📍 Municipal Office Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>📺 4K</span>
-                                <span> 🔊Dolby Atmos</span>
-                                <span> 🎥 Multiplex</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🍔 Food & Snacks</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Sri+Sakthi+Cinemas+24+Municipal+Office+Road+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                </div>
+                <div class="filter-card">
+                    <img src="entertainmentimages/srishakthicinemas.png" alt="">
+                    <section class="card-text">
+                        <h3>Sri Sakthi Cinemas</h3>
+                        <p>⭐ 4.1 (660+ reviews)</p>
+                        <p>📍 Municipal Office Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>📺 4K</span>
+                            <span> 🔊Dolby Atmos</span>
+                            <span> 🎥 Multiplex</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🍔 Food & Snacks</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Sakthi+Cinemas+24+Municipal+Office+Road+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
-                        </section>
-                    </div>
-        </section>
+                            <a href="#" class="details-btn" data-place="srisakthi" style="background-color: #017926; color: white;">View Details →</a>   </nav>
+                    </section>
+                </div>
+           </section>
+    </section>
     </div>
 
     <div class="nearby-container">
         <h2>Explore Nearby Places</h2>
         <p>Popular places near theaters in Pollachi</p>
         <button id="locBtn" type="button">📍 Use my current location</button>
-            <p id="locMsg"></p>
+        <p id="locMsg"></p>
         <section class="nearby-place">
-            
+
             <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
@@ -243,58 +248,134 @@
     </div>
 
 
-    <div class="footer-container">
-        <section class="explore-pollachi">
-            <img src="coconut_tree_icon.png" alt="">
-            <div>
-                <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
-                <p>Discover the places,peoples and lifestyle of pollachi. </p>
-            </div>
-        </section>
-        <section class="quicklinks">
-            <h4>Quick Links</h4>
-            <section class="quicklinks-content">
-                <div class="firstpart">
-                    <a href="index.html">Home</a>
-                    <a href="about-pollachi.html">About Pollachi</a>
-                    <a href="place.html">Places</a>
-                    <a href="hotel.html">Hotels & Restaurants</a>
+   <div class="footer-container">
+    <section class="explore-pollachi">
+      <img src="coconut_tree_icon.png" alt="">
+      <div>
+        <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
+        <p>Discover the places,peoples and lifestyle of pollachi. </p>
+      </div>
+    </section>
+    <section class="quicklinks">
+      <h4>Quick Links</h4>
+      <section class="quicklinks-content">
+        <div class="firstpart">
+          <a href="index.html">Home</a>
+          <a href="about-pollachi.html">About Pollachi</a>
+          <a href="place.html">Places</a>
+          <a href="hotel.html">Hotels & Restaurants</a>
+        </div>
+        <div class="secondpart">
+          <a href="entertainment.html">Theatres</a>
+          <a href="education.html">Education</a>
+          <a href="service.html">Services</a>
+          <a href="contact.html">Contact</a>
+
+        </div>
+      </section>
+
+    </section>
+
+    <section class="followus">
+      <h4>Follow Us</h4>
+      <nav>
+        <img src="facebook.png" alt="">
+        <img src="instagram.png" alt="">
+        <img src="youtube.png" alt="">
+      </nav>
+
+    </section>
+    <section class="footer-searchbar-header">
+      <h4>Search</h4>
+      <p>search the Place in Pollachi.</p>
+      <div class="footer-searchbar">
+        <input type="search" placeholder="Search theatres, hotels, restaurants...">
+        <img src="search.png" alt="">
+        <button>search</button>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
+    <p>Made with ♡ for Pollachi</p>
+  </footer>
+
+
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
                 </div>
-                <div class="secondpart">
-                    <a href="entertainment.html">Theatres</a>
-                    <a href="education.html">Education</a>
-                    <a href="service.html">Services</a>
-                    <a href="contact.html">Contact</a>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
 
                 </div>
             </section>
 
-        </section>
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel">Opening Hours</p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel">Entry Fee</p>
+                            <p id="popupEntry"></p>
 
-        <section class="followus">
-            <h4>Follow Us</h4>
-            <nav>
-                <img src="facebook.png" alt="">
-                <img src="instagram.png" alt="">
-                <img src="youtube.png" alt="">
-            </nav>
+                        </nav>
+                    </section>
 
-        </section>
-        <section class="footer-searchbar-header">
-            <h4>Search</h4>
-            <p>search the Place in Pollachi.</p>
-            <div class="footer-searchbar">
-                <input type="search" placeholder="Search theatres, hotels, restaurants...">
-                <img src="search.png" alt="">
-                <button>search</button>
-            </div>
-        </section>
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel">Best Time to Visit</p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
     </div>
-
-    <footer>
-        <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
-        <p>Made with ♡ for Pollachi</p>
-    </footer>
 
 
 

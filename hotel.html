@@ -7,6 +7,7 @@
     <title>Hotels & Restaurants</title>
     <link rel="stylesheet" href="hotel.css">
     <script src="hotel.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
             <a href="index.html">Home</a>
             <a href="about-pollachi.html">About</a>
             <a href="place.html">Places</a>
-            <a href="hotel.html">Hotels & Restaurants</a>
+            <a href="hotel.html" class="active">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
             <a href="service.html">Services</a>
@@ -41,162 +42,178 @@
             <nav>
                 <h1>Hotels & Restaurants in<span style="color: #78F16D; font-size: 70px;"> Pollachi</span></h1>
                 <p>Find comfortable stays and delicious dining options in Pollachi.
-                    <br>From budget hotels to top restaurants, explore the best here.
+                    From budget hotels to top restaurants, explore the best here.
                 </p>
             </nav>
 
         </section>
         <section class="searchbar-header">
             <div class="searchbar">
+                <span>🔍</span>
                 <input type="search" placeholder="Search hotels, restaurants in Pollachi...">
-                <img src="search.png" alt="">
-                <button>search</button>
+                <button>Search</button>
             </div>
         </section>
     </div>
 
     <div class="hotel-filter">
         <nav class="filter-option">
-            <span>☰ Filter By</span>
-            <span>All Hotels</span>
-            <span>🏷️ Budget</span>
-            <span> ⭐	Rating</span>
-            <span>📚	Amenities</span>
-            <span>👨‍🍳	Cuisine</span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+            <span class="filter-label">☰ Filter By</span>
+
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All Hotels</button>
+                <button type="button" class="pill">🏷️ Budget</button>
+                <button type="button" class="pill">⭐ Rating</button>
+                <button type="button" class="pill">📚 Amenities</button>
+                <button type="button" class="pill">👨‍🍳 Cuisine</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort hotels and restaurants">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
+
         </nav>
+    </div>
 
-        <section class="filter-place">
-           <h2>Popular Hotels in <span style="color: #78F16D;"">Pollachi</span></h2>
+    <section class="filter-place">
+        <h2>Popular Hotels in <span style="color: #78F16D;"">Pollachi</span></h2>
             <p>Stay at the best hotels in Pollachi with great comfort, location and amenities.</p>
 
            <section class=" cards">
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/Apple Inn.png" alt="">
-                        <section class="card-text">
-                            <h3>Apple Inn</h3>
-                            <p>⭐ 4.7 (1000+ reviews)</p>
-                            <p>📍 Valparai Main Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span> 📶 WiFi</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Apple+Inn+Pollachi" target="_blank" style="background: #e4f6e8;
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/Apple Inn.png" alt="">
+                    <section class="card-text">
+                        <h3>Apple Inn</h3>
+                        <p>⭐ 4.7 (1000+ reviews)</p>
+                        <p>📍 Valparai Main Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span> 📶 WiFi</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Apple+Inn+Pollachi" target="_blank"
+                                style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="appleinn"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/Sri Krishnan Residency.png" alt="">
-                        <section class="card-text">
-                            <h3>Sri Krishnan Residency</h3>
-                            <p>⭐ 3.7 (700+ reviews)</p>
-                            <p>📍 Raja Mill Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Sri+Krishnan+Residency+Pollachi" target="_blank" style="background: #e4f6e8;
+                    </section>
+                </div>
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/Sri Krishnan Residency.png" alt="">
+                    <section class="card-text">
+                        <h3>Sri Krishnan Residency</h3>
+                        <p>⭐ 3.7 (700+ reviews)</p>
+                        <p>📍 Raja Mill Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Krishnan+Residency+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="srikrishnan"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/The Surrya Max Residency.png" alt="">
-                        <section class="card-text">
-                            <h3>The Surrya Max Residency</h3>
-                            <p>⭐ 4.7 (1200+ reviews)</p>
-                            <p>📍 Nehru Colony, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span> 📶 WiFi</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=The+Surrya+Max+Residency+Pollachi" target="_blank" style="background: #e4f6e8;
+                    </section>
+                </div>
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/The Surrya Max Residency.png" alt="">
+                    <section class="card-text">
+                        <h3>The Surrya Max Residency</h3>
+                        <p>⭐ 4.7 (1200+ reviews)</p>
+                        <p>📍 Nehru Colony, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span> 📶 WiFi</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+Surrya+Max+Residency+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="surryamax"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/Madhava Inn.png" alt="">
-                        <section class="card-text">
-                            <h3>Hotel Madhava Inn</h3>
-                            <p>⭐ 4.3 (1300+ reviews)</p>
-                            <p>📍 Coimbatore Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span> 📶 WiFi</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Madhava+Inn+161%2F2+Kovai+Main+Road+Pollachi" target="_blank" style="background: #e4f6e8;
+                    </section>
+                </div>
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/Madhava Inn.png" alt="">
+                    <section class="card-text">
+                        <h3>Hotel Madhava Inn</h3>
+                        <p>⭐ 4.3 (1300+ reviews)</p>
+                        <p>📍 Coimbatore Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span> 📶 WiFi</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Madhava+Inn+161%2F2+Kovai+Main+Road+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="madhava"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-           </section>
-        </section>
+                    </section>
+                </div>
+    </section>
+    </section>
     </div>
 
 
     <div class="restaurant-filter">
+        
         <nav class="filter-option" style="margin-top: 5px;">
-            <span>☰ Filter By</span>
-            <span>All Restaurants</span>
-            <span>🟢 Veg</span>
-            <span>🔴 Non-Veg</span>
-            <span>Both</span>
-            <span>👨‍🍳	Cuisine</span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Restaurant Type:Hotel</option>
-                    <option value="">Restaurant Type:Restaurant</option>
-                    <option value="">Restaurant Type:Cafe</option>
-                    <option value="">Restaurant Type:Bakery</option>
-                </select>
+            <span class="filter-label">☰ Filter By</span>
+
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All Restaurants</button>
+                <button type="button" class="pill">🟢 Veg</button>
+                <button type="button" class="pill">🔴 Non-Veg</button>
+                <button type="button" class="pill">Both</button>
+                <button type="button" class="pill">👨‍🍳 Cuisine</button>
+            </nav>
+
+            <span class="span">
+                <select name="" id="" class="sort-select" aria-label="Restaurant type">
+                <option value="">Restaurant Type: Hotel</option>
+                <option value="">Restaurant Type: Restaurant</option>
+                <option value="">Restaurant Type: Cafe</option>
+                <option value="">Restaurant Type: Bakery</option>
+            </select>
+
+            <select name="" id="" class="sort-select" aria-label="Sort restaurants">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
             </span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
         </nav>
 
         <section class="filter-place">
-           <h2>Popular Restaurants in <span style="color: #78F16D;"">Pollachi</span></h2>
+            <h2>Popular Restaurants in <span style="color: #78F16D;"">Pollachi</span></h2>
             <p>Discover the top restaurants in Pollachi offering delicious food and a great dining experience.</p>
 
            <section class=" cards">
@@ -209,15 +226,17 @@
                             <nav class="card-option">
                                 <span>🟢Pure Veg</span>
                                 <span> 👨‍👩‍👧‍👦 Family Dining</span>
-                                <span>🎉	Party Hall</span>
+                                <span>🎉 Party Hall</span>
                                 <span>❄️ AC</span>
                                 <span>🅿️ Parking</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Amutha+Surabhi+Unjavelampatti+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=Amutha+Surabhi+Unjavelampatti+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="amuthasurabhi"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -234,12 +253,14 @@
                                 <span>🎉Party Hall</span>
                                 <span>❄️ AC</span>
                                 <span>🅿️ Parking</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Gowri+Krishna+4+New+Scheme+Road+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Gowri+Krishna+4+New+Scheme+Road+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="gowrikrishna"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -254,15 +275,17 @@
                                 <span>🟢veg</span>
                                 <span>🔴 Non-Veg</span>
                                 <span> 👨‍👩‍👧‍👦 Family Dining</span>
-                                <span>🎉	Party Hall</span>
+                                <span>🎉 Party Hall</span>
                                 <span>❄️ AC</span>
                                 <span>🅿️ Parking</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=The+Palm+Coco+Lagoon+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=The+Palm+Coco+Lagoon+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="thepalm"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -277,89 +300,91 @@
                                 <span>🟢Veg</span>
                                 <span>🔴 Non-Veg</span>
                                 <span> 👨‍👩‍👧‍👦 Family Dining</span>
-                                <span>🎉	Party Hall</span>
+                                <span>🎉 Party Hall</span>
                                 <span>❄️ AC</span>
                                 <span>🅿️ Parking</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Phavan+Mess+72%2F82+Coimbatore+Main+Road+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Phavan+Mess+72%2F82+Coimbatore+Main+Road+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="pollachiphavan"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
                     </div>
-                   
-           </section>
+
+        </section>
         </section>
     </div>
 
     <div class="nearby-container">
-    <h2>Explore Nearby Places</h2>
-    <p>Find places near your current location</p>
-    <button id="locBtn" type="button">📍 Use my current location</button>
-    <p id="locMsg"></p>
+        <h2>Explore Nearby Places</h2>
+        <p>Find places near your current location</p>
+        <button id="locBtn" type="button">📍 Use my current location</button>
+        <p id="locMsg"></p>
 
-    <section class="nearby-place">
+        <section class="nearby-place">
 
-        <a class="nearby-card" data-search="theatres" href="#" target="_blank" rel="noopener">
-            <img src="entertainmentimages/image.png" alt="">
-            <nav>
-                <section>
-                    <img src="hotels&restaurantsimages/image.png" alt="">
-                    <h4>Theatres</h4>
-                </section>
-                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-            </nav>
-        </a>
+            <a class="nearby-card" data-search="theatres" href="#" target="_blank" rel="noopener">
+                <img src="entertainmentimages/image.png" alt="">
+                <nav>
+                    <section>
+                        <img src="hotels&restaurantsimages/image.png" alt="">
+                        <h4>Theatres</h4>
+                    </section>
+                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+                </nav>
+            </a>
 
-        <a class="nearby-card" data-search="cafes" href="#" target="_blank" rel="noopener">
-            <img src="entertainmentimages/cafes.png" alt="">
-            <nav>
-                <section>
-                    <img src="entertainmentimages/cafe1.png" alt="">
-                    <h4>Cafes</h4>
-                </section>
-                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-            </nav>
-        </a>
+            <a class="nearby-card" data-search="cafes" href="#" target="_blank" rel="noopener">
+                <img src="entertainmentimages/cafes.png" alt="">
+                <nav>
+                    <section>
+                        <img src="entertainmentimages/cafe1.png" alt="">
+                        <h4>Cafes</h4>
+                    </section>
+                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+                </nav>
+            </a>
 
-        <a class="nearby-card" data-search="colleges and schools" href="#" target="_blank" rel="noopener">
-            <img src="hotels&restaurantsimages/image copy.png" alt="">
-            <nav>
-                <section>
-                    <img src="hotels&restaurantsimages/education.png" alt="">
-                    <h4>Education</h4>
-                </section>
-                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-            </nav>
-        </a>
+            <a class="nearby-card" data-search="colleges and schools" href="#" target="_blank" rel="noopener">
+                <img src="hotels&restaurantsimages/image copy.png" alt="">
+                <nav>
+                    <section>
+                        <img src="hotels&restaurantsimages/education.png" alt="">
+                        <h4>Education</h4>
+                    </section>
+                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+                </nav>
+            </a>
 
-        <a class="nearby-card" data-search="shopping" href="#" target="_blank" rel="noopener">
-            <img src="entertainmentimages/shopping.png" alt="">
-            <nav>
-                <section>
-                    <img src="entertainmentimages/shopping1.png" alt="">
-                    <h4>Shopping</h4>
-                </section>
-                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-            </nav>
-        </a>
+            <a class="nearby-card" data-search="shopping" href="#" target="_blank" rel="noopener">
+                <img src="entertainmentimages/shopping.png" alt="">
+                <nav>
+                    <section>
+                        <img src="entertainmentimages/shopping1.png" alt="">
+                        <h4>Shopping</h4>
+                    </section>
+                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+                </nav>
+            </a>
 
-        <a class="nearby-card" data-search="tourist places" href="#" target="_blank" rel="noopener">
-            <img src="pollachi_images_png/monkeyfalls.png" alt="">
-            <nav>
-                <section>
-                    <img src="entertainmentimages/mountain.png" alt="">
-                    <h4>Tourist Places</h4>
-                </section>
-                <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
-            </nav>
-        </a>
+            <a class="nearby-card" data-search="tourist places" href="#" target="_blank" rel="noopener">
+                <img src="pollachi_images_png/monkeyfalls.png" alt="">
+                <nav>
+                    <section>
+                        <img src="entertainmentimages/mountain.png" alt="">
+                        <h4>Tourist Places</h4>
+                    </section>
+                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+                </nav>
+            </a>
 
-    </section>
-</div>
+        </section>
+    </div>
     <div class="footer-container">
         <section class="explore-pollachi">
             <img src="coconut_tree_icon.png" alt="">
@@ -412,6 +437,83 @@
         <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
         <p>Made with ♡ for Pollachi</p>
     </footer>
+
+
+
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel">Opening Hours</p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel">Entry Fee</p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel">Best Time to Visit</p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
 
 </body>
 

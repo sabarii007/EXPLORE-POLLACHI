@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transports in Pollachi</title>
     <link rel="stylesheet" href="transport.css">
     <script src="transport.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
+
 <body>
     <div class="header" id="header">
         <h2> <img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
@@ -18,7 +21,7 @@
             <a href="hotel.html">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
-            <a href="service.html">Services</a>
+            <a href="service.html" class="active">Services</a>
             <a href="contact.html">Contact</a>
 
         </nav>
@@ -39,40 +42,42 @@
             <img src="transportimages/transport icon.png" alt="">
             <nav>
                 <h1>Transport in<span style="color: #78F16D; font-size: 70px;"> Pollachi</span></h1>
-                <p>Complete transport guide for Pollachi – buses, trains, taxis, <br> autos and nearby connectivity.
+                <p>Complete transport guide for Pollachi – buses, trains, taxis, autos and nearby connectivity.
                 </p>
             </nav>
 
         </section>
         <section class="searchbar-header">
             <div class="searchbar">
+                <span>🔍</span>
                 <input type="search" placeholder="Search Transport options in Pollachi...">
-                <img src="search.png" alt="">
-                <button>search</button>
+                <button type="button">Search</button>
             </div>
         </section>
     </div>
 
     <div class="filters">
         <nav class="filter-option" style="margin-top: 0px;">
-            <span>☰ Filter By</span>
-            <span>All Transport</span>
-            <span>🚌 Bus</span>
-            <span>🚆 Train</span>
-            <span>🚕 Taxi & Cab</span>
-            <span>🛺 Auto</span>
-            <span>🚍 City Bus</span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+            <span class="filter-label">☰ Filter By</span>
+
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All Transport</button>
+                <button type="button" class="pill">🚌 Bus</button>
+                <button type="button" class="pill">🚆 Train</button>
+                <button type="button" class="pill">🚕 Taxi & Cab</button>
+                <button type="button" class="pill">🛺 Auto</button>
+                <button type="button" class="pill">🚍 City Bus</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort transport services">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
+
         </nav>
-
         <section class="filter-place">
             <h2>Popular Transports in <span style="color: #22A34B;"">Pollachi</span></h2>
             <p>Explore major transport facilities and local travel options in and around Pollachi.</p>
@@ -95,7 +100,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Bus+Stand"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="pollachibusstand"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -120,7 +126,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Junction+Railway+Station"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="railwaystation"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -144,7 +151,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=Raga+Tours+Travels+Pollachi"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="ragatravels"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -167,22 +175,23 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=Auto+Stand+Pollachi+New+Bus+Stand"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="passengerautostand"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
                     </div>
-           </section>
+        </section>
         </section>
     </div>
 
-   <div class="nearby-container">
+    <div class="nearby-container">
         <h2>Explore Nearby Places</h2>
         <p>Popular places near theaters in Pollachi</p>
         <button id="locBtn" type="button">📍 Use my current location</button>
-            <p id="locMsg"></p>
+        <p id="locMsg"></p>
         <section class="nearby-place">
-            
+
             <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
@@ -294,5 +303,158 @@
         <p>Made with ♡ for Pollachi</p>
     </footer>
 
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel"></p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel"></p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel"></p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
+
+
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel">Opening Hours</p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel">Entry Fee</p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel">Best Time to Visit</p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
+
+
 </body>
+
 </html>

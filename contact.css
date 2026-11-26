@@ -103,9 +103,10 @@ html {
   font-size: 15px;
 }
 
-.navbar a:hover {
-  color: #53B946;
-  text-decoration: underline;
+.navbar a:hover,
+.navbar a.active {
+    color: #53B946;
+    text-decoration: underline;
 }
 
 .search {

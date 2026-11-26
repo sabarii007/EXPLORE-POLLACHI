@@ -79,7 +79,8 @@ html {
     font-size: 13px;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
     color: #53B946;
     text-decoration: underline;
 }

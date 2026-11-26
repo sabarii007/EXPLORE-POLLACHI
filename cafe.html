@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafes in Pollachi</title>
     <link rel="stylesheet" href="cafe.css">
     <script src="cafe.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
+
 <body>
-     <div class="header" id="header">
+    <div class="header" id="header">
         <h2> <img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
 
         <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about-pollachi.html">About</a>
             <a href="place.html">Places</a>
-            <a href="hotel.html">Hotels & Restaurants</a>
+            <a href="hotel.html" class="active">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
             <a href="service.html">Services</a>
@@ -41,38 +44,39 @@
             <nav>
                 <h1>Cafes in <span style="color: #78F16D; font-size: 70px;"> Pollachi</span></h1>
                 <p>Discover cozy cafés, great coffee, delicious snacks and perfect <br>
-                     spots to relax in Pollachi.</p>
+                    spots to relax in Pollachi.</p>
             </nav>
 
         </section>
         <section class="searchbar-header">
             <div class="searchbar">
+                <span>🔍</span>
                 <input type="search" placeholder="Search cafes in Pollachi...">
-                <img src="search.png" alt="">
                 <button>search</button>
             </div>
         </section>
     </div>
 
-    
+
     <div class="filter-container">
         <nav class="filter-option">
-            <span>☰ Filter By</span>
-            <span>All </span>
-            <span>📺 4K</span>
-            <span> 🔊Dolby Atmos</span>
-            <span>❄️AC</span>
-            <span>🅿️ Parking</span>
-            <span>🍔 Food & Snacks</span>
+            <span class="filter-label">☰ Filter By</span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All</button>
+                <button type="button" class="pill">📺 4K</button>
+                <button type="button" class="pill">🔊 Dolby Atmos</button>
+                <button type="button" class="pill">❄️ AC</button>
+                <button type="button" class="pill">🅿️ Parking</button>
+                <button type="button" class="pill">🍔 Food & Snacks</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort theatres">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
         </nav>
         <section class="filter-place">
             <h2>Popular Theatres in <span style="color: #78F16D;"">Pollachi</span></h2>
@@ -84,25 +88,27 @@
                         <section class="card-text">
                             <h3>Be Cafe</h3>
                             <p>⭐ 4.5 (20+ reviews)</p>
-                            <p>📍 Palakkad  Road, Pollachi</p>
+                            <p>📍 Palakkad Road, Pollachi</p>
                             <nav class="card-option">
                                 <span>📦 Online Ordering</span>
                                 <span>📖 Suitable for Reading & Working</span>
                                 <span>🧼 Hygienic Environment</span>
                                 <span>🎵 Relaxing Ambience</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=BeCafe+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=BeCafe+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="becafe"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
 
                     </div>
 
-                     <div class="filter-card">
+                    <div class="filter-card">
                         <img src="cafeimages/Ascafe.png" alt="">
                         <section class="card-text">
                             <h3>AS cafe</h3>
@@ -113,19 +119,21 @@
                                 <span>🎉 Mini Banquet Hall</span>
                                 <span>🍨 Ice Cream & Sundaes</span>
                                 <span>🎵 Relaxing Ambience</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=AS+Caffe+83+Nallappa+Street+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=AS+Caffe+83+Nallappa+Street+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="ascafe"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
 
                     </div>
 
-                     <div class="filter-card">
+                    <div class="filter-card">
                         <img src="cafeimages/Tea Shop.png" alt="">
                         <section class="card-text">
                             <h3>The Tea Planet</h3>
@@ -136,19 +144,21 @@
                                 <span>🅿️ Parking</span>
                                 <span>🌿 Cozy Ambience</span>
                                 <span>👨‍👩‍👧 Family & Friends Hangout</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=The+Tea+Planet+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=The+Tea+Planet+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="teaplanet"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
 
                     </div>
 
-                     <div class="filter-card">
+                    <div class="filter-card">
                         <img src="cafeimages/The London Shakes Café.png" alt="">
                         <section class="card-text">
                             <h3>The London Shakes</h3>
@@ -159,29 +169,31 @@
                                 <span>🛵 Home Delivery</span>
                                 <span>🧼 Hygienic Environment</span>
                                 <span>🌟 Attractive ambience</span>
-                                
+
                             </nav>
                             <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=The+London+Shakes+14+Tagore+Street+Pollachi" target="_blank" style="background: #e4f6e8;
+                                <a href="https://www.google.com/maps/search/?api=1&query=The+London+Shakes+14+Tagore+Street+Pollachi"
+                                    target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="londonshakes"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
 
                     </div>
-           </section>
+        </section>
 
-           
+
         </section>
     </div>
     <div class="nearby-container">
         <h2>Explore Nearby Places</h2>
         <p>Popular places near theaters in Pollachi</p>
         <button id="locBtn" type="button">📍 Use my current location</button>
-            <p id="locMsg"></p>
+        <p id="locMsg"></p>
         <section class="nearby-place">
-            
+
             <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
@@ -293,6 +305,82 @@
         <p>Made with ♡ for Pollachi</p>
     </footer>
 
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel">Opening Hours</p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel">Entry Fee</p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel">Best Time to Visit</p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
+
 
 </body>
+
 </html>

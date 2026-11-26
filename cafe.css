@@ -79,7 +79,8 @@ html {
     font-size: 13px;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
     color: #53B946;
     text-decoration: underline;
 }
@@ -126,20 +127,21 @@ html {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
+    align-items: center;
 
 }
 
 .text nav h1 {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 45px;
 }
 
 .text img {
-    width: 90px;
-    height: 90px;
-    padding: 10px;
-    border: 2px solid white;
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
 }
 
 
@@ -147,69 +149,90 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 
 .searchbar {
-    margin-left: 50px;
-    position: relative;
-}
-
-.searchbar img {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 8px;
-    left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 520px;
+    max-width: 90%;
+    margin: 22px 0 0 60px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 5px 5px 5px 14px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
 }
 
 .searchbar input {
-    width: 400px;
-    padding: 9px;
-    border-radius: 10px;
-    border: 2px solid white;
-    padding-left: 30px;
+   flex: 1;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-family: inherit;
 }
 
 .searchbar button {
-    width: 80px;
-    padding: 5px;
-    position: absolute;
-    top: 3px;
-    left: 315px;
-    background-color: #1C9565;
-    border: 3px solid #1C9565;
-    border-radius: 10px;
-}
-
-
-.filter-option {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding-top: 10px;
-    padding-left: 60px;
-    padding-right: 50px;
-    padding-bottom: 10px;
-    background-color: #D3D3D3;
-}
-
-.filter-option span {
-    min-width: 60px;
-    background-color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    padding: 9px 17px;
-    font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ddd;
-}
-
-.filter-option span select {
+    background-color: #1c9565;
+    color: white;
     border: none;
-    padding: 3px;
+    border-radius: 10px;
+    padding: 10px 26px;
+    font-weight: 600;
+}
+.searchbar button:hover{
+    background-color: #15805a;
+}
+.filter-option {
+    padding: 12px 50px 12px 60px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+
+}
+
+.filter-label {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.filter-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    background-color: white;
+    border: 1px solid #cfdad3;
+    border-radius: 30px;
+    padding: 7px 16px;
+    font-size: 12px;
+}
+
+.pill:hover {
+    background-color: #e4f6e8;
+}
+
+.pill.active {
+    background-color: #1c9565;
+    border-color: #1c9565;
+    color: white;
+}
+
+
+.sort-select {
+    margin-left: auto;
+    background-color: white;
+    border: 1px solid #cfdad3;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-family: inherit;
 }
 
 .filter-place {
@@ -515,4 +538,199 @@ footer p {
 #locMsg {
     font-size: 13px;
     margin-bottom: 6px;
+}
+/* POP UP SCREEN STYLE  */
+.popup-overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+
+}
+
+.popup-container {
+    width: 70%;
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    box-sizing: border-box;
+    z-index: 1001;
+
+    animation: popup 0.3s ease-in-out;
+
+
+}
+
+.image-section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-image {
+    width: 100%;
+    height: 250px;
+}
+
+.main-image img {
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sub-image {
+    display: flex;
+    overflow-x: auto;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.sub-image img {
+    width: 90px;
+    height: 70px;
+    object-fit: cover;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.text-section {
+    width: 50%;
+}
+
+.close-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-section button {
+    border: none;
+    background: transparent;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.text-section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-section-title button {
+    border: none;
+    background-color: white;
+    font-size: 35px;
+}
+
+.text-section p {
+    font-size: 10px;
+}
+
+.place-information {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: flex-start;
+}
+
+.place-information section {
+    background-color: #ecf0e8;
+    width: 130px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.place-facilities section {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.place-facilities section nav {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.buttons a{
+    flex: 1;
+    background-color: #017618;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.popup-container.no-image {
+    width: 45%;
+}
+.popup-container.no-image .image-section {
+    display: none;
+}
+.popup-container.no-image .text-section {
+    width: 100%;
+}
+
+
+
+#favBtn{
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.2s;
+}
+#favBtn:active{
+    transform: scale(1.3);
+}
+#favBtn.liked{
+    color: #e11d48;   /* red */
+}
+@keyframes popup {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .popup-container.no-image {
+        width: 94%;
+    }
 }

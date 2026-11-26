@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Services In Pollachi</title>
     <link rel="stylesheet" href="emergencyservice.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -22,7 +23,7 @@
             <a href="hotel.html">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
-            <a href="service.html">Services</a>
+            <a href="service.html" class="active">Services</a>
             <a href="contact.html">Contact</a>
 
         </nav>
@@ -50,308 +51,311 @@
             </nav>
 
         </section>
+
         <section class="searchbar-header">
             <div class="searchbar">
+                <span>🔍</span>
                 <input type="search" placeholder="Search Emergency Services in Pollachi...">
-                <img src="search.png" alt="">
-                <button>search</button>
+                <button>Search</button>
             </div>
         </section>
     </div>
 
     <div class="filter-container">
-
         <nav class="filter-option">
-            <span>☰ Filter By</span>
-            <span>All</span>
-            <span>🚓 Police</span>
-            <span>🚒 Fire & Rescue</span>
-            <span>🚑 Ambulance</span>
-            <span> 🛡️ Safety</span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+            <span class="filter-label">☰ Filter By</span>
+
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All</button>
+                <button type="button" class="pill">🚓 Police</button>
+                <button type="button" class="pill">🚒 Fire & Rescue</button>
+                <button type="button" class="pill">🚑 Ambulance</button>
+                <button type="button" class="pill">🛡️ Safety</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort emergency services">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
+
         </nav>
-
-        <section class="filter-place">
-            <h2>Emergency Services in <span style="color: #78F16D;"">Pollachi</span></h2>
+    </div>
+    <section class="filter-place">
+        <h2>Emergency Services in <span style="color: #78F16D;"">Pollachi</span></h2>
             <p>Find trusted emergency services and get help when you need it.</p>
 
-           <section class="cards">
-                    <div class="filter-card">
-                        <img src="emergencyimages/policestation.png" alt="">
-                        <div class="card-content">
+           <section class=" cards">
+                <div class="filter-card">
+                    <img src="emergencyimages/policestation.png" alt="">
+                    <div class="card-content">
 
-                            <h3>Police Stations</h3>
+                        <h3>Police Stations</h3>
 
-                            <p>Law and order, public safety and police assistance.</p>
+                        <p>Law and order, public safety and police assistance.</p>
 
-                            <div class="rating">
-                                <i class="fa fa-shield"></i>
-                                Public Safety
-                            </div>
+                        <div class="rating">
+                            <i class="fa fa-shield"></i>
+                            Public Safety
+                        </div>
 
-                            <div class="card-buttons">
+                        <div class="card-buttons">
 
-                                <a href="tel:100" class="call-btn">
-                                    <i class="fa fa-phone"></i> Call
-                                </a>
+                            <a href="tel:100" class="call-btn">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
 
-                                <a href="https://www.google.com/maps/search/?api=1&query=Police+Station+Pollachi"
-                                    target="_blank" class="map-btn">
-                                    <i class="fa fa-location-dot"></i> Map
-                                </a>
-
-                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Police+Station+Pollachi"
+                                target="_blank" class="map-btn">
+                                <i class="fa fa-location-dot"></i> Map
+                            </a>
 
                         </div>
+
                     </div>
+                </div>
 
-                    <div class="filter-card">
-                        <img src="emergencyimages/fire&rescue.png" alt="">
-                        <div class="card-content">
+                <div class="filter-card">
+                    <img src="emergencyimages/fire&rescue.png" alt="">
+                    <div class="card-content">
 
-                            <h3>Fire & Rescue</h3>
+                        <h3>Fire & Rescue</h3>
 
-                            <p>Fire fighting, rescue operations and emergency response.</p>
+                        <p>Fire fighting, rescue operations and emergency response.</p>
 
-                            <div class="rating">
-                                <i class="fa fa-fire"></i>
-                                Rescue Services
-                            </div>
+                        <div class="rating">
+                            <i class="fa fa-fire"></i>
+                            Rescue Services
+                        </div>
 
-                            <div class="card-buttons">
+                        <div class="card-buttons">
 
-                                <a href="tel:101" class="call-btn">
-                                    <i class="fa fa-phone"></i> Call
-                                </a>
+                            <a href="tel:101" class="call-btn">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
 
-                                <a href="https://www.google.com/maps/search/?api=1&query=Fire+Station+Pollachi"
-                                    target="_blank" class="map-btn">
-                                    <i class="fa fa-location-dot"></i> Map
-                                </a>
-
-                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Fire+Station+Pollachi"
+                                target="_blank" class="map-btn">
+                                <i class="fa fa-location-dot"></i> Map
+                            </a>
 
                         </div>
 
                     </div>
 
-                    <div class="filter-card">
-                        <img src="emergencyimages/ambluance.png" alt="">
-                        <div class="card-content">
+                </div>
 
-                            <h3>Ambulance Services</h3>
+                <div class="filter-card">
+                    <img src="emergencyimages/ambluance.png" alt="">
+                    <div class="card-content">
 
-                            <p>Emergency medical transportation and patient support.</p>
+                        <h3>Ambulance Services</h3>
 
-                            <div class="rating">
-                                <i class="fa fa-truck-medical"></i>
-                                Medical Emergency
-                            </div>
+                        <p>Emergency medical transportation and patient support.</p>
 
-                            <div class="card-buttons">
+                        <div class="rating">
+                            <i class="fa fa-truck-medical"></i>
+                            Medical Emergency
+                        </div>
 
-                                <a href="tel:108" class="call-btn">
-                                    <i class="fa fa-phone"></i> Call
-                                </a>
+                        <div class="card-buttons">
 
-                                <a href="https://www.google.com/maps/search/?api=1&query=Ambulance+Services+Pollachi"
-                                    target="_blank" class="map-btn">
-                                    <i class="fa fa-location-dot"></i> Map
-                                </a>
+                            <a href="tel:108" class="call-btn">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
 
-                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Ambulance+Services+Pollachi"
+                                target="_blank" class="map-btn">
+                                <i class="fa fa-location-dot"></i> Map
+                            </a>
 
                         </div>
 
                     </div>
 
-                    <div class="filter-card">
-                        <img src="emergencyimages/womensafety.png" alt="">
-                        <div class="card-content">
+                </div>
 
-                            <h3>Women Safety</h3>
+                <div class="filter-card">
+                    <img src="emergencyimages/womensafety.png" alt="">
+                    <div class="card-content">
 
-                            <p>Women protection, emergency assistance and support.</p>
+                        <h3>Women Safety</h3>
 
-                            <div class="rating">
-                                <i class="fa fa-heart"></i>
-                                Safety Support
-                            </div>
+                        <p>Women protection, emergency assistance and support.</p>
 
-                            <div class="card-buttons">
+                        <div class="rating">
+                            <i class="fa fa-heart"></i>
+                            Safety Support
+                        </div>
 
-                                <a href="tel:181" class="call-btn">
-                                    <i class="fa fa-phone"></i> Call
-                                </a>
+                        <div class="card-buttons">
 
-                                <a href="https://www.google.com/maps/search/?api=1&query=All+Women+Police+Station+Pollachi"
-                                    target="_blank" class="map-btn">
-                                    <i class="fa fa-location-dot"></i> Map
-                                </a>
+                            <a href="tel:181" class="call-btn">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
 
-                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=All+Women+Police+Station+Pollachi"
+                                target="_blank" class="map-btn">
+                                <i class="fa fa-location-dot"></i> Map
+                            </a>
 
                         </div>
 
                     </div>
 
-                    <div class="filter-card">
-                        <img src="emergencyimages/childprotection.png" alt="">
-                        <div class="card-content">
+                </div>
 
-                            <h3>Child Protection</h3>
+                <div class="filter-card">
+                    <img src="emergencyimages/childprotection.png" alt="">
+                    <div class="card-content">
 
-                            <p>Child protection, assistance and welfare support.</p>
+                        <h3>Child Protection</h3>
 
-                            <div class="rating">
-                                <i class="fa fa-child"></i>
-                                Child Safety
-                            </div>
+                        <p>Child protection, assistance and welfare support.</p>
 
-                            <div class="card-buttons">
+                        <div class="rating">
+                            <i class="fa fa-child"></i>
+                            Child Safety
+                        </div>
 
-                                <a href="tel:1098" class="call-btn">
-                                    <i class="fa fa-phone"></i> Call
-                                </a>
+                        <div class="card-buttons">
 
-                                <a href="https://www.google.com/maps/search/?api=1&query=Child+Protection+Services+Pollachi"
-                                    target="_blank" class="map-btn">
-                                    <i class="fa fa-location-dot"></i> Map
-                                </a>
+                            <a href="tel:1098" class="call-btn">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
 
-                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Child+Protection+Services+Pollachi"
+                                target="_blank" class="map-btn">
+                                <i class="fa fa-location-dot"></i> Map
+                            </a>
 
                         </div>
 
                     </div>
 
-                    <div class="filter-card">
-                        <img src="emergencyimages/disaster management.png" alt="">
-                        <div class="card-content">
+                </div>
 
-                            <h3>Disaster Management</h3>
+                <div class="filter-card">
+                    <img src="emergencyimages/disaster management.png" alt="">
+                    <div class="card-content">
 
-                            <p>Flood, storm and natural disaster emergency assistance.</p>
+                        <h3>Disaster Management</h3>
 
-                            <div class="rating">
-                                <i class="fa fa-house-flood-water"></i>
-                                Disaster Support
-                            </div>
+                        <p>Flood, storm and natural disaster emergency assistance.</p>
 
-                            <div class="card-buttons">
+                        <div class="rating">
+                            <i class="fa fa-house-flood-water"></i>
+                            Disaster Support
+                        </div>
 
-                                <a href="tel:112" class="call-btn">
-                                    <i class="fa fa-phone"></i> Call
-                                </a>
+                        <div class="card-buttons">
 
-                                <a href="https://www.google.com/maps/search/?api=1&query=Disaster+Management+Office+Coimbatore"
-                                    target="_blank" class="map-btn">
-                                    <i class="fa fa-location-dot"></i> Map
-                                </a>
+                            <a href="tel:112" class="call-btn">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
 
-                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Disaster+Management+Office+Coimbatore"
+                                target="_blank" class="map-btn">
+                                <i class="fa fa-location-dot"></i> Map
+                            </a>
 
                         </div>
 
                     </div>
 
-                    
-                    <p id="noResults" hidden>No services found.</p>
-        </section>
+                </div>
 
-        </section>
+
+                <p id="noResults" hidden>No services found.</p>
+    </section>
+
+    </section>
     </div>
 
     <section class="featured-emergency">
 
-    <!-- Image -->
-    <div class="emergency-image">
-        <img src="emergencyimages/emergencybackground.png" alt="National Emergency Service">
-    </div>
+        <!-- Image -->
+        <div class="emergency-image">
+            <img src="emergencyimages/emergencybackground.png" alt="National Emergency Service">
+        </div>
 
-    <!-- Details -->
-    <div class="emergency-details">
+        <!-- Details -->
+        <div class="emergency-details">
 
-        <span class="featured-badge">
-            <i class="fa-solid fa-star"></i> Featured Emergency Service
-        </span>
+            <span class="featured-badge">
+                <i class="fa-solid fa-star"></i> Featured Emergency Service
+            </span>
 
-        <h2>National Emergency Helpline 112</h2>
+            <h2>National Emergency Helpline 112</h2>
 
-        <p>
-            24/7 National Emergency response across Pollachi
-            for medical, police, fire, and rescue assistance.
-        </p>
+            <p>
+                24/7 National Emergency response across Pollachi
+                for medical, police, fire, and rescue assistance.
+            </p>
 
-        <!-- Service Icons -->
-        <div class="emergency-types">
+            <!-- Service Icons -->
+            <div class="emergency-types">
 
-            <div>
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>Police<br>Assistance</span>
-            </div>
+                <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Police<br>Assistance</span>
+                </div>
 
-            <div>
-                <i class="fa-solid fa-briefcase-medical"></i>
-                <span>Medical<br>Help</span>
-            </div>
+                <div>
+                    <i class="fa-solid fa-briefcase-medical"></i>
+                    <span>Medical<br>Help</span>
+                </div>
 
-            <div>
-                <i class="fa-solid fa-fire"></i>
-                <span>Fire &<br>Rescue</span>
-            </div>
+                <div>
+                    <i class="fa-solid fa-fire"></i>
+                    <span>Fire &<br>Rescue</span>
+                </div>
 
-            <div>
-                <i class="fa-solid fa-house-fire"></i>
-                <span>Disaster<br>Relief</span>
+                <div>
+                    <i class="fa-solid fa-house-fire"></i>
+                    <span>Disaster<br>Relief</span>
+                </div>
+
             </div>
 
         </div>
 
-    </div>
+        <!-- Contact Details -->
+        <div class="emergency-contact">
 
-    <!-- Contact Details -->
-    <div class="emergency-contact">
-
-        <div class="contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <div>
-                <h4>Call 112</h4>
-                <small>Emergency</small>
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h4>Call 112</h4>
+                    <small>Emergency</small>
+                </div>
             </div>
+
+            <div class="contact-item">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <h4>24 / 7 Available</h4>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <small>National Helpline Coverage,<br>Pollachi</small>
+                </div>
+            </div>
+
+            <a href="tel:112" class="emergency-call">
+                <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+
         </div>
 
-        <div class="contact-item">
-            <i class="fa-regular fa-clock"></i>
-            <div>
-                <h4>24 / 7 Available</h4>
-            </div>
-        </div>
+    </section>
 
-        <div class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-                <small>National Helpline Coverage,<br>Pollachi</small>
-            </div>
-        </div>
-
-        <a href="tel:112" class="emergency-call">
-            <i class="fa-solid fa-phone"></i> Call Now
-        </a>
-
-    </div>
-
-</section>
-
-<div class="footer-container">
+    <div class="footer-container">
         <section class="explore-pollachi">
             <img src="coconut_tree_icon.png" alt="">
             <div>

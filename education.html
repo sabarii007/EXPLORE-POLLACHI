@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="education.css">
 
     <script src="education.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <a href="place.html">Places</a>
             <a href="hotel.html">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
-            <a href="education.html">Education</a>
+            <a href="education.html" class="active">Education</a>
             <a href="service.html">Services</a>
             <a href="contact.html">Contact</a>
 
@@ -49,8 +50,9 @@
         </section>
         <section class="searchbar-header">
             <div class="searchbar">
+                <span>🔍</span>
                 <input type="search" placeholder="Search schools, colleges, institutes in Pollachi...">
-                <img src="search.png" alt="">
+
                 <button>search</button>
             </div>
         </section>
@@ -59,21 +61,22 @@
     <div class="filter-container">
 
         <nav class="filter-option">
-            <span>☰ Filter By</span>
-            <span>All</span>
-            <span>🎓 Schools</span>
-            <span> ⚙️ Engineering</span>
-            <span>📖 Arts & Science</span>
-            <span>📐 Polytechnic</span>
+            <span class="filter-label">☰ Filter Services</span>
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All Services</button>
+                <button type="button" class="pill">🎓 Schools</button>
+                <button type="button" class="pill">⚙️ Engineering</button>
+                <button type="button" class="pill">📖 Arts & Science</button>
+                <button type="button" class="pill">📐 Polytechnic</button>
+            </nav>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+
+            <select name="" id="" class="sort-select" aria-label="Sort services">
+                <option value="">Sort By:Nearest First</option>
+                <option value="">Sort By:Popular</option>
+                <option value="">Sort By:A–Z (Name)</option>
+                <option value="">Sort By:Z–A (Name)</option>
+            </select>
         </nav>
 
         <section class="filter-place">
@@ -97,8 +100,7 @@
                             <nav class="card-button">
                                 <a href="" target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                                <a href="#" class="details-btn" data-place="mcet" style="background-color: #017926; color: white;">View Details →</a>   </nav>
 
                         </section>
                     </div>
@@ -118,8 +120,7 @@
                             <nav class="card-button">
                                 <a href="" target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                                <a href="#" class="details-btn" data-place="ngmcollege" style="background-color: #017926; color: white;">View Details →</a>  </nav>
 
                         </section>
                     </div>
@@ -139,8 +140,7 @@
                             <nav class="card-button">
                                 <a href="" target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                                <a href="#" class="details-btn" data-place="pacet" style="background-color: #017926; color: white;">View Details →</a> </nav>
 
                         </section>
                     </div>
@@ -160,8 +160,7 @@
                             <nav class="card-button">
                                 <a href="" target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                                <a href="#" class="details-btn" data-place="npc" style="background-color: #017926; color: white;">View Details →</a></nav>
 
                         </section>
                     </div>
@@ -173,9 +172,9 @@
         <h2>Explore Nearby Places</h2>
         <p>Popular places near theaters in Pollachi</p>
         <button id="locBtn" type="button">📍 Use my current location</button>
-            <p id="locMsg"></p>
+        <p id="locMsg"></p>
         <section class="nearby-place">
-            
+
             <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
@@ -286,6 +285,82 @@
         <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
         <p>Made with ♡ for Pollachi</p>
     </footer>
+
+
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel"></p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel"></p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel"></p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
 
 </body>
 

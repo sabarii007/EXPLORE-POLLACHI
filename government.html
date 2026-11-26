@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Services in Pollachi</title>
+    <link rel="stylesheet" href="government.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <div class="header" id="header">
+        <h2><img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about-pollachi.html">About</a>
+            <a href="place.html">Places</a>
+            <a href="hotel.html">Hotels & Restaurants</a>
+            <a href="entertainment.html">Theatres</a>
+            <a href="education.html">Education</a>
+            <a href="service.html" class="active">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section class="search" id="search">
+            <input type="search" placeholder="Enter Places in Pollachi...">
+            <img src="searchbar.png" alt="">
+        </section>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <div class="gov-hero">
+        <nav class="breadcrumbs">
+            <a href="index.html">🏠 Home ></a>
+            <a href="service.html">Services ></a>
+            <a href="government.html">Government Services</a>
+        </nav>
+
+        <section class="gov-title">
+            <span class="gov-icon">🏛️</span>
+            <nav>
+                <h1>Government Services in <span class="green-text" style="font-size: 60px;">Pollachi</span></h1>
+                <p>Find Taluk Office, Municipality, RTO, Sub-Registrar, and citizen services across Pollachi.</p>
+            </nav>
+        </section>
+
+        <div class="gov-search">
+            <span>🔍</span>
+            <input type="search" id="govSearch" placeholder="Search government services in Pollachi...">
+            <button type="button">Search</button>
+        </div>
+    </div>
+
+    <!-- ============ FILTER BAR ============ -->
+    <div class="filter-bar">
+        <span class="filter-label">☰ Filter Services</span>
+
+        <nav class="filter-pills">
+            <button type="button" class="pill active">All Services</button>
+            <button type="button" class="pill">Taluk Office</button>
+            <button type="button" class="pill">Municipality</button>
+            <button type="button" class="pill">RTO Office</button>
+            <button type="button" class="pill">Registration</button>
+            <button type="button" class="pill">Citizen Centers</button>
+        </nav>
+
+        <select class="sort-select" aria-label="Sort services">
+            <option>Sort By: Popular</option>
+            <option>Sort By: A–Z (Name)</option>
+            <option>Sort By: Z–A (Name)</option>
+            <option>Sort By: Nearest First</option>
+        </select>
+    </div>
+
+    <!-- ============ TOP GOVERNMENT OFFICES ============ -->
+    <div class="top-offices">
+        <h2 class="section-title">Top Government Offices in <span class="green-text">Pollachi</span></h2>
+        <p class="section-sub">Explore leading administrative and citizen service centers in Pollachi.</p>
+
+        <section class="office-cards">
+
+            <div class="filter-card">
+                <img src="pollachitalukoffice.png" alt="">
+                <section class="card-text">
+                    <h3>Pollachi Taluk Office</h3>
+                    <p>⭐ 3.2 (20+ reviews)</p>
+                    <p>📍 Dindigul–Bangalore Road, Pollachi</p>
+                    <nav class="card-option">
+                        <span>📄 Income Certificate</span>
+                        <span>📋 Community Certificate</span>
+                        <span>🏠 Nativity Certificate</span>
+                        <span>📍 Residence Certificate</span>
+                        <span>📜 Legal Heir Certificate</span>
+                        <span>🌾 Patta Transfer</span>
+                        <span>🗺️ Land Records</span>
+                        <span>📝 Public Grievances</span>
+                        <span>👨‍👩‍👧 First Graduate Certificate</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Taluk+Office" target="_blank"
+                            style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="pollachitalukoffice"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+            <div class="filter-card">
+                <img src="governmentimages/subcollector.jpeg" alt="">
+                <section class="card-text">
+                    <h3>Sub Collector Office</h3>
+                    <p>⭐ 5.0 (1+ reviews)</p>
+                    <p>📍 Palakkad–Pollachi Road, Pollachi</p>
+                    <nav class="card-option">
+                        <span>📋 Public Grievance Petitions</span>
+                        <span>🏛️ Revenue Administration</span>
+                        <span>🌾 Land Dispute Enquiries</span>
+                        <span>📜 Revenue Appeals</span>
+                        <span>⚖️ Administrative Hearings</span>
+                        <span>📝 Petition Enquiries</span>
+                        <span>🏢 Government Department Coordination</span>
+                        <span>📂 Land-related Proceedings</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sub+Collector+Office+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="subcollectoroffice"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+            <div class="filter-card">
+                <img src="governmentimages/Pollachimunicipality.png" alt="">
+                <section class="card-text">
+                    <h3>Pollachi Municipality Office</h3>
+                    <p>⭐3.6(60+ reviews)</p>
+                    <p>📍 Palakkad Main Road, Pollachi</p>
+                    <nav class="card-option">
+                        <span>🏠 Property Tax Payment</span>
+                        <span>💧 Water Tax Payment</span>
+                        <span>📜 Birth Certificate</span>
+                        <span>📄 Death Certificate</span>
+                        <span>🏗️ Building Plan Approval</span>
+                        <span>🏪 Trade License</span>
+                        <span>🗑️ Waste Management</span>
+                        <span>🚰 Water Supply Services</span>
+                        <span>💡 Street Light Complaints</span>
+                        <span>🛣️ Road Maintenance</span>
+                        <span>📋 Public Grievance Services</span>
+                        <span>🏘️ Property Assessment</span>
+                        <span>🚽 Sanitation Services</span>
+                        <span>📑 Underground Drainage Services</span>
+
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Municipality+Office"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="pollachimunicipality"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+            <div class="filter-card">
+                <img src="governmentimages/e-sevai.jpeg" alt="">
+                <section class="card-text">
+                    <h3>Arasu e-Sevai Centre</h3>
+                    <p>⭐ No reviews yet</p>
+                    <p>📍 Taluk Office Campus, Coimbatore Road, Pollachi</p>
+                    <nav class="card-option">
+                        <span>📄 Income Certificate</span>
+                        <span>📋 Community Certificate</span>
+                        <span>🏠 Nativity Certificate</span>
+                        <span>📜 Legal Heir Certificate</span>
+                        <span>🎓 First Graduate Certificate</span>
+                        <span>👨‍🌾 Farmer Certificates</span>
+                        <span>🪪 OBC Certificate</span>
+                        <span>📝 Residence Certificate</span>
+                        <span>💰 Pension Scheme Applications</span>
+                        <span>🏡 Patta Transfer</span>
+                        <span>📑 Birth Certificate</span>
+                        <span>📃 Death Certificate</span>
+                        <span>💡 Electricity Bill Payment</span>
+                        <span>🏛️ Government Applications</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Arasu+e-Sevai+Centre+Pollachi+Taluk+Office"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="arasusevai"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+            <div class="filter-card">
+                <img src="governmentimages/Tamil Nadu Electricity Board Office.png" alt="">
+                <section class="card-text">
+                    <h3>Electricity Board (TANGEDCO)</h3>
+                    <p>⭐ 3.1 (90+ reviews)</p>
+                    <p>📍 Udumalai Road, Pollachi</p>
+                    <nav class="card-option">
+                        <span>New Electricity Connection</span>
+                        <span>Electricity Bill Payment</span>
+                        <span>Power Failure Complaints</span>
+                        <span>Meter Installation</span>
+                        <span>Meter Replacement</span>
+                        <span>Name Transfer</span>
+                        <span>Load Change</span>
+                        <span>Street Light Complaints</span>
+                        <span>Solar Rooftop Application</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=TNEB+Rural+Office+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="tangedco"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- ============ FEATURED SERVICE ============ -->
+    <section class="featured">
+        <div class="featured-img">
+            <img src="governmentimages/esevai-center.png" alt="e-Sevai Service Center">
+        </div>
+
+        <div class="featured-text">
+            <span class="featured-badge">★ Featured Service</span>
+            <h2>Citizen Services &amp; E-Sevai Helpdesk</h2>
+            <p>Access online government applications, certificates, licenses, and grievance redressal in Pollachi.</p>
+
+            <div class="featured-icons">
+                <div><span class="ficon">📄</span>
+                    <p>Certificates &amp; Revenue</p>
+                </div>
+                <div><span class="ficon">🏠</span>
+                    <p>Property &amp; Tax Services</p>
+                </div>
+                <div><span class="ficon">🚗</span>
+                    <p>Vehicle &amp; Licensing</p>
+                </div>
+                <div><span class="ficon">⚠️</span>
+                    <p>Public Grievances</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-contact">
+            <div class="contact-row">
+                <span class="cicon">📞</span>
+                <div>
+                    <strong>Contact</strong>
+                    <!-- Replace with the real number -->
+                    <a href="#">Multiple Centres Available</a>
+                </div>
+            </div>
+            <div class="contact-row">
+                <span class="cicon">🕒</span>
+                <div>
+                    <strong>Working Hours</strong>
+                    <p> Varies by Centre</p>
+                </div>
+            </div>
+            <div class="contact-row">
+                <span class="cicon">📍</span>
+                <div>
+                    <strong>Location</strong>
+                    <p> Various Locations in Pollachi,<br>Tamil Nadu - 642002</p>
+                </div>
+            </div>
+            <a class="btn-solid btn-block"
+                href="https://www.google.com/maps/search/?api=1&query=e-Sevai+Center+Pollachi" target="_blank"
+                rel="noopener">Explore All Centres ↗</a>
+        </div>
+    </section>
+
+    <!-- ============ OTHER GOVERNMENT SERVICES ============ -->
+    <div class="other-services">
+        <h2 class="section-title">Other Government Services in <span class="green-text">Pollachi</span></h2>
+        <p class="section-sub">More administrative departments and citizen centers near you.</p>
+
+        <section class="other-cards">
+            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=Taluk+Office+Pollachi"
+                target="_blank" rel="noopener">
+                <span class="other-icon">🏛️</span>
+                <h4>Taluk Office</h4>
+                <span class="arrow">→</span>
+            </a>
+            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=Municipality+Office+Pollachi"
+                target="_blank" rel="noopener">
+                <span class="other-icon">🏢</span>
+                <h4>Municipality</h4>
+                <span class="arrow">→</span>
+            </a>
+            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=RTO+Office+Pollachi"
+                target="_blank" rel="noopener">
+                <span class="other-icon">🚘</span>
+                <h4>RTO Services</h4>
+                <span class="arrow">→</span>
+            </a>
+            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=Sub+Registrar+Office+Pollachi"
+                target="_blank" rel="noopener">
+                <span class="other-icon">📑</span>
+                <h4>Sub-Registrar</h4>
+                <span class="arrow">→</span>
+            </a>
+            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=e-Sevai+Center+Pollachi"
+                target="_blank" rel="noopener">
+                <span class="other-icon">💻</span>
+                <h4>E-Sevai Centers</h4>
+                <span class="arrow">→</span>
+            </a>
+        </section>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div class="footer-container">
+        <section class="explore-pollachi">
+            <img src="coconut_tree_icon.png" alt="">
+            <div>
+                <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
+                <p>Discover the places, people and lifestyle of Pollachi.</p>
+            </div>
+        </section>
+
+        <section class="quicklinks">
+            <h4>Quick Links</h4>
+            <section class="quicklinks-content">
+                <div class="firstpart">
+                    <a href="index.html">Home</a>
+                    <a href="about-pollachi.html">About Pollachi</a>
+                    <a href="place.html">Places</a>
+                    <a href="hotel.html">Hotels &amp; Restaurants</a>
+                </div>
+                <div class="secondpart">
+                    <a href="entertainment.html">Theatres</a>
+                    <a href="education.html">Education</a>
+                    <a href="service.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </section>
+        </section>
+
+        <section class="followus">
+            <h4>Follow Us</h4>
+            <nav>
+                <img src="facebook.png" alt="Facebook">
+                <img src="instagram.png" alt="Instagram">
+                <img src="youtube.png" alt="YouTube">
+            </nav>
+        </section>
+
+        <section class="subscribe">
+            <h4>Subscribe</h4>
+            <p>Get latest updates about Pollachi.</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Enter your email">
+                <button type="button">Subscribe</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
+        <p>Made with ♡ for Pollachi</p>
+    </footer>
+
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel">Opening Hours</p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel">Entry Fee</p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel">Best Time to Visit</p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

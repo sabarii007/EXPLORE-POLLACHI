@@ -7,6 +7,7 @@
     <title>Tourist Places</title>
     <link rel="stylesheet" href="place.css">
     <script src="place.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about-pollachi.html">About</a>
-            <a href="place.html">Places</a>
+            <a href="place.html" class="active">Places</a>
             <a href="hotel.html">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
@@ -39,239 +40,246 @@
 
         </nav>
         <section class="text">
-            <span style="background-color: #3CAF77; border-radius: 10px;">🏔️</span>
+            <img src="placeimages/image copy 15.png" alt="">
             <nav>
-                <h1>Tourist Places in <span style="color: #90F47C;">Pollachi</span></h1>
+                <h1>Tourist Places in <span style="color: #90F47C; font-size: 70px;">Pollachi</span></h1>
                 <p>Explore the natural beauty, dams, hills, and heritage spots of Pollachi <br>– a perfect getaway for
                     nature lovers.</p>
             </nav>
 
         </section>
+
         <section class="searchbar-header">
             <div class="searchbar">
-                <input type="search" placeholder="Search theatres, hotels, restaurants...">
-                <img src="search.png" alt="">
-                <button>search</button>
-            </div>
-            <div class="location-info">
-                <h2><img src="locationicon.png" alt="">Pollachi</h2>
-                <nav class="location-tags">
-                    <p>Nature | </p>
-                    <p>Culture | </p>
-                    <p> Heritage </p>
-
-                </nav>
+                <span>🔍</span>
+                <input type="search" placeholder="Search tourist places in Pollachi...">
+                <button type="button">Search</button>
             </div>
         </section>
-
     </div>
 
     <div class="filter-place">
         <nav class="filter-option">
-            <span>☰ Filter Place</span>
-            <span>All Place</span>
-            <span>🌳 Nature</span>
-            <span>⛰️ Hills</span>
-            <span>🌊 Dams</span>
-            <span>🏛️ Temples</span>
-            <span>📷 Heritage</span>
-            <span>🚶 Trekking</span>
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+
+            <span class="filter-label">☰ Filter Place</span>
+
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All Places</button>
+                <button type="button" class="pill">🌳 Nature</button>
+                <button type="button" class="pill">⛰️ Hills</button>
+                <button type="button" class="pill">🌊 Dams</button>
+                <button type="button" class="pill">🏛️ Temples</button>
+                <button type="button" class="pill">📷 Heritage</button>
+                <button type="button" class="pill">🚶 Trekking</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort tourist places">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
+
         </nav>
+    
 
-        <h2>Popular Tourist Places in <span style="color: #3CAF77;"> Pollachi</span></h2>
-        <p>Explore the most visited and loved tourist attractions in and around Pollachi.</p>
 
-        <section class="filter-items">
+    <h2>Popular Tourist Places in <span style="color: #3CAF77;"> Pollachi</span></h2>
+    <p>Explore the most visited and loved tourist attractions in and around Pollachi.</p>
 
-            <div class="item">
-                <img src="aliyardam.png" alt="">
-                <nav class="item-text">
-                    <h3>Aliyar Dam</h3>
-                    <span>⭐ 4.5 (4,280 reviews)</span>
-                    <span>📍 Aliyar, Pollachi</span>
-                    <section class="category">
-                        <span>🌊 Dam</span>
-                        <span>🌳 Nature</span>
-                        <span>📷 View Point</span>
-                    </section>
-                    <section class="buttons">
-                        <a href="">View on Map</a>
-                        <a href="" style="background-color: #017926; color: white;">View Details →</a>
+    <section class="filter-items">
 
-                    </section>
+        <div class="item">
+            <img src="aliyardam.png" alt="">
+            <nav class="item-text">
+                <h3>Aliyar Dam</h3>
+                <span>⭐ 4.3 (16k reviews)</span>
+                <span>📍 Aliyar, Pollachi</span>
+                <section class="category">
+                    <span>🌊 Dam</span>
+                    <span>🌳 Nature</span>
+                    <span>📷 View Point</span>
+                </section>
+                <section class="buttons">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Aliyar+Dam+Pollachi" target="_blank"
+                        rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
+                    <a href="#" class="details-btn" data-place="aliyar"
+                        style="background-color: #017926; color: white;">View Details →</a>
+                </section>
+            </nav>
+        </div>
+
+        <div class="item">
+            <img src="pollachi_images_png/monkeyfalls.png" alt="">
+            <nav class="item-text">
+                <h3>Monkey Falls</h3>
+                <span>⭐ 4.3 (2,760 reviews)</span>
+                <span>📍 Aliyar Road, Pollachi</span>
+                <section class="category">
+                    <span>🌊 Waterfall</span>
+                    <span>🚶 Trekking</span>
+                    <span>🌳 Nature</span>
+                </section>
+                <section class="buttons">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Monkey+Falls+Pollachi" target="_blank"
+                        rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
+                    <a href="#" class="details-btn" data-place="monkeyfalls"
+                        style="background-color: #017926; color: white;">View Details →</a>
+                </section>
+            </nav>
+        </div>
+
+        <div class="item">
+            <img src="pollachi_images_png/topslip.png" alt="">
+            <nav class="item-text">
+                <h3>Topslip</h3>
+                <span>⭐ 4.4 (3,120 reviews)</span>
+                <span>📍 Anamalai Hills, Pollachi</span>
+                <section class="category">
+                    <span>🐾 Wildlife</span>
+                    <span>🌳 Forest</span>
+                    <span>⛰️ Hills</span>
+                </section>
+                <section class="buttons">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Topslip+Pollachi" target="_blank"
+                        rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
+                    <a href="#" class="details-btn" data-place="topslip"
+                        style="background-color: #017926; color: white;">View Details →</a>
+                </section>
+            </nav>
+        </div>
+
+    </section>
+    </div>
+
+    <div class="itineraries">
+        <h2>Explore Travel Itineraries</h2>
+        <p>Handpicked trip plans to experience the best of Pollachi.</p>
+
+        <button id="tripBtn" type="button">📍 Start from my location</button>
+        <p id="tripMsg"></p>
+
+        <section class="itineraries-items">
+
+            <div class="itineraries-item">
+                <img src="placeimages/image.png" alt="">
+                <nav>
+                    <h3>One Day Trip</h3>
+                    <p>A quick and refreshing trip to Pollachi’s top spots.</p>
+                    <span>📍 Aliyar Dam → Monkey Falls → Topslip</span>
                 </nav>
+                <a class="trip-link" data-stops="Aliyar Dam|Monkey Falls|Topslip" href="#" target="_blank"
+                    rel="noopener">View Itinerary →</a>
             </div>
-            <div class="item">
-                <img src="pollachi_images_png/monkeyfalls.png" alt="">
-                <nav class="item-text">
-                    <h3>Monkey Falls</h3>
-                    <span>⭐ 4.3 (2,760 reviews)</span>
-                    <span>📍 Aliyar Road, Pollachi</span>
-                    <section class="category">
-                        <span>🌊 Waterfall</span>
-                        <span>🚶 Trekking</span>
-                        <span>🌳 Nature</span>
-                    </section>
-                    <section class="buttons">
-                        <a href="">View on Map</a>
-                        <a href="" style="background-color: #017926; color: white;">View Details →</a>
 
-                    </section>
+            <div class="itineraries-item">
+                <img src="placeimages/image copy.png" alt="">
+                <nav>
+                    <h3>Nature Adventure</h3>
+                    <p>Into the wild - forests, wildlife and scenic landscapes.</p>
+                    <span>📍 Topslip → Anamalai Reserve → Valparai</span>
                 </nav>
+                <a class="trip-link" data-stops="Topslip|Anamalai Tiger Reserve|Valparai" href="#" target="_blank"
+                    rel="noopener">View Itinerary →</a>
             </div>
-            <div class="item">
-                <img src="pollachi_images_png/topslip.png" alt="">
-                <nav class="item-text">
-                    <h3>Topslip</h3>
-                    <span>⭐ 4.4 (3,120 reviews)</span>
-                    <span>📍 Anamalai Hills, Pollachi</span>
-                    <section class="category">
-                        <span>🐾 Wildlife</span>
-                        <span>🌳 Forest</span>
-                        <span>⛰️ Hills</span>
-                    </section>
-                    <section class="buttons">
-                        <a href="">View on Map</a>
-                        <a href="" style="background-color: #017926; color: white;">View Details →</a>
 
-                    </section>
+            <div class="itineraries-item">
+                <img src="placeimages/image copy 2.png" alt="">
+                <nav>
+                    <h3>Spiritual Journey</h3>
+                    <p>A peaceful trip to Pollachi’s famous temples.</p>
+                    <span>📍 Masani Amman Temple → Local Temples</span>
                 </nav>
+                <a class="trip-link" data-stops="Masani Amman Temple" href="#" target="_blank" rel="noopener">View
+                    Itinerary →</a>
+            </div>
+
+            <div class="itineraries-item">
+                <img src="placeimages/image copy 3.png" alt="">
+                <nav>
+                    <h3>Weekend Getaway</h3>
+                    <p>A perfect short escape to unwind and relax.</p>
+                    <span>📍 Valparai → Sholayar Dam → Nirar Dam</span>
+                </nav>
+                <a class="trip-link" data-stops="Valparai|Sholayar Dam|Nirar Dam" href="#" target="_blank"
+                    rel="noopener">View Itinerary →</a>
+            </div>
+
+            <div class="itineraries-item">
+                <img src="placeimages/image copy 4.png" alt="">
+                <nav>
+                    <h3>Family Trip</h3>
+                    <p>A fun-filled trip with nature, relaxation and scenic views.</p>
+                    <span>📍 Aliyar Dam → Monkey Falls → Amaravathi Dam</span>
+                </nav>
+                <a class="trip-link" data-stops="Aliyar Dam|Monkey Falls|Amaravathi Dam" href="#" target="_blank"
+                    rel="noopener">View Itinerary →</a>
             </div>
 
         </section>
     </div>
 
-    <div class="itineraries">
-    <h2>Explore Travel Itineraries</h2>
-    <p>Handpicked trip plans to experience the best of Pollachi.</p>
-
-    <button id="tripBtn" type="button">📍 Start from my location</button>
-    <p id="tripMsg"></p>
-
-    <section class="itineraries-items">
-
-        <div class="itineraries-item">
-            <img src="placeimages/image.png" alt="">
+    <div class="nearby-attraction">
+        <section class="nearby-header">
             <nav>
-                <h3>One Day Trip</h3>
-                <p>A quick and refreshing trip to Pollachi’s top spots.</p>
-                <span>📍 Aliyar Dam → Monkey Falls → Topslip</span>
+                <h2>Nearby Attractions</h2>
+                <p>More interesting places to visit near Pollachi.</p>
             </nav>
-            <a class="trip-link" data-stops="Aliyar Dam|Monkey Falls|Topslip" href="#" target="_blank" rel="noopener">View Itinerary →</a>
-        </div>
+            <a href="">View All </a>
+        </section>
 
-        <div class="itineraries-item">
-            <img src="placeimages/image copy.png" alt="">
-            <nav>
-                <h3>Nature Adventure</h3>
-                <p>Into the wild - forests, wildlife and scenic landscapes.</p>
-                <span>📍 Topslip → Anamalai Reserve → Valparai</span>
-            </nav>
-            <a class="trip-link" data-stops="Topslip|Anamalai Tiger Reserve|Valparai" href="#" target="_blank" rel="noopener">View Itinerary →</a>
-        </div>
+        <button id="routeBtn" type="button">📍 Route from my location</button>
+        <p id="routeMsg"></p>
 
-        <div class="itineraries-item">
-            <img src="placeimages/image copy 2.png" alt="">
-            <nav>
-                <h3>Spiritual Journey</h3>
-                <p>A peaceful trip to Pollachi’s famous temples.</p>
-                <span>📍 Masani Amman Temple → Local Temples</span>
-            </nav>
-            <a class="trip-link" data-stops="Masani Amman Temple" href="#" target="_blank" rel="noopener">View Itinerary →</a>
-        </div>
+        <section class="nearby-container">
 
-        <div class="itineraries-item">
-            <img src="placeimages/image copy 3.png" alt="">
-            <nav>
-                <h3>Weekend Getaway</h3>
-                <p>A perfect short escape to unwind and relax.</p>
-                <span>📍 Valparai → Sholayar Dam → Nirar Dam</span>
-            </nav>
-            <a class="trip-link" data-stops="Valparai|Sholayar Dam|Nirar Dam" href="#" target="_blank" rel="noopener">View Itinerary →</a>
-        </div>
+            <a class="nearby-card" data-destination="Valparai" href="#" target="_blank" rel="noopener">
+                <img src="placeimages/image copy 5.png" alt="">
+                <nav>
+                    <img src="placeimages/image copy 6.png" alt="">
+                    <h4>Valparai</h4>
+                </nav>
+                <span>~ 40 km</span>
+            </a>
 
-        <div class="itineraries-item">
-            <img src="placeimages/image copy 4.png" alt="">
-            <nav>
-                <h3>Family Trip</h3>
-                <p>A fun-filled trip with nature, relaxation and scenic views.</p>
-                <span>📍 Aliyar Dam → Monkey Falls → Amaravathi Dam</span>
-            </nav>
-            <a class="trip-link" data-stops="Aliyar Dam|Monkey Falls|Amaravathi Dam" href="#" target="_blank" rel="noopener">View Itinerary →</a>
-        </div>
+            <a class="nearby-card" data-destination="Anamalai Tiger Reserve" href="#" target="_blank" rel="noopener">
+                <img src="placeimages/image copy 7.png" alt="">
+                <nav>
+                    <img src="placeimages/image copy 11.png" alt="">
+                    <h4>Anamalai Tiger Reserve</h4>
+                </nav>
+                <span>~ 28 km</span>
+            </a>
 
-    </section>
-</div>
+            <a class="nearby-card" data-destination="Parambikulam Dam" href="#" target="_blank" rel="noopener">
+                <img src="placeimages/image copy 8.png" alt="">
+                <nav>
+                    <img src="placeimages/image copy 12.png" alt="">
+                    <h4>Parambikulam Dam</h4>
+                </nav>
+                <span>~ 48 km</span>
+            </a>
 
-  <div class="nearby-attraction">
-    <section class="nearby-header">
-        <nav>
-            <h2>Nearby Attractions</h2>
-            <p>More interesting places to visit near Pollachi.</p>
-        </nav>
-        <a href="">View All </a>
-    </section>
+            <a class="nearby-card" data-destination="Udumalpet View Point" href="#" target="_blank" rel="noopener">
+                <img src="placeimages/image copy 9.png" alt="">
+                <nav>
+                    <img src="placeimages/image copy 13.png" alt="">
+                    <h4>Udumalpett View Point</h4>
+                </nav>
+                <span>~ 35 km</span>
+            </a>
 
-    <button id="routeBtn" type="button">📍 Route from my location</button>
-    <p id="routeMsg"></p>
+            <a class="nearby-card" data-destination="Sethumadai" href="#" target="_blank" rel="noopener">
+                <img src="placeimages/image copy 10.png" alt="">
+                <nav>
+                    <img src="placeimages/image copy 14.png" alt="">
+                    <h4>Sethumadai</h4>
+                </nav>
+                <span>~ 24 km</span>
+            </a>
 
-    <section class="nearby-container">
-
-        <a class="nearby-card" data-destination="Valparai" href="#" target="_blank" rel="noopener">
-            <img src="placeimages/image copy 5.png" alt="">
-            <nav>
-                <img src="placeimages/image copy 6.png" alt="">
-                <h4>Valparai</h4>
-            </nav>
-            <span>~ 40 km</span>
-        </a>
-
-        <a class="nearby-card" data-destination="Anamalai Tiger Reserve" href="#" target="_blank" rel="noopener">
-            <img src="placeimages/image copy 7.png" alt="">
-            <nav>
-                <img src="placeimages/image copy 11.png" alt="">
-                <h4>Anamalai Tiger Reserve</h4>
-            </nav>
-            <span>~ 28 km</span>
-        </a>
-
-        <a class="nearby-card" data-destination="Parambikulam Dam" href="#" target="_blank" rel="noopener">
-            <img src="placeimages/image copy 8.png" alt="">
-            <nav>
-                <img src="placeimages/image copy 12.png" alt="">
-                <h4>Parambikulam Dam</h4>
-            </nav>
-            <span>~ 48 km</span>
-        </a>
-
-        <a class="nearby-card" data-destination="Udumalpet View Point" href="#" target="_blank" rel="noopener">
-            <img src="placeimages/image copy 9.png" alt="">
-            <nav>
-                <img src="placeimages/image copy 13.png" alt="">
-                <h4>Udumalpett View Point</h4>
-            </nav>
-            <span>~ 35 km</span>
-        </a>
-
-        <a class="nearby-card" data-destination="Sethumadai" href="#" target="_blank" rel="noopener">
-            <img src="placeimages/image copy 10.png" alt="">
-            <nav>
-                <img src="placeimages/image copy 14.png" alt="">
-                <h4>Sethumadai</h4>
-            </nav>
-            <span>~ 24 km</span>
-        </a>
-
-    </section>
-</div>
+        </section>
+    </div>
 
     <div class="footer-container">
         <section class="explore-pollachi">
@@ -325,6 +333,89 @@
         <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
         <p>Made with ♡ for Pollachi</p>
     </footer>
+
+
+    
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel">Opening Hours</p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel">Entry Fee</p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel">Best Time to Visit</p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <div class="place-fees" id="popupFeesBox" style="display:none;">
+                    <p style="font-weight: 600;">Fees</p>
+                    <table id="popupFees"></table>
+                    <p id="popupFeesNote" class="fees-note"></p>
+                    <hr style="margin-top: 10px; margin-bottom: 10px;">
+                </div>
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
 
 </body>
 

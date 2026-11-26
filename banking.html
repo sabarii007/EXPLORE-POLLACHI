@@ -7,6 +7,7 @@
     <title>Banking & Finance in Pollachi</title>
     <link rel="stylesheet" href="banking.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
             <a href="hotel.html">Hotels & Restaurants</a>
             <a href="entertainment.html">Theatres</a>
             <a href="education.html">Education</a>
-            <a href="service.html">Services</a>
+            <a href="service.html" class="active">Services</a>
             <a href="contact.html">Contact</a>
 
         </nav>
@@ -42,15 +43,17 @@
             <img src="bankimages/bankicon.png" alt="">
             <nav>
                 <h1>Banking & Finance in<span style="color: #78F16D; font-size: 70px;"> Pollachi</span></h1>
-                <p>Find trusted banks, 24/7 ATMs, post offices, and money transfer <br> services across Pollachi.
+                <p>Find trusted banks, 24/7 ATMs, post offices, and money transfer services across Pollachi.
                 </p>
             </nav>
 
         </section>
         <section class="searchbar-header">
             <div class="searchbar">
+                <span>🔍</span>
+
                 <input type="search" placeholder="Search Banking & Finance in Pollachi...">
-                <img src="search.png" alt="">
+
                 <button>search</button>
             </div>
         </section>
@@ -58,22 +61,23 @@
 
     <div class="filter-container">
         <nav class="filter-option">
-            <span>☰ Filter By</span>
-            <span>All </span>
-            <span>Nationalized Banks</span>
-            <span> Private Banks</span>
-            <span>24/7 ATMs</span>
-            <span>Post Office</span>
-            <span>Money Transfer</span>
+            <span class="filter-label">☰ Filter By</span>
 
-            <span>
-                <select name="" id="">
-                    <option value="">Sort By:Nearest First</option>
-                    <option value="">Sort By:Popular</option>
-                    <option value="">Sort By:A–Z (Name)</option>
-                    <option value="">Sort By:Z–A (Name)</option>
-                </select>
-            </span>
+            <nav class="filter-pills">
+                <button type="button" class="pill active">All</button>
+                <button type="button" class="pill">🏦 Nationalized Banks</button>
+                <button type="button" class="pill">🏛️ Private Banks</button>
+                <button type="button" class="pill">🏧 24/7 ATMs</button>
+                <button type="button" class="pill">📮 Post Offices</button>
+                <button type="button" class="pill">💸 Money Transfer</button>
+            </nav>
+
+            <select name="" id="" class="sort-select" aria-label="Sort banking services">
+                <option value="">Sort By: Nearest First</option>
+                <option value="">Sort By: Popular</option>
+                <option value="">Sort By: A–Z (Name)</option>
+                <option value="">Sort By: Z–A (Name)</option>
+            </select>
         </nav>
         <section class="filter-place">
             <h2>Popular Banks & Financial Services in <span style="color: #78F16D;"">Pollachi</span></h2>
@@ -104,7 +108,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Head+Post+Office"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="pollachihpo"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -132,7 +137,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=Mahalingapuram+Post+Office+Pollachi"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="mahalingapurampost"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -166,7 +172,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=SBI+Branch+Pollachi+Palakkad+Road"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="sbi"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -201,7 +208,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=HDFC+Bank+Pollachi+II"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="hdfcbank"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -235,7 +243,8 @@
                                 <a href="https://www.google.com/maps/search/?api=1&query=ESAF+Small+Finance+Bank+Pollachi"
                                     target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="" style="background-color: #017926; color: white;">View Details →</a>
+                                <a href="#" class="details-btn" data-place="esafbank"
+                                    style="background-color: #017926; color: white;">View Details →</a>
                             </nav>
 
                         </section>
@@ -318,9 +327,9 @@
         <h2>Explore Nearby Places</h2>
         <p>Popular places near theaters in Pollachi</p>
         <button id="locBtn" type="button">📍 Use my current location</button>
-            <p id="locMsg"></p>
+        <p id="locMsg"></p>
         <section class="nearby-place">
-            
+
             <a class="nearby-card" data-search="restaurants" href="#" target="_blank" rel="noopener">
                 <img src="entertainmentimages/food.png" alt="">
                 <nav>
@@ -433,6 +442,80 @@
         <p>Made with ♡ for Pollachi</p>
     </footer>
 
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.png" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel"></p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel"></p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel"></p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
 
 
     <script src="banking.js"></script>
