@@ -107,7 +107,7 @@ html {
 
 .container1 {
     background-image: linear-gradient(90deg, rgba(0, 25, 20, .9), rgba(0, 0, 0, .2)),
-        url(emergencyimages/emergencybackground.png);
+        url(emergencyimages/emergencybackground.webp);
     background-size: 100% 300px;
     width: 100%;
     min-height: 260px;

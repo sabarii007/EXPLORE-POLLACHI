@@ -4,12 +4,12 @@ const places = {
     murugalaya: {
         name: "Murugalaya Theater AC",
         category: "Theater",
-        image: "muruglaya_theatre.png",
+        image: "muruglaya_theatre.webp",
         subImages: [
-            "murugalayaimages/image.png",
-            "murugalayaimages/image copy.png",
-            "murugalayaimages/image copy 3.png",
-            "murugalayaimages/image copy 2.png"
+            "murugalayaimages/image.webp",
+            "murugalayaimages/image copy.webp",
+            "murugalayaimages/image copy 3.webp",
+            "murugalayaimages/image copy 2.webp"
         ],
         rating: "3.9",
         reviews: "2.3k reviews",
@@ -26,12 +26,12 @@ const places = {
     madhava: {
         name: "Hotel Madhava Inn",
         category: "Hotel & Restaurant",
-        image: "madavaimages/Madhava Inn Restaurant.png",
+        image: "madavaimages/Madhava Inn Restaurant.webp",
         subImages: [
-            "madavaimages/image.png",
-            "madavaimages/image copy.png",
-            "madavaimages/Madhava Multicuisine Restaurant.png",
-            "madavaimages/Warm Orange Modern Twin Room.png"
+            "madavaimages/image.webp",
+            "madavaimages/image copy.webp",
+            "madavaimages/Madhava Multicuisine Restaurant.webp",
+            "madavaimages/Warm Orange Modern Twin Room.webp"
         ],
         rating: "4.1",
         reviews: "1.4k reviews",
@@ -48,12 +48,12 @@ const places = {
     dmart: {
         name: "DMart Pollachi",
         category: "Shopping",
-        image: "dmart.png",
+        image: "dmart.webp",
         subImages: [
-            "dmartimages/image.png",
-            "dmartimages/image copy.png",
-            "dmartimages/Bright Household Products Aisle.png",
-            "dmartimages/Vibrant Modern Supermarket Aisle.png"
+            "dmartimages/image.webp",
+            "dmartimages/image copy.webp",
+            "dmartimages/Bright Household Products Aisle.webp",
+            "dmartimages/Vibrant Modern Supermarket Aisle.webp"
         ],
         rating: "3.8",
         reviews: "1k reviews",
@@ -70,12 +70,12 @@ const places = {
     aliyar: {
         name: "Aliyar Dam",
         category: "Tourist Place",
-        image: "aliyardam.png",
+        image: "aliyardam.webp",
         subImages: [
-            "aliyardam images/image1.png",
-            "aliyardam images/image.png",
-            "aliyardam images/image copy.png",
-            "aliyardam images/image copy 2.png"
+            "aliyardam images/image1.webp",
+            "aliyardam images/image.webp",
+            "aliyardam images/image copy.webp",
+            "aliyardam images/image copy 2.webp"
         ],
         rating: "4.3",
         reviews: "16k reviews",
@@ -94,10 +94,10 @@ const places = {
         category: "College",
         image: "pacet.jpg",
         subImages: [
-            "pacetimages/Bright Modern Computer Lab Rows.png",
-            "pacetimages/Grand P.A. Educational Institutions Gate.png",
-            "pacetimages/Modern Cafeteria with Indoor Greenery.png",
-            "pacetimages/Vibrant CSE and MECH Library Stacks.png"
+            "pacetimages/Bright Modern Computer Lab Rows.webp",
+            "pacetimages/Grand P.A. Educational Institutions Gate.webp",
+            "pacetimages/Modern Cafeteria with Indoor Greenery.webp",
+            "pacetimages/Vibrant CSE and MECH Library Stacks.webp"
         ],
         rating: "4.1",
         reviews: "600 reviews",
@@ -114,12 +114,12 @@ const places = {
     monkeyfalls: {
         name: "Monkey Falls",
         category: "Tourist Place",
-        image: "pollachi_images_png/monkeyfalls.png",
+        image: "pollachi_images_png/monkeyfalls.webp",
         subImages: [
-            "popupimages/monkeyfalls.png",
-            "popupimages/monkeyfalls1.png",
-            "popupimages/monkeyfalls2.png",
-            "popupimages/monkeyfalls3.png"
+            "popupimages/monkeyfalls.webp",
+            "popupimages/monkeyfalls1.webp",
+            "popupimages/monkeyfalls2.webp",
+            "popupimages/monkeyfalls3.webp"
         ],
         rating: "4.3",
         reviews: "2,760 reviews",
@@ -136,12 +136,12 @@ const places = {
     topslip: {
         name: "Topslip",
         category: "Tourist Place",
-        image: "pollachi_images_png/topslip.png",
+        image: "pollachi_images_png/topslip.webp",
         subImages: [
-            "popupimages/topslip1.png",
-            "popupimages/topslip2.png",
-            "popupimages/topslip3.png",
-            "popupimages/topslip4.png"
+            "popupimages/topslip1.webp",
+            "popupimages/topslip2.webp",
+            "popupimages/topslip3.webp",
+            "popupimages/topslip4.webp"
         ],
         rating: "4.4",
         reviews: "3,120 reviews",
@@ -169,12 +169,12 @@ const places = {
     appleinn: {
         name: "Apple Inn",
         category: "Hotel & Restaurant",
-        image: "hotels&restaurantsimages/Apple Inn.png",
+        image: "hotels&restaurantsimages/Apple Inn.webp",
         subImages: [
-            "popupimages/applein.png",
+            "popupimages/applein.webp",
             "popupimages/applein1.png",
-            "popupimages/applein2.png",
-            "popupimages/applein3.png"
+            "popupimages/applein2.webp",
+            "popupimages/applein3.webp"
         ],
         rating: "4.7",
         reviews: "1000+ reviews",
@@ -191,11 +191,11 @@ const places = {
     srikrishnan: {
         name: "Sri Krishnan Residency",
         category: "Hotel & Restaurant",
-        image: "hotels&restaurantsimages/Sri Krishnan Residency.png",
+        image: "hotels&restaurantsimages/Sri Krishnan Residency.webp",
         subImages: [
             "popupimages/srikrishna.png",
-            "popupimages/srikrishna1.png",
-            "popupimages/srikrishna2.png",
+            "popupimages/srikrishna1.webp",
+            "popupimages/srikrishna2.webp",
             "popupimages/srikrishna3.png"
         ],
         rating: "3.7",
@@ -213,12 +213,12 @@ const places = {
     surryamax: {
         name: "The Surrya Max Residency",
         category: "Hotel & Restaurant",
-        image: "hotels&restaurantsimages/The Surrya Max Residency.png",
+        image: "hotels&restaurantsimages/The Surrya Max Residency.webp",
         subImages: [
             "popupimages/suriyamax.png",
-            "popupimages/suryamax1.png",
+            "popupimages/suryamax1.webp",
             "popupimages/suryamax2.png",
-            "popupimages/suryamax3.png"
+            "popupimages/suryamax3.webp"
         ],
         rating: "4.7",
         reviews: "1200+ reviews",
@@ -234,12 +234,12 @@ const places = {
     amuthasurabhi: {
         name: "Amutha Surabhi",
         category: "Restaurant",
-        image: "hotels&restaurantsimages/Amutha Surabhi.png",
+        image: "hotels&restaurantsimages/Amutha Surabhi.webp",
         subImages: [
-            "popupimages/amuthasurabi.png",
-            "popupimages/amuthasurabi1.png",
-            "popupimages/amuthasurabi2.png",
-            "popupimages/amuthasurabi3.png"
+            "popupimages/amuthasurabi.webp",
+            "popupimages/amuthasurabi1.webp",
+            "popupimages/amuthasurabi2.webp",
+            "popupimages/amuthasurabi3.webp"
         ],
         rating: "4.1",
         reviews: "8.2K+ reviews",
@@ -256,12 +256,12 @@ const places = {
     gowrikrishna: {
         name: "Hotel Gowri Krishna",
         category: "Restaurant",
-        image: "hotels&restaurantsimages/Hotel Gowri Krishna.png",
+        image: "hotels&restaurantsimages/Hotel Gowri Krishna.webp",
         subImages: [
-            "popupimages/g1.jpg",
+            "popupimages/g1.webp",
             "popupimages/g2.jpg",
-            "popupimages/g3.jpg",
-            "popupimages/g4.jpg"
+            "popupimages/g3.webp",
+            "popupimages/g4.webp"
         ],
         rating: "4.1",
         reviews: "9K+ reviews",
@@ -278,12 +278,12 @@ const places = {
     thepalm: {
         name: "The Palm",
         category: "Restaurant",
-        image: "hotels&restaurantsimages/Thepalm.png",
+        image: "hotels&restaurantsimages/Thepalm.webp",
         subImages: [
-            "popupimages/plam1.jpg",
-            "popupimages/plam2.jpg",
-            "popupimages/plam3.jpg",
-            "popupimages/plam4.jpg"
+            "popupimages/plam1.webp",
+            "popupimages/plam2.webp",
+            "popupimages/plam3.webp",
+            "popupimages/plam4.webp"
         ],
         rating: "4.5",
         reviews: "700+ reviews",
@@ -300,9 +300,9 @@ const places = {
     pollachiphavan: {
         name: "Pollachi Phavan Mess",
         category: "Restaurant",
-        image: "hotels&restaurantsimages/pollachiphavan.png",
+        image: "hotels&restaurantsimages/pollachiphavan.webp",
         subImages: [
-            "popupimages/pavanam1.jpg",
+            "popupimages/pavanam1.webp",
             "popupimages/pavanam2.jpg",
             "popupimages/pavanam3.jpg",
             "popupimages/pavanam4.jpg"
@@ -323,7 +323,7 @@ const places = {
     thangamcinemas: {
         name: "Thangam Cinemas",
         category: "Theatre",
-        image: "entertainmentimages/ThangamCinemas.png",
+        image: "entertainmentimages/ThangamCinemas.webp",
         subImages: [
             "popupimages/thanagam1.jpg",
             "popupimages/thangam2.jpg",
@@ -345,7 +345,7 @@ const places = {
     dorais: {
         name: "Dorais Movie Land",
         category: "Theatre",
-        image: "entertainmentimages/DoraisTheatre.png",
+        image: "entertainmentimages/DoraisTheatre.webp",
         subImages: [
             "popupimages/dorais1.jpg",
             "popupimages/dorais2.jpg",
@@ -367,7 +367,7 @@ const places = {
     srisakthi: {
         name: "Sri Sakthi Cinemas",
         category: "Theatre",
-        image: "entertainmentimages/srishakthicinemas.png",
+        image: "entertainmentimages/srishakthicinemas.webp",
         subImages: [
             "popupimages/srisakthi1.jpg",
             "popupimages/srisakthi2.jpg",
@@ -391,8 +391,8 @@ const places = {
         category: "College",
         image: "educationimages/mcet.png",
         subImages: [
-            "popupimages/mcet1.jpg",
-            "popupimages/mcet2.jpg",
+            "popupimages/mcet1.webp",
+            "popupimages/mcet2.webp",
             "popupimages/mcet3.jpg",
             "popupimages/mcet4.jpg"
         ],
@@ -413,10 +413,10 @@ const places = {
         category: "College",
         image: "educationimages/ngmcollege.png",
         subImages: [
-            "popupimages/ngm1.jpg",
+            "popupimages/ngm1.webp",
             "popupimages/ngm2.jpg",
-            "popupimages/ngm3.jpg",
-            "popupimages/ngm4.jpg"
+            "popupimages/ngm3.webp",
+            "popupimages/ngm4.webp"
         ],
         rating: "4.1",
         reviews: "623+ reviews",
@@ -436,9 +436,9 @@ const places = {
         category: "College",
         image: "educationimages/npc.png",
         subImages: [
-            "popupimages/npt1.jpg",
-            "popupimages/npt2.jpg",
-            "popupimages/npt3.jpg",
+            "popupimages/npt1.webp",
+            "popupimages/npt2.webp",
+            "popupimages/npt3.webp",
             "popupimages/npt4.jpg"
         ],
         rating: "4.4",
@@ -455,7 +455,7 @@ const places = {
     pollachibusstand: {
         name: "Pollachi Bus Stand",
         category: "Transport",
-        image: "serviceimages/bus.png",
+        image: "serviceimages/bus.webp",
         subImages: [
             "popupimages/bus1.jpg",
             "popupimages/bus2.jpg",
@@ -477,10 +477,10 @@ const places = {
     eastpolicestation: {
        name: "Pollachi West Police Station",
     category: "Police Station",
-    image: "serviceimages/police station.png",
+    image: "serviceimages/police station.webp",
     subImages: [
         "popupimages/police1.jpg",
-        "popupimages/police2.jpg",
+        "popupimages/police2.webp",
         "popupimages/police3.jpg"
     ],
     rating: "Not Available",
@@ -503,7 +503,7 @@ const places = {
     governmenthospital: {
         name: "Government Hospital, Pollachi",
         category: "Government Hospital",
-        image: "serviceimages/Pollachi Government Hospital.png",
+        image: "serviceimages/Pollachi Government Hospital.webp",
         subImages: [
             "popupimages/gh1.jpg",
             "popupimages/gh2.jpg",
@@ -726,11 +726,11 @@ const places = {
     railwaystation: {
         name: "Pollachi Junction Railway Station",
         category: "Railway Station",
-        image: "serviceimages/Pollachi Junction Railway Station.png",
+        image: "serviceimages/Pollachi Junction Railway Station.webp",
         subImages: [
             "popupimages/rail1.jpg",
-            "popupimages/rail2.jpg",
-            "popupimages/rail3.jpg",
+            "popupimages/rail2.webp",
+            "popupimages/rail3.webp",
             "popupimages/rail4.jpg"
         ],
         rating: "4.2",
@@ -964,7 +964,7 @@ const places = {
     pollachitalukoffice: {
         name: "Pollachi Taluk Office",
         category: "Government Office",
-        image: "governmentimages/pollachitalukoffice.png",
+        image: "governmentimages/pollachitalukoffice.webp",
         subImages: [],
         rating: "Not Verified",
         reviews: "No reviews yet",

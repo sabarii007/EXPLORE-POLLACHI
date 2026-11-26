@@ -108,7 +108,7 @@ html {
 .container1 {
     background-image: linear-gradient(to right,
             rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.1)), url(pollachi_image.png);
+            rgba(0, 0, 0, 0.1)), url(pollachi_image.webp);
     background-size: 100% 300px;
     width: 100%;
     height: 300px;
