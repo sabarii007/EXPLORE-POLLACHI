@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repair Maintenance in Pollachi</title>
+    <link rel="stylesheet" href="repair.css">
+    <script src="index.js" defer></script>
+    <script src="./banking.js" defer></script>
+    <script src="filter.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <div class="header" id="header">
+        <h2><img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="about-pollachi.html">About</a>
+            <a href="place.html">Places</a>
+            <a href="hotel.html">Hotels &amp; Restaurants</a>
+            <a href="entertainment.html">Theatres</a>
+            <a href="education.html">Education</a>
+            <a href="service.html" class="active">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <section class="search" id="search">
+            <input type="search" placeholder="Enter Places in Pollachi...">
+            <img src="searchbar.png" alt="">
+        </section>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <div class="page-hero">
+        <nav class="breadcrumbs">
+            <a href="index.html">🏠 Home ></a>
+            <a href="service.html">Services ></a>
+            <a href="repair.html">Repair Maintenance</a>
+        </nav>
+
+        <section class="page-title">
+            <span class="page-icon">🛠️</span>
+            <nav>
+                <h1>Repair Maintenance in <span class="green-text" style="font-size: 60px;">Pollachi</span></h1>
+                <p>Find trusted bike mechanics, car service centers, electricians, plumbers, and mobile repair shops in
+                    Pollachi.</p>
+            </nav>
+        </section>
+
+        <div class="page-search">
+            <span>🔍</span>
+            <input type="search" id="repairSearch"
+                placeholder="Search repair &amp; maintenance services in Pollachi...">
+            <button type="button">Search</button>
+        </div>
+    </div>
+
+    <!-- ============ FILTER BAR ============ -->
+    <div class="filter-bar">
+        <span class="filter-label">☰ Filter Services</span>
+
+        <nav class="filter-pills">
+            <button type="button" class="pill active">All Services</button>
+            <button type="button" class="pill">🏍️ Bike Repair</button>
+            <button type="button" class="pill">🚗 Car Service</button>
+            <button type="button" class="pill">⚡ Electrical</button>
+            <button type="button" class="pill">🚰 Plumbing</button>
+            <button type="button" class="pill">📱 Mobile Repair</button>
+        </nav>
+
+        <select class="sort-select" aria-label="Sort services">
+            <option>Sort By: Popular</option>
+            <option>Sort By: A–Z (Name)</option>
+            <option>Sort By: Z–A (Name)</option>
+            <option>Sort By: Nearest First</option>
+        </select>
+    </div>
+
+    <!-- ============ TOP REPAIR SERVICES ============ -->
+    <div class="top-services">
+        <h2 class="section-title">Top Repair &amp; Maintenance Services in <span class="green-text">Pollachi</span></h2>
+        <p class="section-sub">Explore leading repair shops and maintenance services in Pollachi with quality care.</p>
+
+        <section class="service-cards">
+
+
+            <div class="filter-card">
+                <img src="repairimages/ommurugatech.webp" alt="">
+                <section class="card-text">
+                    <h3>Om Muruga Tech</h3>
+                    <p>⭐ 4.9 (160+ reviews)</p>
+                    <p>📍 Mahalingapuram, Pollachi</p>
+                    <nav class="card-option">
+                        <span>🔧 AC Repair & Service</span>
+                        <span>🧊 Refrigerator Repair</span>
+                        <span>🧺 Washing Machine Repair</span>
+                        <span>📺 TV Repair & Service</span>
+                        <span>⚡ Electrical Repair</span>
+                        <span>🚰 Plumbing Services</span>
+                        <span>🏠 Home Appliance Repair</span>
+                        <span>🛠️ General Maintenance</span>
+                        <span>🚨 24/7 Emergency Repair</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="" target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="ommurugatech"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+            <div class="filter-card">
+                <img src="repairimages/homecare.webp" alt="">
+                <section class="card-text">
+                    <h3>Sri Lakshmi Devi Home Care</h3>
+                    <p>⭐ 4.8 (200+ reviews)</p>
+                    <p>📍 Mahalingapuram, Pollachi</p>
+                    <nav class="card-option">
+                        <span>🔧 AC Repair & Service</span>
+                        <span>🧊 Refrigerator Repair</span>
+                        <span>🧺 Washing Machine Repair</span>
+                        <span>📺 TV Repair & Service</span>
+                        <span>🍽️ Microwave Oven Repair</span>
+                        <span>💧 Water Cooler Service</span>
+                        <span>📡 Smart TV Repair</span>
+                        <span>🏠 Home Appliance Repair</span>
+                        <span>🛠️ General Maintenance</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Sri+Lakshmi+Devi+Home+Care+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="srilakshmidevihomecare"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+            <div class="filter-card">
+                <img src="repairimages/sivaservice.jpg" alt="">
+                <section class="card-text">
+                    <h3>Shiva Service Centre</h3>
+                    <p>⭐ 5.0 (16+ reviews)</p>
+                    <p>📍 Teppakulam Street, Pollachi</p>
+                    <nav class="card-option">
+                        <span>🌀 Mixer Grinder Repair</span>
+                        <span>⚙️ Wet Grinder Repair</span>
+                        <span>🔥 Iron Box Repair</span>
+                        <span>🪭 Table Fan Repair</span>
+                        <span>🌀 Ceiling Fan Repair</span>
+                        <span>🍳 Gas Stove Repair</span>
+                        <span>🥣 Mixer Jar Repair</span>
+                        <span>🔌 Electrical Appliance Repair</span>
+                        <span>🛠️ General Repair Service</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Shiva+Service+Centre+74+Teppakulam+Street+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="shivaservicecentre"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+            <div class="filter-card">
+                <img src="repairimages/BuildingDoctorPollachi.jpg" alt="">
+                <section class="card-text">
+                    <h3>Building Doctor Pollachi</h3>
+                    <p>⭐ 5.0 (20+ reviews)</p>
+                    <p>📍 Raja Mill Road, Pollachi</p>
+                    <nav class="card-option">
+                        <span>🏠 Building Waterproofing</span>
+                        <span>🌧️ Terrace & Roof Leakage Repair</span>
+                        <span>🚿 Bathroom Waterproofing</span>
+                        <span>💧 Water Tank Waterproofing</span>
+                        <span>🧱 Wall Seepage Treatment</span>
+                        <span>🔨 Crack Filling & Repair</span>
+                        <span>🏗️ Building Restoration</span>
+                        <span>🎨 Dampness Treatment</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Building+Doctor+111+Raja+Mill+Road+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="buildingdoctor"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+            <div class="filter-card">
+                <img src="repairimages/Bike Station.avif" alt="">
+                <section class="card-text">
+                    <h3>Bike Station</h3>
+                    <p>⭐ 4.2 (Not Verified)</p>
+                    <p>📍 Palakkad Road, Pollachi</p>
+                    <nav class="card-option">
+                        <span>🏍️ Multi-Brand Bike Service</span>
+                        <span>🔧 Engine Repair & Overhauling</span>
+                        <span>🛢️ Engine Oil Change</span>
+                        <span>⛓️ Chain Cleaning & Lubrication</span>
+                        <span>🛞 Wheel Alignment</span>
+                        <span>🛑 Disc Brake Service</span>
+                        <span>🔋 Battery Service</span>
+                        <span>⚡ Electrical Repair</span>
+                        <span>🚿 Bike Water Wash</span>
+                        <span>🚨 Breakdown Assistance</span>
+                        <span>🏠 Doorstep Pickup & Drop</span>
+                    </nav>
+                    <nav class="card-button">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Bike+Station+117+Palakkad+Road+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
+    color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="bikestation"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </nav>
+
+                </section>
+            </div>
+
+
+
+
+        </section>
+    </div>
+
+    <!-- ============ FEATURED SERVICE ============ -->
+    <section class="featured">
+        <div class="featured-img">
+            <img src="governmentimages/Home Repair Assistance.webp" alt="24/7 breakdown and home repair assistance">
+        </div>
+
+        <div class="featured-text">
+            <span class="featured-badge">★ Featured Service</span>
+            <h2>24/7 Breakdown &amp; Home Repair Assistance</h2>
+            <p>On-demand roadside assistance, emergency electrician, leakage repair, and doorstep maintenance facilities
+                near you.</p>
+
+            <div class="featured-icons">
+                <div><span class="ficon">🏍️</span>
+                    <p>Roadside Bike &amp; Car Help</p>
+                </div>
+                <div><span class="ficon">⚡</span>
+                    <p>Emergency Electrician</p>
+                </div>
+                <div><span class="ficon">🚰</span>
+                    <p>Leakage &amp; Plumbing Fix</p>
+                </div>
+                <div><span class="ficon">📱</span>
+                    <p>Same-Day Mobile Repair</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-contact">
+            <div class="contact-row">
+                <span class="cicon">📞</span>
+                <div>
+                    <strong>Call 112</strong>
+                    <a href="tel:112">National emergency helpline</a>
+                </div>
+            </div>
+            <div class="contact-row">
+                <span class="cicon">🕒</span>
+                <div>
+                    <strong>Emergency</strong>
+                    <p>24 / 7 Available</p>
+                </div>
+            </div>
+            <div class="contact-row">
+                <span class="cicon">📍</span>
+                <div>
+                    <strong>National Helpline</strong>
+                    <p>Coverage, Pollachi</p>
+                </div>
+            </div>
+            <a class="btn-solid btn-block"
+                href="https://www.google.com/maps/search/?api=1&query=24+Hours+Repair+Services+Pollachi" target="_blank"
+                rel="noopener">Get Directions ↗</a>
+        </div>
+    </section>
+
+    <!-- ============ OTHER REPAIR SERVICES ============ -->
+    <div class="other-services">
+        <h2 class="section-title">Other Repair Services in <span class="green-text">Pollachi</span></h2>
+        <p class="section-sub">More repair options and maintenance facilities near you.</p>
+        <button id="locBtn" type="button">📍 Use my current location</button>
+        <p id="locMsg"></p>
+        <section class="other-cards">
+
+            <a class="other-card nearby-card" data-search="bike repair shop" href="" target="_blank" rel="noopener">
+                <span class="other-icon ic-orange">🏍️</span>
+                <h4>Bike Repair</h4>
+                <span class="arrow">→</span>
+            </a>
+
+            <a class="other-card nearby-card" data-search="car service center" href="" target="_blank" rel="noopener">
+                <span class="other-icon ic-red">🚗</span>
+                <h4>Car Service</h4>
+                <span class="arrow">→</span>
+            </a>
+
+            <a class="other-card nearby-card" data-search="electrician" href="" target="_blank" rel="noopener">
+                <span class="other-icon ic-yellow">⚡</span>
+                <h4>Electrical</h4>
+                <span class="arrow">→</span>
+            </a>
+
+            <a class="other-card nearby-card" data-search="plumber" href="" target="_blank" rel="noopener">
+                <span class="other-icon ic-blue">🚰</span>
+                <h4>Plumbing</h4>
+                <span class="arrow">→</span>
+            </a>
+
+            <a class="other-card nearby-card" data-search="mobile repair shop" href="" target="_blank" rel="noopener">
+                <span class="other-icon ic-green">📱</span>
+                <h4>Mobile Repair</h4>
+                <span class="arrow">→</span>
+            </a>
+
+        </section>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div class="footer-container">
+        <section class="explore-pollachi">
+            <img src="coconut_tree_icon.png" alt="">
+            <div>
+                <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
+                <p>Discover the places, people and lifestyle of Pollachi.</p>
+            </div>
+        </section>
+
+        <section class="quicklinks">
+            <h4>Quick Links</h4>
+            <section class="quicklinks-content">
+                <div class="firstpart">
+                    <a href="index.html">Home</a>
+                    <a href="about-pollachi.html">About Pollachi</a>
+                    <a href="place.html">Places</a>
+                    <a href="hotel.html">Hotels &amp; Restaurants</a>
+                </div>
+                <div class="secondpart">
+                    <a href="entertainment.html">Theatres</a>
+                    <a href="education.html">Education</a>
+                    <a href="service.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </section>
+        </section>
+
+        <section class="followus">
+            <h4>Follow Us</h4>
+            <nav>
+                <img src="facebook.png" alt="Facebook">
+                <img src="instagram.png" alt="Instagram">
+                <img src="youtube.png" alt="YouTube">
+            </nav>
+        </section>
+
+        <section class="footer-searchbar-header">
+            <h4>Search</h4>
+            <p>search the Place in Pollachi.</p>
+            <div class="footer-searchbar">
+                <input type="search" placeholder="Search theatres, hotels, restaurants...">
+
+                <button>search</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
+        <p>Made with ♡ for Pollachi</p>
+    </footer>
+
+    <!-- POP UP SCREEN -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-container">
+            <section class="image-section">
+                <div class="main-image">
+                    <img src="aliyardam.webp" alt="" id="popupMainImage">
+                </div>
+                <div class="sub-image" id="popupGallery">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+
+                </div>
+            </section>
+
+            <section class="text-section">
+                <div class="close-section">
+                    <span style="background-color: #D2FCC0; border-radius: 20px; padding: 5px; font-size: 10px;"
+                        id="popupCategory"></span>
+                    <button id="closebtn">✕</button>
+                </div>
+                <div class="text-section-title">
+                    <h2 id="popupName"></h2>
+                    <button id="favBtn" type="button" aria-label="Add to favourites">♡</button>
+                </div>
+                <p id="popupRating"></p>
+                <p id="popupLocation"></p>
+                <p style="margin-top: 10px;" id="popupDescription"></p>
+                <div class="place-information">
+                    <section>
+                        <span>🕒</span>
+                        <nav>
+                            <p id="popupOpeningLabel"></p>
+                            <p id="popupOpening"></p>
+                        </nav>
+                    </section>
+                    <section>
+                        <span>🎟️ </span>
+                        <nav>
+                            <p id="popupEntryLabel"></p>
+                            <p id="popupEntry"></p>
+
+                        </nav>
+                    </section>
+
+                    <section>
+                        <span>📅 </span>
+                        <nav>
+                            <p id="popupBestTimeLabel"></p>
+                            <p id="popupBestTime"></p>
+                        </nav>
+                    </section>
+                </div>
+                <hr style="margin-bottom: 10px;">
+                <div class="place-facilities">
+                    <p style="font-weight: 600;">Facilities</p>
+                    <section id="popupFacilities">
+
+                    </section>
+                </div>
+                <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                <nav style="display: flex;justify-content: center;" class="buttons">
+                    <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
+color: #087d43;">📞 Call</a>
+                    <a class="viewmap-btn" href="" target="_blank" id="popupMap">View on Map</a>
+                </nav>
+            </section>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

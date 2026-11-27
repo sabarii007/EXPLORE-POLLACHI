@@ -44,6 +44,127 @@ const places = {
         phone: "098437 17799",
         map: "https://www.google.com/maps/search/?api=1&query=Hotel+Madhava+Inn+Pollachi"
     },
+    ommurugatech: {
+    name: "Om Muruga Tech",
+    category: "Repair & Maintenance",
+    image: "essentialimages/ommurugatech.png",
+    subImages: [],
+    rating: "4.9",
+    reviews: "167",
+    location: "7, Vijayaraghavan Street, Mahalingapuram, Pollachi - 642002",
+    description: "Home appliance repair and maintenance service specializing in washing machines, refrigerators and AC servicing.",
+    opening: "Listed as Open 24 Hours",
+    entry: "Service Charges Apply",
+    bestTime: "Call Before Visiting",
+    facilities: [
+        "Washing Machine Repair",
+        "Refrigerator Repair",
+        "AC Repair & Service",
+        "Home Appliance Service"
+    ],
+    phone: "090870 03355",
+    map: "https://www.google.com/maps/search/?api=1&query=Om+Muruga+Tech+Pollachi"
+},
+srilakshmidevihomecare: {
+    name: "Sri Lakshmi Devi Home Care",
+    category: "Repair & Maintenance",
+    image: "essentialimages/srilakshmidevihomecare.png",
+    subImages: [],
+    rating: "4.8",
+    reviews: "224",
+    location: "26, Thiruvalluvar Street, Arumugam Nagar, Mahalingapuram, Pollachi - 642002",
+    description: "Doorstep home appliance repair and maintenance service in Pollachi.",
+    opening: "Monday - Saturday: 8:00 AM - 8:30 PM (Tuesday until 7:00 PM)",
+    entry: "Service Charges Apply",
+    bestTime: "Call Before Visiting",
+    facilities: [
+        "AC Repair & Service",
+        "Washing Machine Repair",
+        "Refrigerator Repair",
+        "Microwave Oven Repair",
+        "Water Cooler Service",
+        "Smart TV Repair"
+    ],
+    phone: "95977 93810",
+    map: "https://www.google.com/maps/search/?api=1&query=Sri+Lakshmi+Devi+Home+Care+Pollachi"
+},
+shivaservicecentre: {
+    name: "Shiva Service Centre",
+    category: "Repair & Maintenance",
+    image: "repairimages/shivaservicecentre.png",
+    subImages: [],
+    rating: "5.0",
+    reviews: "16",
+    location: "No. 74, Teppakulam Street, Above Annamalai Tea Traders, Pollachi - 642001",
+    description: "Home electrical appliance repair and servicing centre in Pollachi.",
+    opening: "Monday - Saturday: 8:30 AM - 9:30 PM, Sunday: 8:30 AM - 2:00 PM",
+    entry: "Service Charges Apply",
+    bestTime: "Call Before Visiting",
+    facilities: [
+        "Mixer Grinder Repair",
+        "Wet Grinder Repair",
+        "Iron Box Repair",
+        "Table Fan Repair",
+        "Ceiling Fan Repair",
+        "Gas Stove Repair",
+        "Mixer Jar Repair"
+    ],
+    phone: "9791302375",
+    map: "https://www.google.com/maps/search/?api=1&query=Shiva+Service+Centre+74+Teppakulam+Street+Pollachi"
+},
+bikestation: {
+    name: "Bike Station",
+    category: "Repair & Maintenance",
+    image: "repairimages/bikestation.png",
+    subImages: [],
+    rating: "4.2",
+    reviews: "Not Verified",
+    location: "No. 117, Near LIC, Palakkad Road, Pollachi - 642001",
+    description: "Multi-brand two-wheeler service centre offering bike and scooter repair, maintenance, engine work and breakdown assistance.",
+    opening: "Monday - Saturday: 9:00 AM - 7:30 PM",
+    entry: "Service Charges Apply",
+    bestTime: "Call Before Visiting",
+    facilities: [
+        "🏍️ Multi-Brand Bike Service",
+        "🔧 Engine Repair & Overhauling",
+        "🛢️ Engine Oil Change",
+        "⛓️ Chain Cleaning & Lubrication",
+        "🛞 Wheel Alignment",
+        "🛑 Disc Brake Service",
+        "🔋 Battery Service",
+        "⚡ Electrical Repair",
+        "🚿 Bike Water Wash",
+        "🚨 Breakdown Assistance",
+        "🏠 Doorstep Pickup & Drop"
+    ],
+    phone: "9865551616",
+    map: "https://www.google.com/maps/search/?api=1&query=Bike+Station+117+Palakkad+Road+Pollachi"
+},
+buildingdoctor: {
+    name: "Building Doctor",
+    category: "Repair & Maintenance",
+    image: "repairimages/buildingdoctor.png",
+    subImages: [],
+    rating: "5.0",
+    reviews: "20",
+    location: "111, Raja Mill Road, Opposite Anand Hotel, Vinayagar Kovil, Pollachi - 642001",
+    description: "Professional building waterproofing, water leakage repair and building restoration services in Pollachi.",
+    opening: "Monday - Saturday: 9:00 AM - 7:00 PM",
+    entry: "Service Charges Apply",
+    bestTime: "Call Before Visiting",
+    facilities: [
+        "Terrace Waterproofing",
+        "Roof Leakage Repair",
+        "Bathroom Waterproofing",
+        "Water Tank Waterproofing",
+        "Wall Seepage Treatment",
+        "Crack Filling & Repair",
+        "Building Restoration",
+        "Dampness Treatment"
+    ],
+    phone: "85310 87727",
+    map: "https://www.google.com/maps/search/?api=1&query=Building+Doctor+111+Raja+Mill+Road+Pollachi"
+},
 
     dmart: {
         name: "DMart Pollachi",
@@ -1052,7 +1173,7 @@ const places = {
 // 2. Category ku yetha labels (3 info boxes)
 // ============================================================
 const categoryLabels = {
-    "Theater": ["Opening Hours", "Ticket Price", "Best Time to Visit"],
+    "Theatre": ["Opening Hours", "Ticket Price", "Best Time to Visit"],
     "Hotel & Restaurant": ["Timings", "Price", "Best Time to Visit"],
     "Tourist Place": ["Opening Hours", "Entry Fee", "Best Time to Visit"],
     "College": ["Timings", "Admission", "Best Time to Visit"],
@@ -1278,3 +1399,5 @@ popup.addEventListener("click", function (event) {
 document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") closePopup();
 });
+
+

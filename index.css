@@ -25,6 +25,10 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-weight: 700;
 }
@@ -521,36 +525,28 @@ html {
 }
 
 .footer-searchbar {
-    position: relative;
-    margin-top: 5px;
+    display: flex;
+    margin-top: 6px;
 }
 
-.footer-searchbar img {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 8px;
-    left: 5px;
-}
 
 .footer-searchbar input {
-    width: 300px;
-    padding: 8px;
-    border-radius: 10px;
-    border: 2px solid white;
-    padding-left: 20px;
-    font-size: 10px;
+    width: 190px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 11px;
+    font-family: inherit;
 }
 
 .footer-searchbar button {
-    width: 80px;
-    padding: 2px;
-    position: absolute;
-    top: 3px;
-    left: 215px;
-    background-color: #1C9565;
-    border: 3px solid #1C9565;
-    border-radius: 5px;
+    background-color: #1c9565;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 600;
 }
 
 .footer-searchbar-header p {
@@ -566,8 +562,10 @@ footer {
     background-color: #03251E;
     color: #B0BBB9;
     font-size: 10px;
+    padding: 8px 0;
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
 }
 
@@ -604,6 +602,8 @@ footer p {
     display: flex;
     box-sizing: border-box;
     z-index: 1001;
+    max-height: 90vh;
+    overflow-y: auto;
 
     animation: popup 0.3s ease-in-out;
 
@@ -714,12 +714,13 @@ footer p {
     align-items: center;
     flex-direction: column;
 }
-.buttons{
+
+.buttons {
     display: flex;
     gap: 10px;
 }
 
-.buttons a{
+.buttons a {
     flex: 1;
     background-color: #017618;
     padding: 7px;
@@ -735,26 +736,60 @@ footer p {
 .popup-container.no-image {
     width: 45%;
 }
+
 .popup-container.no-image .image-section {
     display: none;
 }
+
 .popup-container.no-image .text-section {
     width: 100%;
 }
 
+#popupFeesBox {
+    margin-top: 10px;
+}
+
+#popupFees {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0;
+}
+
+#popupFees td {
+    font-size: 10px;
+    padding: 4px 6px;
+    border-bottom: 1px solid #e3e8e0;
+    vertical-align: top;
+}
+
+#popupFees td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+#popupFeesNote {
+    font-size: 9px;
+    color: #666;
+    line-height: 1.4;
+}
 
 
-#favBtn{
+
+#favBtn {
     cursor: pointer;
     color: #333;
     transition: transform 0.2s;
 }
-#favBtn:active{
+
+#favBtn:active {
     transform: scale(1.3);
 }
-#favBtn.liked{
-    color: #e11d48;   /* red */
+
+#favBtn.liked {
+    color: #e11d48;
+    /* red */
 }
+
 @keyframes popup {
     from {
         transform: scale(0.5);
@@ -771,4 +806,95 @@ footer p {
     .popup-container.no-image {
         width: 94%;
     }
+}
+
+
+/* Search suggestion dropdown */
+
+.search-suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-height: 250px;
+    overflow-y: auto;
+    font-family: inherit;
+    max-height: 220px;
+
+}
+
+/* Suggestion items */
+
+.search-option {
+    padding: 12px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.3;
+}
+
+.search-option:hover,
+.search-option.active {
+    background: #eeeeee;
+}
+
+/* Google style inline autocomplete */
+
+.search-ghost {
+    position: absolute;
+    transform: translateY(-50%);
+    pointer-events: none;
+    white-space: pre;
+    z-index: 3;
+}
+
+.search input {
+    color: black;
+}
+
+.search-ghost .typed {
+    color: transparent;
+}
+
+.search-ghost .remaining {
+    color: #999;
+}
+
+/* Search input */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Selected place highlight */
+
+.global-search-highlight {
+    outline: 3px solid #0C8960;
+    border-radius: 10px;
+    transition: outline 0.3s;
+}
+
+.footer-searchbar .search-suggestions {
+    top: auto;
+    bottom: 100%;
+    width: 190px;
+    margin-bottom: 4px;
+}
+
+.footer-searchbar .search-option {
+    font-size: 12px;
+    padding: 7px 10px;
+}
+
+/* Footer input focus outline konjam subtle */
+.footer-searchbar input:focus {
+    outline: 2px solid #1c9565;
 }

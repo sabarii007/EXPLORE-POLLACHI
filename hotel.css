@@ -499,53 +499,44 @@ html {
 }
 
 .footer-searchbar {
-    position: relative;
-    margin-top: 5px;
+    display: flex;
+    margin-top: 6px;
 }
 
-.footer-searchbar img {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 8px;
-    left: 5px;
-}
 
 .footer-searchbar input {
-    width: 300px;
-    padding: 8px;
-    border-radius: 10px;
-    border: 2px solid white;
-    padding-left: 20px;
-    font-size: 10px;
+   width: 190px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 11px;
+    font-family: inherit;
 }
 
 .footer-searchbar button {
-    width: 80px;
-    padding: 2px;
-    position: absolute;
-    top: 3px;
-    left: 215px;
-    background-color: #1C9565;
-    border: 3px solid #1C9565;
-    border-radius: 5px;
+    background-color: #1c9565;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 600;
 }
-
-.footer-searchbar-header p {
+.footer-searchbar-header p{
     font-size: 10px;
     color: #B0BBB9;
 }
-
-.footer-searchbar-header h4 {
+.footer-searchbar-header h4{
     font-size: 15px;
 }
-
 footer {
     background-color: #03251E;
     color: #B0BBB9;
     font-size: 10px;
+    padding: 8px 0;
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
 }
 

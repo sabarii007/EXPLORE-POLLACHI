@@ -102,7 +102,7 @@ button { font-family: inherit; cursor: pointer; }
             rgba(4, 40, 32, 0.95) 0%,
             rgba(4, 40, 32, 0.7) 45%,
             rgba(0, 0, 0, 0.05) 100%),
-        url(governmentimages/government-hero.png);
+        url(governmentimages/governmentbackground.webp);
     background-size: cover;
     background-position: center right;
     color: white;
@@ -480,6 +480,19 @@ button { font-family: inherit; cursor: pointer; }
     gap: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
     transition: 0.3s;
+}
+#locBtn{
+    margin: 10px 0;
+    padding: 8px 14px;
+    background-color: #017926;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#locMsg{
+    font-size: 13px;
+    margin-bottom: 6px;
 }
 
 .other-card:hover {

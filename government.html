@@ -7,6 +7,8 @@
     <title>Government Services in Pollachi</title>
     <link rel="stylesheet" href="government.css">
     <script src="index.js" defer></script>
+    <script src="banking.js" defer></script>
+    <script src="filter.js" defer></script>
 </head>
 
 <body>
@@ -296,38 +298,40 @@
     <div class="other-services">
         <h2 class="section-title">Other Government Services in <span class="green-text">Pollachi</span></h2>
         <p class="section-sub">More administrative departments and citizen centers near you.</p>
-
+        <button id="locBtn" type="button">📍 Use my current location</button>
+        <p id="locMsg"></p>
         <section class="other-cards">
-            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=Taluk+Office+Pollachi"
-                target="_blank" rel="noopener">
+
+            <a class="other-card nearby-card" data-search="Taluk Office" href="" target="_blank" rel="noopener">
                 <span class="other-icon">🏛️</span>
                 <h4>Taluk Office</h4>
                 <span class="arrow">→</span>
             </a>
-            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=Municipality+Office+Pollachi"
-                target="_blank" rel="noopener">
+
+            <a class="other-card nearby-card" data-search="Municipality Office" href="" target="_blank" rel="noopener">
                 <span class="other-icon">🏢</span>
                 <h4>Municipality</h4>
                 <span class="arrow">→</span>
             </a>
-            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=RTO+Office+Pollachi"
-                target="_blank" rel="noopener">
+
+            <a class="other-card nearby-card" data-search="RTO Office" href="" target="_blank" rel="noopener">
                 <span class="other-icon">🚘</span>
                 <h4>RTO Services</h4>
                 <span class="arrow">→</span>
             </a>
-            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=Sub+Registrar+Office+Pollachi"
-                target="_blank" rel="noopener">
+
+            <a class="other-card nearby-card" data-search="Sub Registrar Office" href="" target="_blank" rel="noopener">
                 <span class="other-icon">📑</span>
                 <h4>Sub-Registrar</h4>
                 <span class="arrow">→</span>
             </a>
-            <a class="other-card" href="https://www.google.com/maps/search/?api=1&query=e-Sevai+Center+Pollachi"
-                target="_blank" rel="noopener">
+
+            <a class="other-card nearby-card" data-search="e-Sevai Centre" href="" target="_blank" rel="noopener">
                 <span class="other-icon">💻</span>
                 <h4>E-Sevai Centers</h4>
                 <span class="arrow">→</span>
             </a>
+
         </section>
     </div>
 

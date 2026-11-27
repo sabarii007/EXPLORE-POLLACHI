@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="place.css">
     <script src="place.js" defer></script>
     <script src="index.js" defer></script>
+    <script src="global-search.js" defer></script>
+    <script src="filter.js" defer></script>
 </head>
 
 <body>
@@ -26,9 +28,10 @@
 
         </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
-            <img src="searchbar.png" alt="">
+        <section class="search">
+            <input type="search" class="searchInput" placeholder="Search places...">
+            
+            <div class="suggestions"></div>
         </section>
     </div>
 
@@ -52,8 +55,9 @@
         <section class="searchbar-header">
             <div class="searchbar">
                 <span>🔍</span>
-                <input type="search" placeholder="Search tourist places in Pollachi...">
-                <button type="button">Search</button>
+                <input type="search" class="searchInput" placeholder="Search theatres, hotels, restaurants...">
+                <button type="button" class="searchBtn">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>
@@ -81,75 +85,75 @@
             </select>
 
         </nav>
-    
 
 
-    <h2>Popular Tourist Places in <span style="color: #3CAF77;"> Pollachi</span></h2>
-    <p>Explore the most visited and loved tourist attractions in and around Pollachi.</p>
 
-    <section class="filter-items">
+        <h2>Popular Tourist Places in <span style="color: #3CAF77;"> Pollachi</span></h2>
+        <p>Explore the most visited and loved tourist attractions in and around Pollachi.</p>
 
-        <div class="item">
-            <img src="aliyardam.webp" alt="">
-            <nav class="item-text">
-                <h3>Aliyar Dam</h3>
-                <span>⭐ 4.3 (16k reviews)</span>
-                <span>📍 Aliyar, Pollachi</span>
-                <section class="category">
-                    <span>🌊 Dam</span>
-                    <span>🌳 Nature</span>
-                    <span>📷 View Point</span>
-                </section>
-                <section class="buttons">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Aliyar+Dam+Pollachi" target="_blank"
-                        rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
-                    <a href="#" class="details-btn" data-place="aliyar"
-                        style="background-color: #017926; color: white;">View Details →</a>
-                </section>
-            </nav>
-        </div>
+        <section class="filter-items">
 
-        <div class="item">
-            <img src="pollachi_images_png/monkeyfalls.webp" alt="">
-            <nav class="item-text">
-                <h3>Monkey Falls</h3>
-                <span>⭐ 4.3 (2,760 reviews)</span>
-                <span>📍 Aliyar Road, Pollachi</span>
-                <section class="category">
-                    <span>🌊 Waterfall</span>
-                    <span>🚶 Trekking</span>
-                    <span>🌳 Nature</span>
-                </section>
-                <section class="buttons">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Monkey+Falls+Pollachi" target="_blank"
-                        rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
-                    <a href="#" class="details-btn" data-place="monkeyfalls"
-                        style="background-color: #017926; color: white;">View Details →</a>
-                </section>
-            </nav>
-        </div>
+            <div class="item">
+                <img src="aliyardam.webp" alt="">
+                <nav class="item-text">
+                    <h3>Aliyar Dam</h3>
+                    <span>⭐ 4.3 (16k reviews)</span>
+                    <span>📍 Aliyar, Pollachi</span>
+                    <section class="category">
+                        <span>🌊 Dam</span>
+                        <span>🌳 Nature</span>
+                        <span>📷 View Point</span>
+                    </section>
+                    <section class="buttons">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Aliyar+Dam+Pollachi" target="_blank"
+                            rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="aliyar"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </section>
+                </nav>
+            </div>
 
-        <div class="item">
-            <img src="pollachi_images_png/topslip.webp" alt="">
-            <nav class="item-text">
-                <h3>Topslip</h3>
-                <span>⭐ 4.4 (3,120 reviews)</span>
-                <span>📍 Anamalai Hills, Pollachi</span>
-                <section class="category">
-                    <span>🐾 Wildlife</span>
-                    <span>🌳 Forest</span>
-                    <span>⛰️ Hills</span>
-                </section>
-                <section class="buttons">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Topslip+Pollachi" target="_blank"
-                        rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
-                    <a href="#" class="details-btn" data-place="topslip"
-                        style="background-color: #017926; color: white;">View Details →</a>
-                </section>
-            </nav>
-        </div>
+            <div class="item">
+                <img src="pollachi_images_png/monkeyfalls.webp" alt="">
+                <nav class="item-text">
+                    <h3>Monkey Falls</h3>
+                    <span>⭐ 4.3 (2,760 reviews)</span>
+                    <span>📍 Aliyar Road, Pollachi</span>
+                    <section class="category">
+                        <span>🌊 Waterfall</span>
+                        <span>🚶 Trekking</span>
+                        <span>🌳 Nature</span>
+                    </section>
+                    <section class="buttons">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Monkey+Falls+Pollachi" target="_blank"
+                            rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="monkeyfalls"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </section>
+                </nav>
+            </div>
 
-    </section>
+            <div class="item">
+                <img src="pollachi_images_png/topslip.webp" alt="">
+                <nav class="item-text">
+                    <h3>Topslip</h3>
+                    <span>⭐ 4.4 (3,120 reviews)</span>
+                    <span>📍 Anamalai Hills, Pollachi</span>
+                    <section class="category">
+                        <span>🐾 Wildlife</span>
+                        <span>🌳 Forest</span>
+                        <span>⛰️ Hills</span>
+                    </section>
+                    <section class="buttons">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Topslip+Pollachi" target="_blank"
+                            rel="noopener" style="background: #e4f6e8; color: #087d43;">View on Map</a>
+                        <a href="#" class="details-btn" data-place="topslip"
+                            style="background-color: #017926; color: white;">View Details →</a>
+                    </section>
+                </nav>
+            </div>
+
+        </section>
     </div>
 
     <div class="itineraries">
@@ -321,10 +325,10 @@
         <section class="footer-searchbar-header">
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
-            <div class="footer-searchbar">
-                <input type="search" placeholder="Search theatres, hotels, restaurants...">
-                <img src="search.png" alt="">
-                <button>search</button>
+             <div class="footer-searchbar">
+                <input type="search" class="searchInput" placeholder="Search places...">
+                <button type="button">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>
@@ -335,7 +339,7 @@
     </footer>
 
 
-    
+
 
     <div class="popup-overlay" id="popup">
 
@@ -398,14 +402,14 @@
 
                     </section>
                 </div>
+                <div id="popupFeesBox" style="display:none">
+                    <p style="font-weight:600">Fees</p>
+                    <table id="popupFees"></table>
+                    <p id="popupFeesNote"></p>
+                </div>
                 <hr style="margin-top: 10px; margin-bottom: 10px;">
 
-                <div class="place-fees" id="popupFeesBox" style="display:none;">
-                    <p style="font-weight: 600;">Fees</p>
-                    <table id="popupFees"></table>
-                    <p id="popupFeesNote" class="fees-note"></p>
-                    <hr style="margin-top: 10px; margin-bottom: 10px;">
-                </div>
+                
 
                 <nav style="display: flex;justify-content: center;" class="buttons">
                     <a id="popupCall" href="#" style="display:none;background: #e4f6e8;
