@@ -12,13 +12,13 @@
     <script src="entertainment.js" defer></script>
     <script src="index.js" defer></script>
     <script src="filter.js" defer></script>
-
+</head>
 
 
 <body>
     <div class="header" id="header">
         <h2> <img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
-
+        <button id="menubtn" class="menubtn">☰</button>
         <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about-pollachi.html">About</a>
@@ -40,13 +40,13 @@
     <div class="container1">
         <nav class="breadcrumbs">
             <a href="index.html"><span style="color: white;">🏠 Home ></span></a>
-            <a href="entertainment.html"><span style="color: white;">Theaters</span></a>
+            <a href="entertainment.html"><span style="color: white;"> Theatres</span></a>
         </nav>
 
         <section class="text">
             <img src="entertainmentimages/image copy.png" alt="">
             <nav>
-                <h1>Theatres in <span style="color: #78F16D; font-size: 70px;"> Pollachi</span></h1>
+                <h1> Theatres in <span style="color: #78F16D; font-size: 70px;"> Pollachi</span></h1>
                 <p>Find the best cinemas, explore facilities, show timings and plan your next <br>movie experience in
                     Pollachi.</p>
             </nav>
@@ -84,13 +84,13 @@
             </select>
 
         </nav>
-    </div>
 
-    <section class="filter-place">
-        <h2>Popular Theatres in <span style="color: #78F16D;"">Pollachi</span></h2>
+
+        <section class="filter-place">
+            <h2>Popular Theatres in <span style="color: #78F16D;">Pollachi</span></h2>
             <p>Explore top movie theatres with rating, facilities and location</p>
 
-           <section class=" cards">
+            <section class="cards">
                 <div class="filter-card">
                     <img src="muruglaya_theatre.webp" alt="">
                     <section class="card-text">
@@ -108,7 +108,8 @@
                             <a href="https://www.google.com/maps/search/?api=1&query=Murugalaya+Vishal+Cinemas+Pollachi"
                                 target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                            <a href="" style="background-color: #017926; color: white;" class="details-btn" data-place="murugalaya">View Details →</a>
+                            <a href="#" style="background-color: #017926; color: white;" class="details-btn"
+                                data-place="murugalaya">View Details →</a>
                         </nav>
 
                     </section>
@@ -117,7 +118,7 @@
                 <div class="filter-card">
                     <img src="entertainmentimages/ThangamCinemas.webp" alt="">
                     <section class="card-text">
-                        <h3>ThangamCinemas</h3>
+                        <h3>Thangam Cinemas</h3>
                         <p>⭐ 4.4 (6300+ reviews)</p>
                         <p>📍 Kottur Road, Pollachi</p>
                         <nav class="card-option">
@@ -131,7 +132,9 @@
                             <a href="https://www.google.com/maps/search/?api=1&query=Thangam+Cinemas+Pollachi"
                                 target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                           <a href="#" class="details-btn" data-place="thangamcinemas" style="background-color: #017926; color: white;">View Details →</a>   </nav>
+                            <a href="#" class="details-btn" data-place="thangamcinemas"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
                     </section>
 
@@ -139,7 +142,7 @@
                 <div class="filter-card">
                     <img src="entertainmentimages/DoraisTheatre.webp" alt="">
                     <section class="card-text">
-                        <h3>DoraisTheatre</h3>
+                        <h3>Dorais Theatre</h3>
                         <p>⭐ 4.0 (2600+ reviews)</p>
                         <p>📍 Coimbatore Road, Pollachi</p>
                         <nav class="card-option">
@@ -153,7 +156,9 @@
                             <a href="https://www.google.com/maps/search/?api=1&query=Dorais+Movie+Land+Pollachi"
                                 target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                            <a href="#" class="details-btn" data-place="dorais" style="background-color: #017926; color: white;">View Details →</a>   </nav>
+                            <a href="#" class="details-btn" data-place="dorais"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
                     </section>
 
@@ -176,16 +181,18 @@
                             <a href="https://www.google.com/maps/search/?api=1&query=Sri+Sakthi+Cinemas+24+Municipal+Office+Road+Pollachi"
                                 target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                            <a href="#" class="details-btn" data-place="srisakthi" style="background-color: #017926; color: white;">View Details →</a>   </nav>
+                            <a href="#" class="details-btn" data-place="srisakthi"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
                     </section>
                 </div>
-           </section>
-    </section>
+            </section>
+        </section>
     </div>
 
     <div class="nearby-container">
         <h2>Explore Nearby Places</h2>
-        <p>Popular places near theaters in Pollachi</p>
+        <p>Popular places near Theatres in Pollachi</p>
         <button id="locBtn" type="button">📍 Use my current location</button>
         <p id="locMsg"></p>
         <section class="nearby-place">
@@ -249,58 +256,58 @@
     </div>
 
 
-   <div class="footer-container">
-    <section class="explore-pollachi">
-      <img src="coconut_tree_icon.png" alt="">
-      <div>
-        <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
-        <p>Discover the places,peoples and lifestyle of pollachi. </p>
-      </div>
-    </section>
-    <section class="quicklinks">
-      <h4>Quick Links</h4>
-      <section class="quicklinks-content">
-        <div class="firstpart">
-          <a href="index.html">Home</a>
-          <a href="about-pollachi.html">About Pollachi</a>
-          <a href="place.html">Places</a>
-          <a href="hotel.html">Hotels & Restaurants</a>
-        </div>
-        <div class="secondpart">
-          <a href="entertainment.html">Theatres</a>
-          <a href="education.html">Education</a>
-          <a href="service.html">Services</a>
-          <a href="contact.html">Contact</a>
+    <div class="footer-container">
+        <section class="explore-pollachi">
+            <img src="coconut_tree_icon.png" alt="">
+            <div>
+                <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
+                <p>Discover the places,peoples and lifestyle of pollachi. </p>
+            </div>
+        </section>
+        <section class="quicklinks">
+            <h4>Quick Links</h4>
+            <section class="quicklinks-content">
+                <div class="firstpart">
+                    <a href="index.html">Home</a>
+                    <a href="about-pollachi.html">About Pollachi</a>
+                    <a href="place.html">Places</a>
+                    <a href="hotel.html">Hotels & Restaurants</a>
+                </div>
+                <div class="secondpart">
+                    <a href="entertainment.html">Theatres</a>
+                    <a href="education.html">Education</a>
+                    <a href="service.html">Services</a>
+                    <a href="contact.html">Contact</a>
 
-        </div>
-      </section>
+                </div>
+            </section>
 
-    </section>
+        </section>
 
-    <section class="followus">
-      <h4>Follow Us</h4>
-      <nav>
-        <img src="facebook.png" alt="">
-        <img src="instagram.png" alt="">
-        <img src="youtube.png" alt="">
-      </nav>
+        <section class="followus">
+            <h4>Follow Us</h4>
+            <nav>
+                <img src="facebook.png" alt="">
+                <img src="instagram.png" alt="">
+                <img src="youtube.png" alt="">
+            </nav>
 
-    </section>
-    <section class="footer-searchbar-header">
-      <h4>Search</h4>
-      <p>search the Place in Pollachi.</p>
-      <div class="footer-searchbar">
-        <input type="search" placeholder="Search theatres, hotels, restaurants...">
-        
-        <button>search</button>
-      </div>
-    </section>
-  </div>
+        </section>
+        <section class="footer-searchbar-header">
+            <h4>Search</h4>
+            <p>search the Place in Pollachi.</p>
+            <div class="footer-searchbar">
+                <input type="search" placeholder="Search Places in Pollachi...">
 
-  <footer>
-    <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
-    <p>Made with ♡ for Pollachi</p>
-  </footer>
+                <button>search</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
+        <p>Made with ♡ for Pollachi</p>
+    </footer>
 
 
     <!-- POP UP SCREEN -->

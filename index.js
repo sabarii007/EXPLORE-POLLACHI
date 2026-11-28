@@ -595,7 +595,7 @@ buildingdoctor: {
         map: "https://www.google.com/maps/search/?api=1&query=Pollachi+Bus+Stand"
     },
 
-    eastpolicestation: {
+    westpolicestation: {
        name: "Pollachi West Police Station",
     category: "Police Station",
     image: "serviceimages/police station.webp",
@@ -1066,22 +1066,7 @@ buildingdoctor: {
         map: "https://www.google.com/maps/search/?api=1&query=Pollachi+Associates+Petrol+Bunk"
     },
 
-    nmahalingam: {
-        name: "N. Mahalingam & Co.",
-        category: "Petrol Pump",
-        image: "petrolimages/nmahalingam.png",
-        subImages: [],
-        rating: "4.2",
-        reviews: "629 reviews",
-        location: "102, Coimbatore Road, Arumugam Nagar, Pollachi - 642002",
-        description: "An ABT petrol pump operated by N. Mahalingam & Company, part of the Sakthi & ABT Group, providing fuel services to vehicles in Pollachi.",
-        opening: "24 Hours",
-        entry: "Free Entry",
-        bestTime: "Available 24 Hours",
-        facilities: ["Petrol", "Diesel", "Fuel Filling", "Vehicle Refuelling"],
-        phone: "+91 95855 09456",
-        map: "https://www.google.com/maps/search/?api=1&query=N+Mahalingam+and+Co+Petrol+Pump+Pollachi"
-    },
+   
     pollachitalukoffice: {
         name: "Pollachi Taluk Office",
         category: "Government Office",
@@ -1400,4 +1385,26 @@ document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") closePopup();
 });
 
+//T0GGLE BUTTON
+
+let menubtn = document.getElementById("menubtn");
+let navbar = document.getElementById("navbar");
+
+menubtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+
+    if (navbar.classList.contains("active")) {
+        menubtn.textContent = "✕";
+    } else {
+        menubtn.textContent = "☰";
+    }
+});
+
+let navLinks = navbar.querySelectorAll("a");
+navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navbar.classList.remove("active");
+        menubtn.textContent = "☰";
+    });
+});
 

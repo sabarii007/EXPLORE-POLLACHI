@@ -89,6 +89,15 @@ html {
     text-decoration: underline;
 }
 
+
+.menubtn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
 .search {
     margin-right: 50px;
     position: relative;
@@ -802,11 +811,7 @@ footer p {
     }
 }
 
-@media (max-width: 900px) {
-    .popup-container.no-image {
-        width: 94%;
-    }
-}
+
 
 
 /* Search suggestion dropdown */
@@ -897,4 +902,209 @@ input[type="search"]::-webkit-search-decoration {
 /* Footer input focus outline konjam subtle */
 .footer-searchbar input:focus {
     outline: 2px solid #1c9565;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+
+img { max-width: 100%; }
+
+/* ---------- Laptop / small desktop (≤ 1100px) ---------- */
+@media (max-width: 1100px) {
+    .text-content { width: 60%; }
+    .text-content h2 { font-size: 56px; }
+
+    .categories {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .about-container {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .about { width: 100%; margin-left: 0; }
+    .visit-container,
+    .quickfacts { width: 45%; }
+
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .explore-pollachi,
+    .quicklinks { width: 45%; }
+    .followus { width: 40%; }
+}
+
+/* ---------- Tablet (≤ 900px) ---------- */
+@media (max-width: 900px) {
+
+    /* Header + hamburger menu */
+    .header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .header h2 { margin-left: 10px; }
+
+    .menubtn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        gap: 12px;
+        padding: 10px;
+    }
+    .navbar.active { display: flex; }
+    .navbar a { font-size: 15px; }
+
+    .search {
+        display: none;
+    }
+    
+
+    /* Hero */
+    .container1 {
+        height: auto;
+        min-height: 300px;
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 20px;
+    }
+    .breadcrumbs,
+    .text-content { margin-left: 15px; }
+    .text-content { width: 90%; }
+    .text-content h3 { font-size: 36px; }
+    .text-content h2 { font-size: 48px; line-height: 1.1; }
+
+    .searchbar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .searchbar {
+        width: calc(100% - 30px);
+        max-width: 520px;
+        margin: 20px 15px 0;
+    }
+    .location-info { margin: 0 15px; }
+
+    /* Categories */
+    .category-header { margin-left: 10px; }
+    .category-header p { line-height: 1.4; }
+    .categories {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .categories-list p { font-size: 11px; text-align: center; }
+
+    /* Featured places */
+    .feature-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .feature-title p { line-height: 1.4; }
+    .Category-btn {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .place-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    /* Popup */
+    .popup-container,
+    .popup-container.no-image {
+        width: 94%;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .image-section,
+    .text-section { width: 100%; }
+    .main-image { height: 220px; }
+    .main-image img { width: 100%; }
+    .text-section p { font-size: 12px; }
+    .place-information section { width: calc(50% - 12px); }
+}
+
+/* ---------- Mobile (≤ 600px) ---------- */
+@media (max-width: 600px) {
+
+    .header h2 { font-size: 18px; }
+
+    .text-content { width: 95%; }
+    .text-content h3 { font-size: 28px; }
+    .text-content h2 { font-size: 40px; }
+    .text-content h5 { font-size: 16px; }
+    .text-content p { font-size: 13px; line-height: 1.5; }
+
+    .searchbar button { padding: 8px 14px; }
+
+    /* Categories -> 3 per row */
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .categories-list { width: 100%; height: 85px; }
+    .categories-list p { font-size: 10px; }
+
+    /* Cards -> 1 column */
+    .place-container { grid-template-columns: 1fr; }
+    .place-card { min-height: auto; }
+    .place-card img { height: 220px; }
+
+    /* About section */
+    .about-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .about,
+    .visit-container,
+    .quickfacts { width: 100%; margin-left: 0; }
+    .about-content { flex-direction: column; }
+    .about-content img { width: 100%; }
+    .about-content p { font-size: 13px; }
+    .visit-text p,
+    .quickfacts-content p { font-size: 12px; }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .explore-pollachi,
+    .quicklinks,
+    .followus,
+    .footer-searchbar-header { width: 100%; }
+    .explore-pollachi p { width: 100%; }
+    .firstpart a,
+    .secondpart a { font-size: 13px; line-height: 1.8; }
+    .footer-searchbar input { width: 100%; flex: 1; }
+    .footer-searchbar .search-suggestions { width: 100%; }
+    .footer-searchbar-header p { font-size: 12px; }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    /* Popup */
+    .popup-container { padding: 15px; }
+    .main-image { height: 180px; }
+    .sub-image img { width: 70px; height: 55px; }
+    .place-information section { width: 100%; }
+    .buttons { flex-direction: column; }
 }

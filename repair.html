@@ -7,7 +7,7 @@
     <title>Repair Maintenance in Pollachi</title>
     <link rel="stylesheet" href="repair.css">
     <script src="index.js" defer></script>
-    <script src="./banking.js" defer></script>
+    <script src="repair.js" defer></script>
     <script src="filter.js" defer></script>
 </head>
 
@@ -16,7 +16,7 @@
     <!-- ============ HEADER ============ -->
     <div class="header" id="header">
         <h2><img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
-
+        <button id="menubtn" class="menubtn">☰</button>
         <nav class="navbar" id="navbar">
             <a href="index.html">Home</a>
             <a href="about-pollachi.html">About</a>
@@ -73,10 +73,10 @@
         </nav>
 
         <select class="sort-select" aria-label="Sort services">
+            <option>Sort By: Nearest First</option>
             <option>Sort By: Popular</option>
             <option>Sort By: A–Z (Name)</option>
             <option>Sort By: Z–A (Name)</option>
-            <option>Sort By: Nearest First</option>
         </select>
     </div>
 
@@ -106,7 +106,7 @@
                         <span>🚨 24/7 Emergency Repair</span>
                     </nav>
                     <nav class="card-button">
-                        <a href="" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=Om+Muruga+Tech+Pollachi" target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                         <a href="#" class="details-btn" data-place="ommurugatech"
                             style="background-color: #017926; color: white;">View Details →</a>
@@ -197,7 +197,7 @@
             </div>
 
             <div class="filter-card">
-                <img src="repairimages/Bike Station.avif" alt="">
+                <img src="repairimages/Bike Station.avif" alt="Bike Station">
                 <section class="card-text">
                     <h3>Bike Station</h3>
                     <p>⭐ 4.2 (Not Verified)</p>
@@ -296,31 +296,31 @@
         <p id="locMsg"></p>
         <section class="other-cards">
 
-            <a class="other-card nearby-card" data-search="bike repair shop" href="" target="_blank" rel="noopener">
+            <a class="other-card nearby-card" data-search="bike repair shop" href="#" target="_blank" rel="noopener">
                 <span class="other-icon ic-orange">🏍️</span>
                 <h4>Bike Repair</h4>
                 <span class="arrow">→</span>
             </a>
 
-            <a class="other-card nearby-card" data-search="car service center" href="" target="_blank" rel="noopener">
+            <a class="other-card nearby-card" data-search="car service center" href="#" target="_blank" rel="noopener">
                 <span class="other-icon ic-red">🚗</span>
                 <h4>Car Service</h4>
                 <span class="arrow">→</span>
             </a>
 
-            <a class="other-card nearby-card" data-search="electrician" href="" target="_blank" rel="noopener">
+            <a class="other-card nearby-card" data-search="electrician" href="#" target="_blank" rel="noopener">
                 <span class="other-icon ic-yellow">⚡</span>
                 <h4>Electrical</h4>
                 <span class="arrow">→</span>
             </a>
 
-            <a class="other-card nearby-card" data-search="plumber" href="" target="_blank" rel="noopener">
+            <a class="other-card nearby-card" data-search="plumber" href="#" target="_blank" rel="noopener">
                 <span class="other-icon ic-blue">🚰</span>
                 <h4>Plumbing</h4>
                 <span class="arrow">→</span>
             </a>
 
-            <a class="other-card nearby-card" data-search="mobile repair shop" href="" target="_blank" rel="noopener">
+            <a class="other-card nearby-card" data-search="mobile repair shop" href="#" target="_blank" rel="noopener">
                 <span class="other-icon ic-green">📱</span>
                 <h4>Mobile Repair</h4>
                 <span class="arrow">→</span>
@@ -370,7 +370,7 @@
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
             <div class="footer-searchbar">
-                <input type="search" placeholder="Search theatres, hotels, restaurants...">
+                <input type="search" placeholder="Search places in Pollachi...">
 
                 <button>search</button>
             </div>

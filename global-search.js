@@ -27,7 +27,7 @@ const categoryPages = {
     "Government Hospital": "emergencyservice.html",
     "Government Office": "government.html",
     "Government Service": "government.html",
-    "Repair & Maintenance": "essential-services.html",
+    "Repair & Maintenance": "repair.html",
     "Petrol Pump": "essential-services.html"
 };
 

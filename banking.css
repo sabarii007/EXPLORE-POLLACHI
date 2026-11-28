@@ -85,6 +85,14 @@ html {
     text-decoration: underline;
 }
 
+.menubtn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
 .search {
     margin-right: 50px;
     position: relative;
@@ -839,99 +847,33 @@ footer p{
     }
 }
 
-@media (max-width: 900px) {
-    .popup-container.no-image {
-        width: 94%;
-    }
+/* =========================================================
+   RESPONSIVE DESIGN (banking.html)
+========================================================= */
+
+img { max-width: 100%; }
+
+.container1 {
+    background-size: cover;
+    background-position: center;
 }
 
-/* Responsive */
-
-/* @media(max-width: 768px) {
-
-    .banking-features {
-        grid-template-columns: 1fr;
-        padding: 12px;
-    }
-
-    .why-banking,
-    .quick-links {
-        min-height: 190px;
-    }
-
-    .quick-content {
-        width: 75%;
-    }
-
-    .quick-buttons {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-    }
-
-    .quick-buttons a {
-        font-size: 11px;
-        padding: 10px 7px;
-    }
-
-    .banking-image {
-        right: 0;
-        width: 30%;
-        opacity: 0.5;
-    }
-
-    .banking-text {
-        display: none;
-    }
+.popup-container {
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-@media(max-width: 400px) {
-
-    .quick-content {
-        width: 100%;
-    }
-
-    .banking-image {
-        display: none;
-    }
-
-} */
-
-
-/* =================================
-   RESPONSIVE DESIGN
-================================= */
-
-
-/* ---------- LAPTOP ---------- */
-
+/* ---------------- LAPTOP (≤ 1200px) ---------------- */
 @media (max-width: 1200px) {
+    .header h2 { margin-left: 20px; }
+    .search { margin-right: 20px; }
 
-    .header h2 {
-        margin-left: 20px;
-    }
+    .breadcrumbs,
+    .text { margin-left: 30px; }
+    .searchbar { margin-left: 30px; }
 
-    .search {
-        margin-right: 20px;
-    }
-
-    .navbar {
-        gap: 8px;
-    }
-
-    .navbar a {
-        font-size: 12px;
-    }
-
-    .filter-place {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
-
+    .filter-option { padding: 12px 30px; }
+    .filter-place,
     .nearby-container {
         margin-left: 30px;
         margin-right: 30px;
@@ -939,733 +881,203 @@ footer p{
 
     .nearby-place {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 12px;
     }
-
-    .nearby-card {
-        width: 100%;
-    }
-
+    .nearby-card { width: 100%; }
 }
 
-
-/* ---------- TABLET ---------- */
-
+/* ---------------- TABLET (≤ 992px) ---------------- */
 @media (max-width: 992px) {
 
-    /* Header */
-
+    /* Header + hamburger */
     .header {
         flex-wrap: wrap;
-        gap: 15px;
-        padding: 15px;
+        gap: 10px;
+        padding: 12px 15px;
     }
+    .header h2 { margin-left: 0; }
 
-    .header h2 {
-        margin-left: 0;
-    }
+    .menubtn { display: block; cursor: pointer; }
 
     .navbar {
-        order: 3;
+        display: none;
+        flex-direction: column;
         width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
+        order: 3;
+        gap: 12px;
+        padding: 8px 0;
     }
+    .navbar.active { display: flex; }
+    .navbar a { font-size: 15px; }
 
     .search {
-        margin-right: 0;
+        display: none;
     }
-
 
     /* Hero */
-
-    .breadcrumbs {
-        margin-left: 20px;
-    }
-
-    .text {
-        margin-left: 20px;
-    }
-
+    .container1 { min-height: 240px; }
+    .breadcrumbs,
+    .text { margin-left: 15px; }
     .text nav h1 {
         font-size: 32px;
         line-height: 1.3;
     }
-
-    .text nav h1 span {
-        font-size: 40px !important;
-    }
-
-    .text img {
-        width: 65px;
-        height: 70px;
-    }
-
-
-    /* Search */
+    .text nav h1 span { font-size: 40px !important; }
 
     .searchbar {
-        margin-left: 20px;
+        width: calc(100% - 30px);
+        max-width: 520px;
+        margin: 18px 15px 0;
+    }
+    .searchbar-header { align-items: flex-start; }
+
+    /* Filter */
+    .filter-option { padding: 12px 15px; }
+    .filter-pills {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        padding-bottom: 6px;
+    }
+    .pill {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .sort-select {
+        width: 100%;
+        margin-left: 0;
     }
 
-
-    /* Filters */
-
-    .filter-option {
-        padding: 15px 20px;
-        flex-wrap: wrap;
-        gap: 10px;
+    /* Cards */
+    .filter-place,
+    .nearby-container {
+        margin-left: 15px;
+        margin-right: 15px;
     }
-
-    .filter-option span {
-        font-size: 11px;
-        padding: 8px 12px;
-    }
-
-
-    /* Bank Cards */
-
-    .filter-place {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
     .cards {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+    .filter-card img { height: 180px; }
 
-    .filter-card img {
-        height: 180px;
-    }
-
-
-    /* Banking Features */
-
+    /* Banking features */
     .banking-features {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .why-banking {
+        grid-template-columns: 1fr;
         padding: 15px;
     }
-
-    .why-banking h2 {
-        font-size: 18px;
-    }
-
-    .why-banking li {
-        font-size: 12px;
-    }
-
-    .quick-links {
-        padding: 15px;
-    }
-
-    .quick-content {
-        width: 85%;
-    }
-
-    .quick-content h2 {
-        font-size: 18px;
-    }
-
-    .quick-buttons {
-        gap: 8px;
-    }
-
-    .quick-buttons a {
-        font-size: 11px;
-        padding: 10px 7px;
-    }
-
-    .banking-image {
-        width: 30%;
-    }
-
-    .banking-text {
-        display: none;
-    }
-
-
-    /* Nearby Places */
-
-    .nearby-container {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .nearby-place {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+    .why-banking,
+    .quick-links { min-height: 190px; }
+    .quick-content { width: 70%; }
+    .banking-image { width: 30%; }
+    .banking-text { display: none; }
 
     /* Footer */
-
     .footer-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
         padding: 20px;
     }
-
     .explore-pollachi,
     .quicklinks,
-    .followus {
-        width: 100%;
-    }
+    .followus,
+    .footer-searchbar-header { width: 100%; }
+    .explore-pollachi p { width: 100%; }
+    .footer-searchbar input { width: 100%; flex: 1; }
 
-    .footer-searchbar input {
-        width: 100%;
-    }
-
-    .footer-searchbar button {
-        left: auto;
-        right: 3px;
-    }
-
-}
-
-
-/* ---------- MOBILE ---------- */
-
-@media (max-width: 768px) {
-
-    /* Header */
-
-    .header {
+    /* Popup */
+    .popup-container,
+    .popup-container.no-image {
+        width: 94%;
         flex-direction: column;
-        align-items: center;
         gap: 15px;
-    }
-
-    .header h2 {
-        margin: 0;
-        font-size: 20px;
-    }
-
-    .navbar {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        order: 0;
-    }
-
-    .navbar a {
-        font-size: 12px;
-    }
-
-    .search {
-        width: 100%;
-        margin: 0;
-    }
-
-    .search input {
-        width: 100%;
-    }
-
-
-    /* Hero Section */
-
-    .container1 {
-        min-height: 250px;
-        background-size: cover;
-        background-position: center;
-        padding: 12px;
-    }
-
-    .breadcrumbs {
-        margin-left: 5px;
-        font-size: 10px;
-    }
-
-    .text {
-        margin-left: 5px;
-        margin-top: 20px;
-        gap: 10px;
-        align-items: flex-start;
-    }
-
-    .text img {
-        width: 50px;
-        height: 55px;
-    }
-
-    .text nav h1 {
-        font-size: 23px;
-        line-height: 1.4;
-    }
-
-    .text nav h1 span {
-        font-size: 28px !important;
-    }
-
-    .text nav p {
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    .text nav p br {
-        display: none;
-    }
-
-
-    /* Hero Search */
-
-    .searchbar-header {
-        width: 100%;
-    }
-
-    .searchbar {
-        width: 100%;
-        margin: 15px 0 0;
-    }
-
-    .searchbar input {
-        width: 100%;
-        padding: 10px 85px 10px 30px;
-        font-size: 11px;
-    }
-
-    .searchbar img {
-        top: 10px;
-    }
-
-    .searchbar button {
-        width: 70px;
-        left: auto;
-        right: 4px;
-        top: 4px;
-        padding: 5px;
-        font-size: 11px;
-    }
-
-
-    /* Filter Section */
-
-    .filter-option {
-        padding: 12px;
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .filter-option span {
-        min-width: auto;
-        padding: 8px 12px;
-        font-size: 10px;
-    }
-
-    .filter-option span select {
-        font-size: 10px;
-        max-width: 130px;
-    }
-
-
-    /* Bank Cards Section */
-
-    .filter-place {
-        margin: 15px;
-    }
-
-    .filter-place h2 {
-        font-size: 18px;
-    }
-
-    .filter-place > p {
-        font-size: 11px;
-    }
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .filter-card {
-        margin-top: 5px;
-    }
-
-    .filter-card img {
-        height: 140px;
-    }
-
-    .card-text {
-        padding: 8px;
-    }
-
-    .card-text h3 {
-        font-size: 13px;
-    }
-
-    .card-text p {
-        font-size: 10px;
-    }
-
-    .card-option {
-        gap: 5px;
-    }
-
-    .card-option span {
-        font-size: 9px;
-        padding: 3px;
-    }
-
-    .card-button {
-        padding: 5px;
-        gap: 5px;
-    }
-
-    .card-button a {
-        font-size: 9px;
-        padding: 7px 3px;
-    }
-
-
-    /* Banking Features */
-
-    .banking-features {
-        grid-template-columns: 1fr;
-        padding: 12px;
-        gap: 12px;
-    }
-
-    .why-banking {
-        min-height: 180px;
-        padding: 18px;
-    }
-
-    .why-banking h2 {
-        font-size: 19px;
-    }
-
-    .why-banking li {
-        font-size: 12px;
-        margin: 10px 0;
-    }
-
-    .bank-bg-icon {
-        font-size: 80px;
-    }
-
-
-    /* Quick Links */
-
-    .quick-links {
-        min-height: 190px;
         padding: 15px;
     }
+    .image-section,
+    .text-section { width: 100%; }
+    .main-image { height: 220px; }
+    .main-image img { width: 100%; }
+    .sub-image { padding-right: 0; }
+    .sub-image img { margin-right: 8px; }
+    .text-section p { font-size: 12px; }
+}
 
-    .quick-content {
-        width: 75%;
-    }
+/* ---------------- MOBILE (≤ 768px) ---------------- */
+@media (max-width: 768px) {
+    .header h2 { font-size: 18px; }
 
-    .quick-content h2 {
-        font-size: 17px;
-        margin-bottom: 12px;
-    }
+    .container1 { padding: 12px; }
+    .text { align-items: flex-start; gap: 10px; }
+    .text img { width: 50px; height: 50px; }
+    .text nav h1 { font-size: 24px; }
+    .text nav h1 span { font-size: 30px !important; }
+    .text nav p { font-size: 12px; line-height: 1.6; }
 
-    .quick-buttons {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-    }
+    .searchbar input { font-size: 12px; }
+    .searchbar button { padding: 8px 14px; }
 
-    .quick-buttons a {
-        font-size: 10px;
-        padding: 10px 6px;
-    }
+    .filter-place h2 { font-size: 18px; }
+    .filter-place > p { font-size: 12px; }
 
-    .banking-image {
-        width: 30%;
-        right: 0;
-    }
+    .cards { gap: 12px; }
+    .card-text { padding: 10px; }
+    .card-text h3 { font-size: 15px; }
+    .card-text p { font-size: 12px; }
+    .card-option span { font-size: 11px; padding: 2px 6px; }
+    .card-button { padding-right: 0; }
+    .card-button a { font-size: 12px; }
 
-    .banking-text {
-        display: none;
-    }
+    .why-banking h2 { font-size: 19px; }
+    .why-banking li { font-size: 13px; }
+    .quick-content { width: 100%; }
+    .quick-content h2 { font-size: 18px; }
+    .quick-buttons a { font-size: 12px; padding: 10px 8px; }
+    .banking-image { display: none; }
 
-
-    /* Nearby Places */
-
-    .nearby-container {
-        margin: 15px;
-    }
-
-    .nearby-container h2 {
-        font-size: 18px;
-    }
-
-    .nearby-container p {
-        font-size: 11px;
-    }
-
-    .nearby-place {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-
-    .nearby-card {
-        width: 100%;
-        margin-top: 5px;
-    }
-
+    .nearby-container h2 { font-size: 18px; }
+    .nearby-place { grid-template-columns: repeat(2, 1fr); }
     .nearby-card > img {
-        width: 100%;
         height: 120px;
         object-fit: cover;
     }
-
     .nearby-card nav {
         padding: 8px;
         align-items: center;
     }
-
-    .nearby-card nav section h4 {
-        font-size: 11px;
-    }
-
-
-    /* Footer */
-
-    .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .explore-pollachi {
-        width: 100%;
-    }
-
-    .explore-pollachi h3 {
-        font-size: 15px;
-    }
-
-    .explore-pollachi p {
-        font-size: 10px;
-        width: 100%;
-    }
-
-    .quicklinks {
-        width: 100%;
-    }
-
-    .followus {
-        width: 100%;
-    }
-
-    .followus img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .footer-searchbar-header {
-        width: 100%;
-    }
-
-    .footer-searchbar input {
-        width: 100%;
-    }
-
-    .footer-searchbar button {
-        left: auto;
-        right: 3px;
-    }
+    .nearby-card nav section h4 { font-size: 12px; }
 
     footer {
-        flex-wrap: wrap;
-        gap: 8px;
-        padding: 10px;
-        justify-content: center;
+        flex-direction: column;
         text-align: center;
+        gap: 5px;
+        padding: 10px;
     }
-
-    footer p {
-        margin: 0;
-        font-size: 9px;
-    }
-
+    footer p { margin: 0; font-size: 10px; }
 }
 
+/* ---------------- SMALL MOBILE (≤ 600px) ---------------- */
+@media (max-width: 600px) {
+    .cards { grid-template-columns: 1fr; }
+    .filter-card img { height: 200px; }
 
-/* ---------- SMALL MOBILE ---------- */
-
-@media (max-width: 480px) {
-
-    /* Header */
-
-    .header h2 {
-        font-size: 18px;
-    }
-
-    .navbar {
-        gap: 10px;
-    }
-
-    .navbar a {
-        font-size: 11px;
-    }
-
-
-    /* Hero */
-
-    .text {
-        gap: 8px;
-    }
-
-    .text img {
-        width: 42px;
-        height: 45px;
-    }
-
-    .text nav h1 {
-        font-size: 19px;
-    }
-
-    .text nav h1 span {
-        font-size: 23px !important;
-    }
-
-    .text nav p {
-        font-size: 10px;
-    }
-
-
-    /* Filter */
-
-    .filter-option {
-        gap: 6px;
-    }
-
-    .filter-option span {
-        font-size: 9px;
-        padding: 7px 9px;
-    }
-
-
-    /* Cards */
-
-    .cards {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .filter-card img {
-        height: 190px;
-    }
-
-    .card-text h3 {
-        font-size: 14px;
-    }
-
-    .card-text p {
-        font-size: 11px;
-    }
-
-    .card-option span {
-        font-size: 10px;
-    }
-
-    .card-button a {
-        font-size: 11px;
-    }
-
-
-    /* Quick Links */
-
-    .quick-links {
-        min-height: 200px;
-    }
-
-    .quick-content {
-        width: 100%;
-    }
-
-    .quick-buttons {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .quick-buttons a {
-        font-size: 10px;
-    }
-
-    .banking-image {
-        display: none;
-    }
-
-
-    /* Nearby Places */
-
-    .nearby-place {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .nearby-card > img {
-        height: 100px;
-    }
-
-    .nearby-card nav section h4 {
-        font-size: 10px;
-    }
-
-
-    /* Footer */
-
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px 10px;
-        padding: 15px;
-    }
-
-    .footer-searchbar input {
-        font-size: 9px;
-    }
-
-}
-
-
-/* ---------- EXTRA SMALL MOBILE ---------- */
-
-@media (max-width: 350px) {
-
-    .navbar {
-        gap: 8px;
-    }
-
-    .navbar a {
-        font-size: 10px;
-    }
-
-    .text nav h1 {
-        font-size: 17px;
-    }
-
-    .text nav h1 span {
-        font-size: 20px !important;
-    }
-
-    .filter-option span {
-        padding: 6px 7px;
-        font-size: 8px;
-    }
-
-    .quick-buttons a {
-        font-size: 9px;
-        padding: 8px 4px;
-    }
-
-    .nearby-place {
-        grid-template-columns: 1fr;
-    }
+    .quick-buttons { grid-template-columns: 1fr; }
 
     .footer-container {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
+    .firstpart a,
+    .secondpart a { font-size: 13px; line-height: 1.8; }
+    .footer-searchbar-header p { font-size: 12px; }
 
+    .place-information section { width: 100%; }
+    .buttons { flex-direction: column; }
+}
+
+/* ---------------- EXTRA SMALL (≤ 380px) ---------------- */
+@media (max-width: 380px) {
+    .text nav h1 { font-size: 20px; }
+    .text nav h1 span { font-size: 24px !important; }
+    .nearby-place { grid-template-columns: 1fr; }
 }
