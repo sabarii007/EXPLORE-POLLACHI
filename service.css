@@ -920,6 +920,9 @@ img {
     .search {
         display: none;
     }
+    .searchBtn {
+        display: none;
+    }
 
     .breadcrumbs,
     .text {

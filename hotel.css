@@ -1020,6 +1020,9 @@ img {
     .searchbar-header {
         align-items: flex-start;
     }
+    .searchBtn {
+        display: none;
+    }
 
     .filter-option {
         padding: 12px 15px;

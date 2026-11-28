@@ -834,6 +834,7 @@ footer p {
 .search input {
     padding-right: 60px;
 }
+
 .search .search-clear {
     left: auto !important;
     right: 8px !important;
@@ -978,6 +979,10 @@ img {
     }
 
     .search {
+        display: none;
+    }
+
+    .searchBtn {
         display: none;
     }
 

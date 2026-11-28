@@ -860,6 +860,10 @@ img {
         display: none;
     }
 
+    .searchBtn {
+        display: none;
+    }
+
     /* Hero */
     .container1 {
         min-height: 240px;

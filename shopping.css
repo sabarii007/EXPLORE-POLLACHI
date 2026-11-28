@@ -1007,6 +1007,9 @@ img {
         align-items: flex-start;
     }
 
+    .searchBtn {
+        display: none;
+    }
     /* Filter */
     .filter-option {
         padding: 12px 15px;

@@ -1106,6 +1106,9 @@ img {
     .search {
         display: none;
     }
+    .searchBtn {
+        display: none;
+    }
 
     .container1 {
         min-height: 240px;

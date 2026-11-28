@@ -882,6 +882,7 @@ footer p {
         opacity: 1;
     }
 }
+
 /* Search suggestion dropdown */
 
 .search-suggestions {
@@ -975,6 +976,7 @@ footer p {
 .search input {
     padding-right: 60px;
 }
+
 .search .search-clear {
     left: auto !important;
     right: 8px !important;
@@ -1012,6 +1014,7 @@ input[type="search"]::-webkit-search-decoration {
 .footer-searchbar input:focus {
     outline: 2px solid #1c9565;
 }
+
 /* =========================================================
    RESPONSIVE DESIGN (banking.html)
 ========================================================= */
@@ -1107,6 +1110,10 @@ img {
     }
 
     .search {
+        display: none;
+    }
+
+    .searchBtn {
         display: none;
     }
 

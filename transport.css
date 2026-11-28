@@ -969,6 +969,9 @@ img {
     .search {
         display: none;
     }
+    .searchBtn {
+        display: none;
+    }
 
     /* Hero */
     .container1 {

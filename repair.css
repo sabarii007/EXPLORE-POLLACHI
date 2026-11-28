@@ -1143,6 +1143,9 @@ img {
     .search {
         display: none;
     }
+    .searchBtn {
+        display: none;
+    }
 
     .page-hero {
         min-height: 260px;
