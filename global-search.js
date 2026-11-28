@@ -1,4 +1,5 @@
 const categoryPages = {
+    "Theater": "entertainment.html",
     "Theatre": "entertainment.html",
     "Hotel & Restaurant": "hotel.html",
     "Restaurant": "hotel.html",
@@ -25,7 +26,6 @@ const categoryPages = {
     "Petrol Pump": "essential-services.html"
 };
 
-
 const searchData = (typeof places !== "undefined" ? Object.entries(places) : []).map(([key, data]) => ({
     key: key,
     name: data.name,
@@ -33,7 +33,7 @@ const searchData = (typeof places !== "undefined" ? Object.entries(places) : [])
     url: categoryPages[data.category] || "index.html"
 }));
 
-const CARD_SELECTOR = ".place-card, .hotel-card, .card, .other-card, .service-card";
+const CARD_SELECTOR = ".place-card, .hotel-card, .card, .other-card, .service-card, .filter-card";
 
 function findPlaceCard(key) {
     const button = document.querySelector(`.details-btn[data-place="${key}"]`);
@@ -46,16 +46,31 @@ function highlightPlace(key) {
     if (!card) return false;
 
     if (card.style.display === "none") {
-        const allBtn = document.querySelector(".filter-btn");
+        const allBtn = document.querySelector(".filter-btn, .pill");
         if (allBtn) allBtn.click();
         card.style.display = "";
     }
 
     card.scrollIntoView({ behavior: "smooth", block: "center" });
-    card.classList.add("global-search-highlight");
+
+    const oldOutline = card.style.outline;
+    const oldOffset = card.style.outlineOffset;
+    const oldRadius = card.style.borderRadius;
+    const oldTransition = card.style.transition;
+    const oldShadow = card.style.boxShadow;
+
+    card.style.transition = "outline 0.3s, box-shadow 0.3s";
+    card.style.outline = "3px solid #0C8960";
+    card.style.outlineOffset = "2px";
+    card.style.borderRadius = "10px";
+    card.style.boxShadow = "0 0 15px rgba(12, 137, 96, 0.6)";
 
     setTimeout(() => {
-        card.classList.remove("global-search-highlight");
+        card.style.outline = oldOutline;
+        card.style.outlineOffset = oldOffset;
+        card.style.borderRadius = oldRadius;
+        card.style.boxShadow = oldShadow;
+        card.style.transition = oldTransition;
     }, 3000);
 
     return true;
