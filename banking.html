@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="index.js" defer></script>
     <script src="filter.js" defer></script>
+    <script src="global-place-data.js" defer></script>
+    <script src="global-search.js" defer></script>
 </head>
 
 <body>
@@ -27,9 +29,10 @@
 
         </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
-            <img src="searchbar.png" alt="">
+        <section class="search">
+            <input type="search" class="searchInput" placeholder="Search places...">
+
+            <div class="suggestions"></div>
         </section>
     </div>
 
@@ -52,10 +55,9 @@
         <section class="searchbar-header">
             <div class="searchbar">
                 <span>🔍</span>
-
-                <input type="search" placeholder="Search Banking & Finance in Pollachi...">
-
-                <button>search</button>
+                <input type="search" class="searchInput" placeholder="Search theatres, hotels, restaurants...">
+                <button type="button" class="searchBtn">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>
@@ -431,9 +433,9 @@
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
             <div class="footer-searchbar">
-                <input type="search" placeholder="Search theatres, hotels, restaurants...">
-                
-                <button>search</button>
+                <input type="search" class="searchInput" placeholder="Search places...">
+                <button type="button">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>

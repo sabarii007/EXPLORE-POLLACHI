@@ -9,6 +9,8 @@
     <script src="hotel.js" defer></script>
     <script src="index.js" defer></script>
     <script src="filter.js" defer></script>
+    <script src="global-place-data.js" defer></script>
+    <script src="global-search.js" defer></script>
 </head>
 
 <body>
@@ -27,10 +29,12 @@
 
         </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
-            <img src="searchbar.png" alt="">
-        </section>
+        <section class="search">
+            <input type="search" class="searchInput" placeholder="Search places...">
+            
+            <div class="suggestions"></div>
+</section>
+
     </div>
 
     <div class="container1">
@@ -51,9 +55,10 @@
         <section class="searchbar-header">
             <div class="searchbar">
                 <span>🔍</span>
-                <input type="search" placeholder="Search hotels, restaurants in Pollachi...">
-                <button>Search</button>
-            </div>
+                <input type="search" class="searchInput" placeholder="Search  Hotels and Restaurants in pollachi...">
+                <button type="button" class="searchBtn">Search</button>
+                <div class="suggestions"></div>
+</div>
         </section>
     </div>
 
@@ -84,99 +89,99 @@
             <h2>Popular Hotels in <span style="color: #78F16D;">Pollachi</span></h2>
             <p>Stay at the best hotels in Pollachi with great comfort, location and amenities.</p>
 
-           <section class="cards">
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/Apple Inn.webp" alt="">
-                        <section class="card-text">
-                            <h3>Apple Inn</h3>
-                            <p>⭐ 4.7 (1000+ reviews)</p>
-                            <p>📍 Valparai Main Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span> 📶 WiFi</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Apple+Inn+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+            <section class="cards">
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/Apple Inn.webp" alt="">
+                    <section class="card-text">
+                        <h3>Apple Inn</h3>
+                        <p>⭐ 4.7 (1000+ reviews)</p>
+                        <p>📍 Valparai Main Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span> 📶 WiFi</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Apple+Inn+Pollachi" target="_blank"
+                                style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="appleinn"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="appleinn"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/Sri Krishnan Residency.webp" alt="">
-                        <section class="card-text">
-                            <h3>Sri Krishnan Residency</h3>
-                            <p>⭐ 3.7 (700+ reviews)</p>
-                            <p>📍 Raja Mill Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Sri+Krishnan+Residency+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                    </section>
+                </div>
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/Sri Krishnan Residency.webp" alt="">
+                    <section class="card-text">
+                        <h3>Sri Krishnan Residency</h3>
+                        <p>⭐ 3.7 (700+ reviews)</p>
+                        <p>📍 Raja Mill Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Krishnan+Residency+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="srikrishnan"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="srikrishnan"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/The Surrya Max Residency.webp" alt="">
-                        <section class="card-text">
-                            <h3>The Surrya Max Residency</h3>
-                            <p>⭐ 4.7 (1200+ reviews)</p>
-                            <p>📍 Nehru Colony, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span> 📶 WiFi</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=The+Surrya+Max+Residency+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                    </section>
+                </div>
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/The Surrya Max Residency.webp" alt="">
+                    <section class="card-text">
+                        <h3>The Surrya Max Residency</h3>
+                        <p>⭐ 4.7 (1200+ reviews)</p>
+                        <p>📍 Nehru Colony, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span> 📶 WiFi</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=The+Surrya+Max+Residency+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="surryamax"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="surryamax"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-                    <div class="filter-card">
-                        <img src="hotels&restaurantsimages/Madhava Inn.webp" alt="">
-                        <section class="card-text">
-                            <h3>Hotel Madhava Inn</h3>
-                            <p>⭐ 4.3 (1300+ reviews)</p>
-                            <p>📍 Coimbatore Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>🧹 Clean room</span>
-                                <span> 📶 WiFi</span>
-                                <span>❄️ AC</span>
-                                <span>🅿️ Parking</span>
-                                <span>🚿 hot water</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Madhava+Inn+161%2F2+Kovai+Main+Road+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                    </section>
+                </div>
+                <div class="filter-card">
+                    <img src="hotels&restaurantsimages/Madhava Inn.webp" alt="">
+                    <section class="card-text">
+                        <h3>Hotel Madhava Inn</h3>
+                        <p>⭐ 4.3 (1300+ reviews)</p>
+                        <p>📍 Coimbatore Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>🧹 Clean room</span>
+                            <span> 📶 WiFi</span>
+                            <span>❄️ AC</span>
+                            <span>🅿️ Parking</span>
+                            <span>🚿 hot water</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Madhava+Inn+161%2F2+Kovai+Main+Road+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="madhava"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="madhava"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-           </section>
+                    </section>
+                </div>
+            </section>
         </section>
 
     </div>
@@ -428,9 +433,9 @@
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
             <div class="footer-searchbar">
-                <input type="search" placeholder="Search Places in Pollachi...">
-
-                <button>search</button>
+                <input type="search" class="searchInput" placeholder="Search places...">
+                <button type="button">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>

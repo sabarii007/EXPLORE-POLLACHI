@@ -10,6 +10,8 @@
     <script src="education.js" defer></script>
     <script src="index.js" defer></script>
     <script src="filter.js" defer></script>
+    <script src="global-place-data.js" defer></script>
+    <script src="global-search.js" defer></script>
 </head>
 
 <body>
@@ -28,9 +30,10 @@
 
         </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
-            <img src="searchbar.png" alt="">
+        <section class="search">
+            <input type="search" class="searchInput" placeholder="Search places...">
+
+            <div class="suggestions"></div>
         </section>
     </div>
 
@@ -52,9 +55,9 @@
         <section class="searchbar-header">
             <div class="searchbar">
                 <span>🔍</span>
-                <input type="search" placeholder="Search schools, colleges, institutes in Pollachi...">
-
-                <button>search</button>
+                <input type="search" class="searchInput" placeholder="Search theatres, hotels, restaurants...">
+                <button type="button" class="searchBtn">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>
@@ -84,88 +87,100 @@
             <h2>Top Educational Institutions in <span style="color: #78F16D;">Pollachi</span></h2>
             <p>Explore well-known institutions in Pollachi with courses, facilities and ratings.</p>
 
-           <section class="cards">
-                    <div class="filter-card">
-                        <img src="educationimages/MCET Campus.webp" alt="">
-                        <section class="card-text">
-                            <h3>Dr. Mahalingam College of Engineering and Technology (MCET)</h3>
-                            <p>⭐ 4.3 (1300+ reviews)</p>
-                            <p>📍 Udumalai Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>⚙️ Engineering</span>
-                                <span> 📶 WiFi</span>
-                                <span>🎓 UG & PG</span>
-                                <span>🅿️ Parking</span>
-                                <span>🏨 Hostel</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=MCET+Pollachi" target="_blank" style="background: #e4f6e8;
+            <section class="cards">
+                <div class="filter-card">
+                    <img src="educationimages/MCET Campus.webp" alt="">
+                    <section class="card-text">
+                        <h3>Dr. Mahalingam College of Engineering and Technology (MCET)</h3>
+                        <p>⭐ 4.3 (1300+ reviews)</p>
+                        <p>📍 Udumalai Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>⚙️ Engineering</span>
+                            <span> 📶 WiFi</span>
+                            <span>🎓 UG & PG</span>
+                            <span>🅿️ Parking</span>
+                            <span>🏨 Hostel</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=MCET+Pollachi" target="_blank"
+                                style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="mcet" style="background-color: #017926; color: white;">View Details →</a>   </nav>
+                            <a href="#" class="details-btn" data-place="mcet"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-                    <div class="filter-card">
-                        <img src="educationimages/ngm college.webp" alt="">
-                        <section class="card-text">
-                            <h3>Nallamuthu Gounder Mahalingam College (NGM College)</h3>
-                            <p>⭐ 4.1 (600+ reviews)</p>
-                            <p>📍 Pollachi Palghat Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>📖 Arts & Science</span>
-                                <span> 📶 WiFi</span>
-                                <span>🎓 UG & PG</span>
-                                <span>🅿️ Parking</span>
-                                <span>🏨 Hostel</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=NGM+College+Pollachi" target="_blank" style="background: #e4f6e8;
+                    </section>
+                </div>
+                <div class="filter-card">
+                    <img src="educationimages/ngm college.webp" alt="">
+                    <section class="card-text">
+                        <h3>Nallamuthu Gounder Mahalingam College (NGM College)</h3>
+                        <p>⭐ 4.1 (600+ reviews)</p>
+                        <p>📍 Pollachi Palghat Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>📖 Arts & Science</span>
+                            <span> 📶 WiFi</span>
+                            <span>🎓 UG & PG</span>
+                            <span>🅿️ Parking</span>
+                            <span>🏨 Hostel</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=NGM+College+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="ngmcollege" style="background-color: #017926; color: white;">View Details →</a>  </nav>
+                            <a href="#" class="details-btn" data-place="ngmcollege"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
+                    </section>
+                </div>
 
-                    <div class="filter-card">
-                        <img src="educationimages/P. A. College.webp" alt="">
-                        <section class="card-text">
-                            <h3>P.A. College of Engineering and Technology (PACET)</h3>
-                            <p>⭐ 4.1 (600+ reviews)</p>
-                            <p>📍 Puliyampatti, Pollachi</p>
-                            <nav class="card-option">
-                                <span>⚙️ Engineering</span>
-                                <span>🎓 UG & PG</span>
-                                <span>🅿️ Parking</span>
-                                <span>🏨 Hostel</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Nachimuthu+Polytechnic+College+Pollachi" target="_blank" style="background: #e4f6e8;
+                <div class="filter-card">
+                    <img src="educationimages/P. A. College.webp" alt="">
+                    <section class="card-text">
+                        <h3>P.A. College of Engineering and Technology (PACET)</h3>
+                        <p>⭐ 4.1 (600+ reviews)</p>
+                        <p>📍 Puliyampatti, Pollachi</p>
+                        <nav class="card-option">
+                            <span>⚙️ Engineering</span>
+                            <span>🎓 UG & PG</span>
+                            <span>🅿️ Parking</span>
+                            <span>🏨 Hostel</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Nachimuthu+Polytechnic+College+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="pacet" style="background-color: #017926; color: white;">View Details →</a> </nav>
+                            <a href="#" class="details-btn" data-place="pacet"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
+                    </section>
+                </div>
 
 
-                    <div class="filter-card">
-                        <img src="educationimages/npc polytechnic.webp" alt="">
-                        <section class="card-text">
-                            <h3>Nachimuthu Polytechnic College (NPC)</h3>
-                            <p>⭐ 4.4 (500+ reviews)</p>
-                            <p>📍 Udumalai Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span>📐 Polytechnic</span>
-                                <span>🅿️ Parking</span>
-                                <span>🏨 Hostel</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Nachimuthu+Polytechnic+College+Pollachi" target="_blank" style="background: #e4f6e8;
+                <div class="filter-card">
+                    <img src="educationimages/npc polytechnic.webp" alt="">
+                    <section class="card-text">
+                        <h3>Nachimuthu Polytechnic College (NPC)</h3>
+                        <p>⭐ 4.4 (500+ reviews)</p>
+                        <p>📍 Udumalai Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span>📐 Polytechnic</span>
+                            <span>🅿️ Parking</span>
+                            <span>🏨 Hostel</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Nachimuthu+Polytechnic+College+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="npc" style="background-color: #017926; color: white;">View Details →</a></nav>
+                            <a href="#" class="details-btn" data-place="npc"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
-        </section>
+                    </section>
+                </div>
+            </section>
         </section>
     </div>
 
@@ -275,10 +290,11 @@
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
             <div class="footer-searchbar">
-                <input type="search" placeholder="Search places in Pollachi...">
-                
-                <button>search</button>
+                <input type="search" class="searchInput" placeholder="Search places...">
+                <button type="button">Search</button>
+                <div class="suggestions"></div>
             </div>
+
         </section>
     </div>
 

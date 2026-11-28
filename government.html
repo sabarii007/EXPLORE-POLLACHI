@@ -9,6 +9,8 @@
     <script src="index.js" defer></script>
     <script src="government.js" defer></script>
     <script src="filter.js" defer></script>
+    <script src="global-place-data.js" defer></script>
+    <script src="global-search.js" defer></script>
 </head>
 
 <body>
@@ -28,9 +30,10 @@
             <a href="contact.html">Contact</a>
         </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
-            <img src="searchbar.png" alt="">
+        <section class="search">
+            <input type="search" class="searchInput" placeholder="Search places...">
+
+            <div class="suggestions"></div>
         </section>
     </div>
 
@@ -52,8 +55,9 @@
 
         <div class="gov-search">
             <span>🔍</span>
-            <input type="search" id="govSearch" placeholder="Search government services in Pollachi...">
-            <button type="button">Search</button>
+            <input type="search" id="govSearch" class="searchInput"
+                placeholder="Search government services in Pollachi...">
+            <button type="button" class="searchBtn">Search</button>
         </div>
     </div>
 
@@ -372,12 +376,13 @@
             </nav>
         </section>
 
-        <section class="subscribe">
+        <section class="footer-searchbar-header">
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
-            <div class="subscribe-box">
-                <input type="email" placeholder="Enter your email">
-                <button type="button">Subscribe</button>
+            <div class="footer-searchbar">
+                <input type="search" class="searchInput" placeholder="Search places...">
+                <button type="button">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>

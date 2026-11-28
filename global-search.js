@@ -1,10 +1,4 @@
-// =====================================
-// GLOBAL SEARCH WITH GOOGLE AUTOCOMPLETE
-// =====================================
-
-// Category wise page mapping
 const categoryPages = {
-    "Theater": "entertainment.html",
     "Theatre": "entertainment.html",
     "Hotel & Restaurant": "hotel.html",
     "Restaurant": "hotel.html",
@@ -31,18 +25,13 @@ const categoryPages = {
     "Petrol Pump": "essential-services.html"
 };
 
-// Create search data from places object
-const searchData = Object.entries(places).map(([key, data]) => ({
+
+const searchData = (typeof places !== "undefined" ? Object.entries(places) : []).map(([key, data]) => ({
     key: key,
     name: data.name,
     category: data.category,
     url: categoryPages[data.category] || "index.html"
 }));
-
-
-// =====================================
-// HELPERS (shared)
-// =====================================
 
 const CARD_SELECTOR = ".place-card, .hotel-card, .card, .other-card, .service-card";
 
@@ -56,11 +45,10 @@ function highlightPlace(key) {
     const card = findPlaceCard(key);
     if (!card) return false;
 
-    // Card filter-la hide aagi irundha, "All" filter-a click pannu
     if (card.style.display === "none") {
         const allBtn = document.querySelector(".filter-btn");
         if (allBtn) allBtn.click();
-        card.style.display = "";   // fallback
+        card.style.display = "";
     }
 
     card.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -82,33 +70,31 @@ function safeSession(action, key, value) {
     return null;
 }
 
-
-// =====================================
-// SEARCH INPUT SETUP
-// =====================================
-
 document.querySelectorAll('input[type="search"]').forEach(input => {
 
     const wrapper = input.parentElement;
     wrapper.style.position = "relative";
 
-    // Inline suggestion
     const ghost = document.createElement("div");
     ghost.className = "search-ghost";
 
-    // Dropdown suggestion
     const dropdown = document.createElement("div");
     dropdown.className = "search-suggestions";
 
+    const clearBtn = document.createElement("button");
+    clearBtn.type = "button";
+    clearBtn.className = "search-clear";
+    clearBtn.setAttribute("aria-label", "Clear search");
+    clearBtn.textContent = "✕";
+
     wrapper.appendChild(ghost);
     wrapper.appendChild(dropdown);
+    wrapper.appendChild(clearBtn);
 
     let selectedSuggestion = null;
     let activeIndex = -1;
     let currentResults = [];
 
-
-    // Ghost text-a input text oda exact-a align pannum
     function positionGhost() {
         const cs = getComputedStyle(input);
         ghost.style.fontFamily = cs.fontFamily;
@@ -121,8 +107,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
                 parseFloat(cs.borderLeftWidth)) + "px";
         ghost.style.top =
             (input.offsetTop + input.offsetHeight / 2) + "px";
-
-
         ghost.style.overflow = "hidden";
         ghost.style.maxWidth =
             (input.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)) + "px";
@@ -133,6 +117,18 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
         dropdown.style.width = input.offsetWidth + "px";
     }
 
+    function positionClear() {
+        const extra = wrapper.classList.contains("search") ? 36 : 0;
+        clearBtn.style.left = "auto";
+        clearBtn.style.right = (wrapper.clientWidth - input.offsetLeft - input.offsetWidth + 8 + extra) + "px";
+        clearBtn.style.top = (input.offsetTop + input.offsetHeight / 2) + "px";
+    }
+
+    function toggleClear() {
+        positionClear();
+        clearBtn.style.display = input.value ? "block" : "none";
+    }
+
     function renderGhost(item) {
         ghost.innerHTML = "";
 
@@ -140,7 +136,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
         if (!item.name.toLowerCase().startsWith(input.value.toLowerCase())) return;
 
         positionGhost();
-
 
         const typed = document.createElement("span");
         typed.className = "typed";
@@ -153,14 +148,9 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
         ghost.append(typed, remaining);
     }
 
-
-    // =====================================
-    // OPEN SELECTED PLACE
-    // =====================================
-
     function openPlace(item) {
-
         input.value = item.name;
+        toggleClear();
         dropdown.style.display = "none";
         ghost.innerHTML = "";
 
@@ -171,11 +161,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
             window.location.href = item.url;
         }
     }
-
-
-    // =====================================
-    // SHOW SUGGESTIONS
-    // =====================================
 
     function showSuggestions() {
 
@@ -190,7 +175,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
         if (value === "") {
             currentResults = searchData.slice(0, 8);
         } else {
-            // startsWith munnaadi varum, appuram includes
             const starts = searchData.filter(i =>
                 i.name.toLowerCase().startsWith(value));
             const contains = searchData.filter(i =>
@@ -204,7 +188,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
             return;
         }
 
-        // Google style inline suggestion
         if (value !== "") {
             const match = currentResults.find(item =>
                 item.name.toLowerCase().startsWith(input.value.toLowerCase())
@@ -215,7 +198,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
             }
         }
 
-        // Dropdown list
         currentResults.forEach(item => {
             const option = document.createElement("div");
             option.className = "search-option";
@@ -228,16 +210,10 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
 
             dropdown.appendChild(option);
         });
+
         positionDropdown();
         dropdown.style.display = "block";
-
-
     }
-
-
-    // =====================================
-    // KEYBOARD SUGGESTION SELECTION
-    // =====================================
 
     function selectSuggestion(index) {
 
@@ -255,11 +231,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
         }
     }
 
-
-    // =====================================
-    // SEARCH (Enter / Search button)
-    // =====================================
-
     function runSearch() {
         if (selectedSuggestion) {
             openPlace(selectedSuggestion);
@@ -272,14 +243,22 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
         if (currentResults[0]) openPlace(currentResults[0]);
     }
 
-
-    // =====================================
-    // EVENTS
-    // =====================================
+    clearBtn.addEventListener("mousedown", function (e) {
+        e.preventDefault();
+        input.value = "";
+        ghost.innerHTML = "";
+        dropdown.style.display = "none";
+        selectedSuggestion = null;
+        activeIndex = -1;
+        toggleClear();
+        input.focus();
+    });
 
     input.addEventListener("input", showSuggestions);
+    input.addEventListener("input", toggleClear);
 
     input.addEventListener("focus", showSuggestions);
+    input.addEventListener("focus", toggleClear);
 
     input.addEventListener("click", function () {
         if (dropdown.style.display !== "block") showSuggestions();
@@ -305,7 +284,6 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
             }
         }
 
-        // Arrow Right - cursor text-in kadaisila irundha mattum accept
         else if (e.key === "ArrowRight") {
             if (selectedSuggestion &&
                 input.selectionStart === input.value.length) {
@@ -313,6 +291,7 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
                 input.value = selectedSuggestion.name;
                 ghost.innerHTML = "";
                 dropdown.style.display = "none";
+                toggleClear();
             }
         }
 
@@ -326,19 +305,18 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
             ghost.innerHTML = "";
             selectedSuggestion = null;
         }
+
         else if (e.key === "Tab") {
             dropdown.style.display = "none";
             ghost.innerHTML = "";
         }
     });
 
-    // Search button (hero + footer)
-    const searchBtn = wrapper.querySelector("button");
+    const searchBtn = wrapper.querySelector("button:not(.search-clear)");
     if (searchBtn) {
         searchBtn.addEventListener("click", runSearch);
     }
 
-    // Close dropdown
     document.addEventListener("click", function (e) {
         if (!wrapper.contains(e.target)) {
             dropdown.style.display = "none";
@@ -348,13 +326,11 @@ document.querySelectorAll('input[type="search"]').forEach(input => {
 
     window.addEventListener("resize", () => {
         if (ghost.innerHTML) positionGhost();
+        toggleClear();
     });
+
+    toggleClear();
 });
-
-
-// =====================================
-// AFTER PAGE NAVIGATION
-// =====================================
 
 window.addEventListener("load", function () {
 

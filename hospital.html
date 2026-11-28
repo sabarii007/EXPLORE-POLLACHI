@@ -9,6 +9,8 @@
     <script src="hospital.js" defer></script>
     <script src="index.js" defer></script>
     <script src="filter.js" defer></script>
+    <script src="global-place-data.js" defer></script>
+    <script src="global-search.js" defer></script>
 </head>
 
 <body>
@@ -27,10 +29,12 @@
 
         </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
-            <img src="searchbar.png" alt="">
+        <section class="search">
+            <input type="search" class="searchInput" placeholder="Search places...">
+
+            <div class="suggestions"></div>
         </section>
+
     </div>
 
     <div class="container1">
@@ -53,8 +57,9 @@
         <section class="searchbar-header">
             <div class="searchbar">
                 <span>🔍</span>
-                <input type="search" placeholder="Search Hospitals in Pollachi...">
-                <button>Search</button>
+                <input type="search" class="searchInput" placeholder="Search Hospitals in Pollachi...">
+                <button type="button" class="searchBtn">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>
@@ -87,110 +92,110 @@
             <h2>Popular Hospitals in <span style="color: #22A34B;">Pollachi</span></h2>
             <p>Explore leading hospitals in Pollachi with quality care, expert doctors and modern facilities.</p>
 
-           <section class="cards">
-                    <div class="filter-card">
-                        <img src="hospitalsimages/arathana.webp" alt="">
-                        <section class="card-text">
-                            <h3>Arathana Hospital</h3>
-                            <p>⭐ 4.5 (800+ reviews)</p>
-                            <p>📍 Coimbatore Main Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span> 🦴 Orthopedics & Joint Care </span>
-                                <span>🏃 Physiotherapy & Rehabilitation </span>
-                                <span> 💊 Pain Management </span>
-                                <span>🚨 24/7 </span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Arathana+Hospital+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+            <section class="cards">
+                <div class="filter-card">
+                    <img src="hospitalsimages/arathana.webp" alt="">
+                    <section class="card-text">
+                        <h3>Arathana Hospital</h3>
+                        <p>⭐ 4.5 (800+ reviews)</p>
+                        <p>📍 Coimbatore Main Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span> 🦴 Orthopedics & Joint Care </span>
+                            <span>🏃 Physiotherapy & Rehabilitation </span>
+                            <span> 💊 Pain Management </span>
+                            <span>🚨 24/7 </span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Arathana+Hospital+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="arathana"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="arathana"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
+                    </section>
+                </div>
 
-                    <div class="filter-card">
-                        <img src="hospitalsimages/Sri Sakthy Medical Care Entrance.webp" alt="">
-                        <section class="card-text">
-                            <h3>Sri Sakthy Medical Care</h3>
-                            <p>⭐ 4.9 (1200+ reviews)</p>
-                            <p>📍 New Scheme Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span> 🩸 Diabetes Care </span>
-                                <span>❤️ Cardiac Care </span>
-                                <span>🩺 Hypertension Management</span>
-                                <span>🦋 Thyroid Care</span>
-                                <span>⚖️ Obesity Management</span>
-                                <span>😴 Sleep Disorders Care</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Sri+Sakthy+Medical+Care+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                <div class="filter-card">
+                    <img src="hospitalsimages/Sri Sakthy Medical Care Entrance.webp" alt="">
+                    <section class="card-text">
+                        <h3>Sri Sakthy Medical Care</h3>
+                        <p>⭐ 4.9 (1200+ reviews)</p>
+                        <p>📍 New Scheme Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span> 🩸 Diabetes Care </span>
+                            <span>❤️ Cardiac Care </span>
+                            <span>🩺 Hypertension Management</span>
+                            <span>🦋 Thyroid Care</span>
+                            <span>⚖️ Obesity Management</span>
+                            <span>😴 Sleep Disorders Care</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sri+Sakthy+Medical+Care+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="srisakthy"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="srisakthy"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
+                    </section>
+                </div>
 
-                    <div class="filter-card">
-                        <img src="hospitalsimages/MCV ENT Trust Hospital Exterior.webp" alt="">
-                        <section class="card-text">
-                            <h3>MCV Memorial ENT Trust Hospital</h3>
-                            <p>⭐ 4.8 (1400+ reviews)</p>
-                            <p>📍 Palghat Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span> 👂 Ear Treatment & Surgery </span>
-                                <span>👃 Nose & Sinus Treatment </span>
-                                <span>🗣️ Throat Treatment</span>
-                                <span>🦻 Hearing Tests</span>
-                                <span>🌀 Vertigo Treatment</span>
-                                <span>😴 Sleep Apnea Treatment</span>
-                                <span>🩺 ENT Consultation</span>
-                                <span>🧬 Cochlear Implant</span>
-                                <span>🚨 24/7</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=MCV+Memorial+ENT+Trust+Hospital+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                <div class="filter-card">
+                    <img src="hospitalsimages/MCV ENT Trust Hospital Exterior.webp" alt="">
+                    <section class="card-text">
+                        <h3>MCV Memorial ENT Trust Hospital</h3>
+                        <p>⭐ 4.8 (1400+ reviews)</p>
+                        <p>📍 Palghat Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span> 👂 Ear Treatment & Surgery </span>
+                            <span>👃 Nose & Sinus Treatment </span>
+                            <span>🗣️ Throat Treatment</span>
+                            <span>🦻 Hearing Tests</span>
+                            <span>🌀 Vertigo Treatment</span>
+                            <span>😴 Sleep Apnea Treatment</span>
+                            <span>🩺 ENT Consultation</span>
+                            <span>🧬 Cochlear Implant</span>
+                            <span>🚨 24/7</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=MCV+Memorial+ENT+Trust+Hospital+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="mcvhospital"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="mcvhospital"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
+                    </section>
+                </div>
 
-                    <div class="filter-card">
-                        <img src="hospitalsimages/Blue-Hour Prabhu Clinic Entrance.webp" alt="">
-                        <section class="card-text">
-                            <h3>Prabhu Multi Speciality Hospital</h3>
-                            <p>⭐ 4.5 (800+ reviews)</p>
-                            <p>📍 New Scheme Road, Pollachi</p>
-                            <nav class="card-option">
-                                <span> ❤️ Cardiology & Heart Care</span>
-                                <span>🩺 General Medicine</span>
-                                <span>🏥 General Surgery</span>
-                                <span>🧠 Neurology</span>
-                                <span>🦴 Orthopedics</span>
-                                <span>🚑 Emergency Care</span>
-                            </nav>
-                            <nav class="card-button">
-                                <a href="https://www.google.com/maps/search/?api=1&query=Prabhu+Multi+Speciality+Hospital+Pollachi"
-                                    target="_blank" style="background: #e4f6e8;
+                <div class="filter-card">
+                    <img src="hospitalsimages/Blue-Hour Prabhu Clinic Entrance.webp" alt="">
+                    <section class="card-text">
+                        <h3>Prabhu Multi Speciality Hospital</h3>
+                        <p>⭐ 4.5 (800+ reviews)</p>
+                        <p>📍 New Scheme Road, Pollachi</p>
+                        <nav class="card-option">
+                            <span> ❤️ Cardiology & Heart Care</span>
+                            <span>🩺 General Medicine</span>
+                            <span>🏥 General Surgery</span>
+                            <span>🧠 Neurology</span>
+                            <span>🦴 Orthopedics</span>
+                            <span>🚑 Emergency Care</span>
+                        </nav>
+                        <nav class="card-button">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Prabhu+Multi+Speciality+Hospital+Pollachi"
+                                target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
-                                <a href="#" class="details-btn" data-place="prabhuhospital"
-                                    style="background-color: #017926; color: white;">View Details →</a>
-                            </nav>
+                            <a href="#" class="details-btn" data-place="prabhuhospital"
+                                style="background-color: #017926; color: white;">View Details →</a>
+                        </nav>
 
-                        </section>
-                    </div>
+                    </section>
+                </div>
 
-        </section>
-        
+            </section>
+
 
     </div>
 
@@ -308,9 +313,9 @@
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
             <div class="footer-searchbar">
-                <input type="search" placeholder="Search Places in Pollachi...">
-
-                <button>search</button>
+                <input type="search" class="searchInput" placeholder="Search places...">
+                <button type="button">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>

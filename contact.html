@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Explore Pollachi</title>
   <link rel="stylesheet" href="contact.css">
+  <script src="index.js" defer></script>
+  <script src="global-place-data.js" defer></script>
+  <script src="global-search.js" defer></script>
 </head>
+
 <body>
 
   <header>
     <div class="header" id="header">
-        <h2> <img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
-        <button id="menubtn" class="menubtn">☰</button>
-        <nav class="navbar" id="navbar">
-            <a href="index.html">Home</a>
-            <a href="about-pollachi.html">About</a>
-            <a href="place.html">Places</a>
-            <a href="hotel.html">Hotels & Restaurants</a>
-            <a href="entertainment.html">Theatres</a>
-            <a href="education.html">Education</a>
-            <a href="service.html">Services</a>
-            <a href="contact.html" class="active">Contact</a>
+      <h2> <img src="coconut_tree_icon.png" alt="" width="20px" height="20px">Explore Pollachi</h2>
+      <button id="menubtn" class="menubtn">☰</button>
+      <nav class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about-pollachi.html">About</a>
+        <a href="place.html">Places</a>
+        <a href="hotel.html">Hotels & Restaurants</a>
+        <a href="entertainment.html">Theatres</a>
+        <a href="education.html">Education</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
 
-        </nav>
+      </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
-            <img src="searchbar.png" alt="">
-        </section>
+      <section class="search">
+        <input type="search" class="searchInput" placeholder="Search places...">
+
+        <div class="suggestions"></div>
+      </section>
     </div>
   </header>
 
@@ -38,8 +44,7 @@
 
   <main class="wrap">
 
-    <
-    <aside class="info">
+    < <aside class="info">
       <h3>Get in touch</h3>
       <div class="info-item">
         <strong>Email</strong>
@@ -57,92 +62,94 @@
         <strong>Follow us</strong>
         <a href="#">Instagram</a> · <a href="#">Facebook</a> · <a href="#">YouTube</a>
       </div>
-    </aside>
+      </aside>
 
-    <!-- Right: form -->
-    <form id="contactForm" novalidate>
-      <h3>Send a message</h3>
+      <!-- Right: form -->
+      <form id="contactForm" novalidate>
+        <h3>Send a message</h3>
 
-      <label for="name">Your name</label>
-      <input type="text" id="name" name="name" autocomplete="name" required>
-      <div class="error-text" id="nameError"></div>
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+        <div class="error-text" id="nameError"></div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" autocomplete="email" required>
-      <div class="error-text" id="emailError"></div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+        <div class="error-text" id="emailError"></div>
 
-      <label for="topic">Topic</label>
-      <select id="topic" name="topic">
-        <option>Suggest a new place</option>
-        <option>Correct wrong information</option>
-        <option>Advertise or partner</option>
-        <option>Other</option>
-      </select>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option>Suggest a new place</option>
+          <option>Correct wrong information</option>
+          <option>Advertise or partner</option>
+          <option>Other</option>
+        </select>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
-      <div class="error-text" id="messageError"></div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <div class="error-text" id="messageError"></div>
 
-      <button type="submit" id="sendBtn" class="sendBtn">Send message</button>
-      <div id="status" role="status" aria-live="polite"></div>
-    </form>
+        <button type="submit" id="sendBtn" class="sendBtn">Send message</button>
+        <div id="status" role="status" aria-live="polite"></div>
+      </form>
 
   </main>
 
-  
-    <div class="footer-container">
-        <section class="explore-pollachi">
-            <img src="coconut_tree_icon.png" alt="">
-            <div>
-                <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
-                <p>Discover the places,peoples and lifestyle of pollachi. </p>
-            </div>
-        </section>
-        <section class="quicklinks">
-            <h4>Quick Links</h4>
-            <section class="quicklinks-content">
-                <div class="firstpart">
-                    <a href="index.html">Home</a>
-                    <a href="about-pollachi.html">About Pollachi</a>
-                    <a href="place.html">Places</a>
-                    <a href="hotel.html">Hotels & Restaurants</a>
-                </div>
-                <div class="secondpart">
-                    <a href="entertainment.html">Theatres</a>
-                    <a href="education.html">Education</a>
-                    <a href="service.html">Services</a>
-                    <a href="contact.html">Contact</a>
 
-                </div>
-            </section>
+  <div class="footer-container">
+    <section class="explore-pollachi">
+      <img src="coconut_tree_icon.png" alt="">
+      <div>
+        <h3>Explore <span style="color: #1BC221;">Pollachi</span></h3>
+        <p>Discover the places,peoples and lifestyle of pollachi. </p>
+      </div>
+    </section>
+    <section class="quicklinks">
+      <h4>Quick Links</h4>
+      <section class="quicklinks-content">
+        <div class="firstpart">
+          <a href="index.html">Home</a>
+          <a href="about-pollachi.html">About Pollachi</a>
+          <a href="place.html">Places</a>
+          <a href="hotel.html">Hotels & Restaurants</a>
+        </div>
+        <div class="secondpart">
+          <a href="entertainment.html">Theatres</a>
+          <a href="education.html">Education</a>
+          <a href="service.html">Services</a>
+          <a href="contact.html">Contact</a>
 
-        </section>
+        </div>
+      </section>
 
-        <section class="followus">
-            <h4>Follow Us</h4>
-            <nav>
-                <img src="facebook.png" alt="">
-                <img src="instagram.png" alt="">
-                <img src="youtube.png" alt="">
-            </nav>
+    </section>
 
-        </section>
-        <section class="footer-searchbar-header">
-            <h4>Search</h4>
-            <p>search the Place in Pollachi.</p>
-            <div class="footer-searchbar">
-                <input type="search" placeholder="Search places in Pollachi...">
-                
-                <button>search</button>
-            </div>
-        </section>
-    </div>
+    <section class="followus">
+      <h4>Follow Us</h4>
+      <nav>
+        <img src="facebook.png" alt="">
+        <img src="instagram.png" alt="">
+        <img src="youtube.png" alt="">
+      </nav>
 
-    <footer>
-        <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
-        <p>Made with ♡ for Pollachi</p>
-    </footer>
+    </section>
+    <section class="footer-searchbar-header">
+      <h4>Search</h4>
+      <p>search the Place in Pollachi.</p>
+      <div class="footer-searchbar">
+        <input type="search" class="searchInput" placeholder="Search places...">
+        <button type="button">Search</button>
+        <div class="suggestions"></div>
+      </div>
+
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Explore Pollachi. All Rights Reserved.</p>
+    <p>Made with ♡ for Pollachi</p>
+  </footer>
 
   <script src="contact.js"></script>
 </body>
+
 </html>

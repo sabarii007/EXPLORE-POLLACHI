@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service in Pollachi</title>
     <link rel="stylesheet" href="service.css">
-    
+
     <script src="index.js" defer></script>
-    
+    <script src="global-place-data.js" defer></script>
+    <script src="global-search.js" defer></script>
 
 </head>
 
@@ -28,8 +29,10 @@
 
         </nav>
 
-        <section class="search" id="search">
-            <input type="search" placeholder="Enter Places in Pollachi...">
+        <section class="search">
+            <input type="search" class="searchInput" placeholder="Search places...">
+
+            <div class="suggestions"></div>
         </section>
     </div>
     <div class="container1">
@@ -50,8 +53,9 @@
         <section class="searchbar-header">
             <div class="searchbar">
                 <span>🔍</span>
-                <input type="search" placeholder="Search services in Pollachi...">
-                <button type="button">Search</button>
+                <input type="search" class="searchInput" placeholder="Search theatres, hotels, restaurants...">
+                <button type="button" class="searchBtn">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>
@@ -141,15 +145,16 @@
             </a>
             <a href="repair.html">
                 <div class="service-card repair">
-                <img src="serviceimages/repair_maintenance.png" alt="">
-                <h4>Repair Maintenance</h4>
-                <nav>
-                    <p>Bike, Car, Electrical, Plumbing, Mobile Repair</p>
-                    <img src="murugalayaimages/rightarrow.png" alt="" style="background-color: #105927; padding: 5px;">
+                    <img src="serviceimages/repair_maintenance.png" alt="">
+                    <h4>Repair Maintenance</h4>
+                    <nav>
+                        <p>Bike, Car, Electrical, Plumbing, Mobile Repair</p>
+                        <img src="murugalayaimages/rightarrow.png" alt=""
+                            style="background-color: #105927; padding: 5px;">
 
-                </nav>
+                    </nav>
 
-            </div>
+                </div>
             </a>
 
         </section>
@@ -166,7 +171,8 @@
                     <h3>Bus Stand</h3>
                     <p>📍 Bus Stand, Pollachi</p>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Bus+Stand" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Bus+Stand" target="_blank"
+                            style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                         <a href="#" class="details-btn" data-place="pollachibusstand"
                             style="background-color: #017926; color: white;">View Details →</a>
@@ -180,7 +186,8 @@
                     <h3>Police Station</h3>
                     <p>📍 Palakkad Road, Pollachi</p>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+West+Police+Station" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+West+Police+Station"
+                            target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                         <a href="#" class="details-btn" data-place="westpolicestation"
                             style="background-color: #017926; color: white;">View Details →</a>
@@ -194,7 +201,8 @@
                     <h3>Government Hospital</h3>
                     <p>📍 Palakkad Road, Pollachi</p>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Government+Hospital+Pollachi" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=Government+Hospital+Pollachi"
+                            target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                         <a href="#" class="details-btn" data-place="governmenthospital"
                             style="background-color: #017926; color: white;">View Details →</a>
@@ -208,7 +216,8 @@
                     <h3>Railway Station</h3>
                     <p>📍 Periyapodhu, Pollachi</p>
                     <nav class="card-button">
-                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Junction+Railway+Station" target="_blank" style="background: #e4f6e8;
+                        <a href="https://www.google.com/maps/search/?api=1&query=Pollachi+Junction+Railway+Station"
+                            target="_blank" style="background: #e4f6e8;
     color: #087d43;">View on Map</a>
                         <a href="#" class="details-btn" data-place="railwaystation"
                             style="background-color: #017926; color: white;">View Details →</a>
@@ -305,9 +314,9 @@
             <h4>Search</h4>
             <p>search the Place in Pollachi.</p>
             <div class="footer-searchbar">
-                <input type="search" placeholder="Search places in Pollachi...">
-                
-                <button>search</button>
+                <input type="search" class="searchInput" placeholder="Search places...">
+                <button type="button">Search</button>
+                <div class="suggestions"></div>
             </div>
         </section>
     </div>

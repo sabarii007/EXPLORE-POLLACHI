@@ -175,7 +175,7 @@ html {
 }
 
 .searchbar input {
-   flex: 1;
+    flex: 1;
     border: none;
     outline: none;
     font-size: 13px;
@@ -190,9 +190,11 @@ html {
     padding: 10px 26px;
     font-weight: 600;
 }
-.searchbar button:hover{
+
+.searchbar button:hover {
     background-color: #15805a;
 }
+
 .filter-option {
     padding: 12px 50px 12px 60px;
     display: flex;
@@ -484,7 +486,7 @@ html {
 
 
 .footer-searchbar input {
-   width: 190px;
+    width: 190px;
     padding: 8px 10px;
     border: none;
     border-radius: 8px 0 0 8px;
@@ -512,7 +514,7 @@ html {
 }
 
 footer {
-   background-color: #03251E;
+    background-color: #03251E;
     color: #B0BBB9;
     font-size: 10px;
     padding: 8px 0;
@@ -541,6 +543,7 @@ footer p {
     font-size: 13px;
     margin-bottom: 6px;
 }
+
 /* POP UP SCREEN STYLE  */
 .popup-overlay {
     width: 100%;
@@ -678,12 +681,13 @@ footer p {
     align-items: center;
     flex-direction: column;
 }
-.buttons{
+
+.buttons {
     display: flex;
     gap: 10px;
 }
 
-.buttons a{
+.buttons a {
     flex: 1;
     background-color: #017618;
     padding: 7px;
@@ -699,26 +703,32 @@ footer p {
 .popup-container.no-image {
     width: 45%;
 }
+
 .popup-container.no-image .image-section {
     display: none;
 }
+
 .popup-container.no-image .text-section {
     width: 100%;
 }
 
 
 
-#favBtn{
+#favBtn {
     cursor: pointer;
     color: #333;
     transition: transform 0.2s;
 }
-#favBtn:active{
+
+#favBtn:active {
     transform: scale(1.3);
 }
-#favBtn.liked{
-    color: #e11d48;   /* red */
+
+#favBtn.liked {
+    color: #e11d48;
+    /* red */
 }
+
 @keyframes popup {
     from {
         transform: scale(0.5);
@@ -731,11 +741,144 @@ footer p {
     }
 }
 
+/* Search suggestion dropdown */
+
+.search-suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-height: 250px;
+    overflow-y: auto;
+    font-family: inherit;
+    max-height: 220px;
+
+}
+
+/* Suggestion items */
+
+.search-option {
+    padding: 12px 15px;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.3;
+}
+
+.search-option:hover,
+.search-option.active {
+    background: #eeeeee;
+}
+
+/* Google style inline autocomplete */
+
+.search-ghost {
+    position: absolute;
+    transform: translateY(-50%);
+    pointer-events: none;
+    white-space: pre;
+    z-index: 3;
+}
+
+.search input {
+    width: 200px;
+    padding-right: 36px;
+}
+
+.search-ghost .typed {
+    color: transparent;
+}
+
+.search-ghost .remaining {
+    color: #999;
+}
+
+.search-clear,
+.searchbar .search-clear,
+.footer-searchbar .search-clear,
+.search .search-clear {
+    display: none;
+    position: absolute;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 6px;
+    z-index: 4;
+}
+
+.search-clear:hover,
+.searchbar .search-clear:hover,
+.footer-searchbar .search-clear:hover,
+.search .search-clear:hover {
+    background: transparent;
+    color: #e11d48;
+}
+
+.searchbar input,
+.footer-searchbar input {
+    padding-right: 28px;
+}
+
+.search input {
+    padding-right: 60px;
+}
+.search .search-clear {
+    left: auto !important;
+    right: 8px !important;
+}
+
+/* Search input */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Selected place highlight */
+
+.global-search-highlight {
+    outline: 3px solid #0C8960;
+    border-radius: 10px;
+    transition: outline 0.3s;
+}
+
+.footer-searchbar .search-suggestions {
+    top: auto;
+    bottom: 100%;
+    width: 190px;
+    margin-bottom: 4px;
+}
+
+.footer-searchbar .search-option {
+    font-size: 12px;
+    padding: 7px 10px;
+}
+
+/* Footer input focus outline konjam subtle */
+.footer-searchbar input:focus {
+    outline: 2px solid #1c9565;
+}
+
 /* =========================================================
-   RESPONSIVE DESIGN (cafe.html)
+   RESPONSIVE DESIGN
 ========================================================= */
 
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+}
 
 .container1 {
     background-size: cover;
@@ -755,14 +898,27 @@ img { max-width: 100%; }
 
 /* ---------------- LAPTOP (≤ 1200px) ---------------- */
 @media (max-width: 1200px) {
-    .header h2 { margin-left: 20px; }
-    .search { margin-right: 20px; }
+    .header h2 {
+        margin-left: 20px;
+    }
+
+    .search {
+        margin-right: 20px;
+    }
 
     .breadcrumbs,
-    .text { margin-left: 30px; }
-    .searchbar { margin-left: 30px; }
+    .text {
+        margin-left: 30px;
+    }
 
-    .filter-option { padding: 12px 30px; }
+    .searchbar {
+        margin-left: 30px;
+    }
+
+    .filter-option {
+        padding: 12px 30px;
+    }
+
     .filter-place,
     .nearby-container {
         margin-left: 30px;
@@ -779,7 +935,10 @@ img { max-width: 100%; }
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 12px;
     }
-    .nearby-card { width: 100%; }
+
+    .nearby-card {
+        width: 100%;
+    }
 }
 
 /* ---------------- TABLET (≤ 992px) ---------------- */
@@ -791,9 +950,15 @@ img { max-width: 100%; }
         gap: 10px;
         padding: 12px 15px;
     }
-    .header h2 { margin-left: 0; }
 
-    .menubtn { display: block; cursor: pointer; }
+    .header h2 {
+        margin-left: 0;
+    }
+
+    .menubtn {
+        display: block;
+        cursor: pointer;
+    }
 
     .navbar {
         display: none;
@@ -803,42 +968,69 @@ img { max-width: 100%; }
         gap: 12px;
         padding: 8px 0;
     }
-    .navbar.active { display: flex; }
-    .navbar a { font-size: 15px; }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 15px;
+    }
 
     .search {
         display: none;
     }
+
     /* Hero */
-    .container1 { min-height: 240px; }
+    .container1 {
+        min-height: 240px;
+    }
+
     .breadcrumbs,
-    .text { margin-left: 15px; }
+    .text {
+        margin-left: 15px;
+    }
+
     .text nav h1 {
         font-size: 32px;
         line-height: 1.3;
     }
-    .text nav h1 span { font-size: 40px !important; }
-    .text nav p br { display: none; }
+
+    .text nav h1 span {
+        font-size: 40px !important;
+    }
+
+    .text nav p br {
+        display: none;
+    }
 
     .searchbar {
         width: calc(100% - 30px);
         max-width: 520px;
         margin: 18px 15px 0;
     }
-    .searchbar-header { align-items: flex-start; }
+
+    .searchbar-header {
+        align-items: flex-start;
+    }
 
     /* Filter */
-    .filter-option { padding: 12px 15px; }
+    .filter-option {
+        padding: 12px 15px;
+    }
+
     .filter-pills {
         flex-wrap: nowrap;
         overflow-x: auto;
         width: 100%;
         padding-bottom: 6px;
     }
+
     .pill {
         white-space: nowrap;
         flex-shrink: 0;
     }
+
     .sort-select {
         width: 100%;
         margin-left: 0;
@@ -850,7 +1042,10 @@ img { max-width: 100%; }
         margin-left: 15px;
         margin-right: 15px;
     }
-    .filter-card img { height: 180px; }
+
+    .filter-card img {
+        height: 180px;
+    }
 
     /* Footer */
     .footer-container {
@@ -859,12 +1054,22 @@ img { max-width: 100%; }
         gap: 25px;
         padding: 20px;
     }
+
     .explore-pollachi,
     .quicklinks,
     .followus,
-    .footer-searchbar-header { width: 100%; }
-    .explore-pollachi p { width: 100%; }
-    .footer-searchbar input { width: 100%; flex: 1; }
+    .footer-searchbar-header {
+        width: 100%;
+    }
+
+    .explore-pollachi p {
+        width: 100%;
+    }
+
+    .footer-searchbar input {
+        width: 100%;
+        flex: 1;
+    }
 
     /* Popup */
     .popup-container,
@@ -874,50 +1079,129 @@ img { max-width: 100%; }
         gap: 15px;
         padding: 15px;
     }
+
     .image-section,
-    .text-section { width: 100%; }
-    .main-image { height: 220px; }
-    .main-image img { width: 100%; }
-    .sub-image { padding-right: 0; }
-    .sub-image img { margin-right: 8px; }
-    .text-section p { font-size: 12px; }
+    .text-section {
+        width: 100%;
+    }
+
+    .main-image {
+        height: 220px;
+    }
+
+    .main-image img {
+        width: 100%;
+    }
+
+    .sub-image {
+        padding-right: 0;
+    }
+
+    .sub-image img {
+        margin-right: 8px;
+    }
+
+    .text-section p {
+        font-size: 12px;
+    }
 }
 
 /* ---------------- MOBILE (≤ 768px) ---------------- */
 @media (max-width: 768px) {
-    .header h2 { font-size: 18px; }
+    .header h2 {
+        font-size: 18px;
+    }
 
-    .container1 { padding: 12px; }
-    .text { align-items: flex-start; gap: 10px; }
-    .text img { width: 50px; height: 50px; padding: 6px; }
-    .text nav h1 { font-size: 24px; }
-    .text nav h1 span { font-size: 30px !important; }
-    .text nav p { font-size: 12px; line-height: 1.6; }
+    .container1 {
+        padding: 12px;
+    }
 
-    .searchbar input { font-size: 12px; }
-    .searchbar button { padding: 8px 14px; }
+    .text {
+        align-items: flex-start;
+        gap: 10px;
+    }
 
-    .filter-place h2 { font-size: 18px; }
-    .filter-place > p { font-size: 12px; }
+    .text img {
+        width: 50px;
+        height: 50px;
+        padding: 6px;
+    }
 
-    .card-text { padding: 10px; }
-    .card-text h3 { font-size: 15px; }
-    .card-text p { font-size: 12px; }
-    .card-option span { font-size: 11px; padding: 2px 6px; }
-    .card-button { padding-right: 0; }
-    .card-button a { font-size: 12px; }
+    .text nav h1 {
+        font-size: 24px;
+    }
 
-    .nearby-container h2 { font-size: 18px; }
-    .nearby-place { grid-template-columns: repeat(2, 1fr); }
-    .nearby-card > img {
+    .text nav h1 span {
+        font-size: 30px !important;
+    }
+
+    .text nav p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .searchbar input {
+        font-size: 12px;
+    }
+
+    .searchbar button {
+        padding: 8px 14px;
+    }
+
+    .filter-place h2 {
+        font-size: 18px;
+    }
+
+    .filter-place>p {
+        font-size: 12px;
+    }
+
+    .card-text {
+        padding: 10px;
+    }
+
+    .card-text h3 {
+        font-size: 15px;
+    }
+
+    .card-text p {
+        font-size: 12px;
+    }
+
+    .card-option span {
+        font-size: 11px;
+        padding: 2px 6px;
+    }
+
+    .card-button {
+        padding-right: 0;
+    }
+
+    .card-button a {
+        font-size: 12px;
+    }
+
+    .nearby-container h2 {
+        font-size: 18px;
+    }
+
+    .nearby-place {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nearby-card>img {
         height: 120px;
         object-fit: cover;
     }
+
     .nearby-card nav {
         padding: 8px;
         align-items: center;
     }
-    .nearby-card nav section h4 { font-size: 12px; }
+
+    .nearby-card nav section h4 {
+        font-size: 12px;
+    }
 
     footer {
         flex-direction: column;
@@ -925,29 +1209,58 @@ img { max-width: 100%; }
         gap: 5px;
         padding: 10px;
     }
-    footer p { margin: 0; font-size: 10px; }
+
+    footer p {
+        margin: 0;
+        font-size: 10px;
+    }
 }
 
 /* ---------------- SMALL MOBILE (≤ 600px) ---------------- */
 @media (max-width: 600px) {
-    .cards { grid-template-columns: 1fr; }
-    .filter-card img { height: 200px; }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-card img {
+        height: 200px;
+    }
 
     .footer-container {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    .firstpart a,
-    .secondpart a { font-size: 13px; line-height: 1.8; }
-    .footer-searchbar-header p { font-size: 12px; }
 
-    .place-information section { width: 100%; }
-    .buttons { flex-direction: column; }
+    .firstpart a,
+    .secondpart a {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+    .footer-searchbar-header p {
+        font-size: 12px;
+    }
+
+    .place-information section {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
 }
 
 /* ---------------- EXTRA SMALL (≤ 380px) ---------------- */
 @media (max-width: 380px) {
-    .text nav h1 { font-size: 20px; }
-    .text nav h1 span { font-size: 24px !important; }
-    .nearby-place { grid-template-columns: 1fr; }
+    .text nav h1 {
+        font-size: 20px;
+    }
+
+    .text nav h1 span {
+        font-size: 24px !important;
+    }
+
+    .nearby-place {
+        grid-template-columns: 1fr;
+    }
 }
